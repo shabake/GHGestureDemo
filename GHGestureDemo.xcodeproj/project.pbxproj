@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		D62D9A8C2253079200B51E89 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = D62D9A8B2253079200B51E89 /* README.md */; };
 		D62D9A9022530A2800B51E89 /* GHAdjustFocal.m in Sources */ = {isa = PBXBuildFile; fileRef = D62D9A8F22530A2800B51E89 /* GHAdjustFocal.m */; };
+		D62D9A9422537B9300B51E89 /* GHPrivacyAuthTool.m in Sources */ = {isa = PBXBuildFile; fileRef = D62D9A9322537B9200B51E89 /* GHPrivacyAuthTool.m */; };
 		D6A75CD12251A9430074D683 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D6A75CD02251A9430074D683 /* AppDelegate.m */; };
 		D6A75CD42251A9430074D683 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6A75CD32251A9430074D683 /* ViewController.m */; };
 		D6A75CD72251A9430074D683 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6A75CD52251A9430074D683 /* Main.storyboard */; };
@@ -23,6 +24,8 @@
 		D62D9A8B2253079200B51E89 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
 		D62D9A8E22530A2800B51E89 /* GHAdjustFocal.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GHAdjustFocal.h; sourceTree = "<group>"; };
 		D62D9A8F22530A2800B51E89 /* GHAdjustFocal.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GHAdjustFocal.m; sourceTree = "<group>"; };
+		D62D9A9222537B9200B51E89 /* GHPrivacyAuthTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHPrivacyAuthTool.h; sourceTree = "<group>"; };
+		D62D9A9322537B9200B51E89 /* GHPrivacyAuthTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHPrivacyAuthTool.m; sourceTree = "<group>"; };
 		D6A75CCC2251A9430074D683 /* GHGestureDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GHGestureDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6A75CCF2251A9430074D683 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		D6A75CD02251A9430074D683 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -59,9 +62,19 @@
 			path = GHAdjustFocal;
 			sourceTree = "<group>";
 		};
+		D62D9A9122537B9200B51E89 /* GHPrivacyAuthTool */ = {
+			isa = PBXGroup;
+			children = (
+				D62D9A9222537B9200B51E89 /* GHPrivacyAuthTool.h */,
+				D62D9A9322537B9200B51E89 /* GHPrivacyAuthTool.m */,
+			);
+			path = GHPrivacyAuthTool;
+			sourceTree = "<group>";
+		};
 		D6A75CC32251A9430074D683 = {
 			isa = PBXGroup;
 			children = (
+				D62D9A9122537B9200B51E89 /* GHPrivacyAuthTool */,
 				D62D9A8D225309D300B51E89 /* GHAdjustFocal */,
 				D6A75CEC2251BA950074D683 /* GHCameraModule */,
 				D6A75CCE2251A9430074D683 /* GHGestureDemo */,
@@ -81,11 +94,11 @@
 			isa = PBXGroup;
 			children = (
 				D6A75CE52251B0860074D683 /* UIView+GHAdd.h */,
+				D62D9A8B2253079200B51E89 /* README.md */,
 				D6A75CE62251B0860074D683 /* UIView+GHAdd.m */,
 				D6A75CCF2251A9430074D683 /* AppDelegate.h */,
 				D6A75CD02251A9430074D683 /* AppDelegate.m */,
 				D6A75CD22251A9430074D683 /* ViewController.h */,
-				D62D9A8B2253079200B51E89 /* README.md */,
 				D6A75CD32251A9430074D683 /* ViewController.m */,
 				D6A75CD52251A9430074D683 /* Main.storyboard */,
 				D6A75CD82251A9450074D683 /* Assets.xcassets */,
@@ -178,6 +191,7 @@
 			files = (
 				D6A75CD42251A9430074D683 /* ViewController.m in Sources */,
 				D6A75CE72251B0860074D683 /* UIView+GHAdd.m in Sources */,
+				D62D9A9422537B9300B51E89 /* GHPrivacyAuthTool.m in Sources */,
 				D6A75CDF2251A9450074D683 /* main.m in Sources */,
 				D62D9A9022530A2800B51E89 /* GHAdjustFocal.m in Sources */,
 				D6A75CD12251A9430074D683 /* AppDelegate.m in Sources */,

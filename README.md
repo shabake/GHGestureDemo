@@ -12,8 +12,8 @@
 
 **如果运行崩溃请在iofo.plist中添加key `Privacy - Camera Usage Description`**
 
-
-![Untitled.gif](https://upload-images.jianshu.io/upload_images/1419035-75858481f750f451.gif?imageMogr2/auto-orient/strip)
+<!--
+![Untitled.gif](https://upload-images.jianshu.io/upload_images/1419035-75858481f750f451.gif?imageMogr2/auto-orient/strip)-->
 
 
 ### 复习拖拽手势 `UIPanGestureRecognizer `
@@ -47,6 +47,14 @@ UIPanGestureRecognizer *panGest = [[UIPanGestureRecognizer alloc]initWithTarget:
 - (void)panView:(UIPanGestureRecognizer *)panGest{
 }
 ```
+### 依赖
+`GHPrivacyAuthTool` 权限检查工具
+
+`GHCameraModule.h` 相机整合模块
+
+`UIView+GHAdd.h` UIView的分类
+
+### 自定义view
 
 自定义一个`view`命名为`GHAdjustFocal`,
 里面包含五个部分分别是

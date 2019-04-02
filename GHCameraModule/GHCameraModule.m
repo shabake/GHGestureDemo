@@ -298,10 +298,10 @@
             [_session addOutput:self.metadataOutput];
 
             self.metadataOutput.metadataObjectTypes = @[
-                                                        AVMetadataObjectTypeQRCode,
-                                                        AVMetadataObjectTypeEAN13Code,
-                                                        AVMetadataObjectTypeEAN8Code,
-                                                        AVMetadataObjectTypeCode128Code
+                AVMetadataObjectTypeQRCode,
+                AVMetadataObjectTypeEAN13Code,
+                AVMetadataObjectTypeEAN8Code,
+                AVMetadataObjectTypeCode128Code
                                                         ];
         }
     }

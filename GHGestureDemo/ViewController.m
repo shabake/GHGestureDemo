@@ -10,11 +10,12 @@
 #import "UIView+GHAdd.h"
 #import "GHCameraModule.h"
 #import "GHAdjustFocal.h"
+#import "GHPrivacyAuthTool.h"
 
 #define kScreenWidth  [UIScreen mainScreen].bounds.size.width
 #define kScreenHeight [UIScreen mainScreen].bounds.size.height
 #define kAutoWithSize(r) r*kScreenWidth / 375.0
-#define ColorRGBA(r, g, b, a) ([UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:(a)])
+#define weakself(self)          __weak __typeof(self) weakSelf = self
 
 @interface ViewController ()
 
@@ -34,9 +35,15 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.zoomScale = 1;
-    [self.cameraModule adjustFocalWtihValue:10];
     
-    [self.cameraModule start];
+    weakself(self);
+    [[GHPrivacyAuthTool share] checkPrivacyAuthWithType:GHPrivacyCamera isPushSetting:YES title:@"提示" message:@"请在设置中开启相机权限" withHandle:^(BOOL granted, GHAuthStatus status) {
+        if (granted) {
+            [weakSelf.cameraModule adjustFocalWtihValue:10];
+            [weakSelf.cameraModule start];
+        }
+    }];
+ 
     [self.view addSubview:self.adjustFocal];
 
     UIPanGestureRecognizer *panGest = [[UIPanGestureRecognizer alloc]initWithTarget:self action:@selector(panView:)];
@@ -61,6 +68,20 @@
     value.text = [NSString stringWithFormat:@"%.2f",scale];
     [self.view addSubview:value];
     self.value = value;
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(enterFore) name:UIApplicationWillEnterForegroundNotification object:[UIApplication sharedApplication]];
+}
+
+- (void)enterFore{
+    self.zoomScale = 1;
+    
+    weakself(self);
+    [[GHPrivacyAuthTool share] checkPrivacyAuthWithType:GHPrivacyCamera isPushSetting:YES title:@"提示" message:@"请在设置中开启相机权限" withHandle:^(BOOL granted, GHAuthStatus status) {
+        if (granted) {
+            [weakSelf.cameraModule adjustFocalWtihValue:10];
+            [weakSelf.cameraModule start];
+        }
+    }];
 }
 
 #pragma mark - 捏合手势
