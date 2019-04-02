@@ -53,6 +53,16 @@ UIPanGestureRecognizer *panGest = [[UIPanGestureRecognizer alloc]initWithTarget:
 - (void)panView:(UIPanGestureRecognizer *)panGest{
 }
 ```
+
+如果存在同时多种手势需要重写代理方法
+
+```
+- (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldRecognizeSimultaneouslyWithGestureRecognizer:(UIGestureRecognizer *)otherGestureRecognizer{
+    
+    return YES;
+}
+```
+
 ### 依赖
 `GHPrivacyAuthTool` 权限检查工具
 
@@ -131,6 +141,15 @@ CGPoint trans = [panGest translationInView:panGest.view];
     [panGest setTranslation:CGPointZero inView:panGest.view];
     /// 动态改变相机焦距
     [self.cameraModule adjustFocalWtihValue:scale * 10];
+```
+
+#### Tip
+
+最后别忘了移除监听
+
+```
+[[NSNotificationCenter defaultCenter] removeObserver:self];
+
 ```
 ---
 
