@@ -9,16 +9,11 @@
 #import <UIKit/UIKit.h>
 
 NS_ASSUME_NONNULL_BEGIN
-@class GHAdjustFocal;
-
-typedef void(^GHAdjustFocalValueBlock)(GHAdjustFocal *sdjustFocal, CGFloat value);
 
 /**
  * 调整焦距组件
  */
 @interface GHAdjustFocal : UIView
-
-@property (nonatomic , copy) GHAdjustFocalValueBlock focalValueBlock;
 
 @property (nonatomic , assign) CGFloat circleCenterY;
 

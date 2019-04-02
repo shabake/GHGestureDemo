@@ -5,11 +5,16 @@
 
 ## GHGestureDemo
 
+
 ![image.png](https://upload-images.jianshu.io/upload_images/1419035-13e1431e4e114b45.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/620)
 
 捏合手势和拖拽手势并存,实现调整焦距
+**git较大且不清晰请下载demo运行到真机查看**
 
-### 拖拽手势 `UIPanGestureRecognizer `
+<!--![Untitled.gif](https://upload-images.jianshu.io/upload_images/1419035-75858481f750f451.gif?imageMogr2/auto-orient/strip)-->
+
+
+### 复习拖拽手势 `UIPanGestureRecognizer `
 
 先看api提供集成属性和方法
 
@@ -20,7 +25,7 @@
 > `(void)setTranslation:(CGPoint)translation inView:(nullable UIView *)view;` 设置拖拽速度
 
 
-### 捏合手势 `UIPinchGestureRecognizer `
+### 复习捏合手势 `UIPinchGestureRecognizer `
 
 >`scale` 缩放比例
 
@@ -41,10 +46,80 @@ UIPanGestureRecognizer *panGest = [[UIPanGestureRecognizer alloc]initWithTarget:
 }
 ```
 
+自定义一个`view`命名为`GHAdjustFocal`,
+里面包含五个部分分别是
+`backGround`背景 `circle`圆圈 `slider `滑杆 `add `加号 `sub`减号
+
+里面可以通过属性`circleCenterY`设置圆圈的位置
+还有两个分别是获取圆圈的当前的`centerY`和滑杆的总高度
+
+### 关键方法
+
+`videoScaleAndCropFactor ` 调整焦距的属性,最小值是1,所以为了安全每个value再加上1
+
+```
+  AVCaptureConnection * videoConnection = [self.stillImageOutput connectionWithMediaType:AVMediaTypeVideo];
+
+    [self.previewLayer setAffineTransform:CGAffineTransformMakeScale(1+value, 1+value)];
+    videoConnection.videoScaleAndCropFactor = 1 + value;
+    
+```
+
+我定义个一个方法讲手势操作之后获取的`value`传进来
+
+```
+- (void)adjustFocalWtihValue: (CGFloat)value 
+```
+
+### 在控制器中调用
+#### 初始化
+声明一个属性`zoomScale`,因为默认是最大的,所以初始化为1
+
+```self.zoomScale = 1;```
+
+相机的焦距也是最大的为10
+
+```[self.cameraModule adjustFocalWtihValue:10];```
+
+在view上添加捏合手势和拖拽手势
+
+#### 计算
+拖拽手势中
+```
+/// 滑动的距离
+CGPoint trans = [panGest translationInView:panGest.view];
+/// 获取到圆圈的中心y值
+    CGFloat circleCenterY = [self.adjustFocal getCircleCenterY]; /// circleY
+ /// y值自增
+    circleCenterY += trans.y;
+     /// 获取到滑动总距离
+    CGFloat totalHeight = [self.adjustFocal getSliderHeight]; /// 滑动总长度
+  	  /// 处理顶部越界
+    if (circleCenterY <= 20) {
+        circleCenterY = 20; /// 处理顶部
+    }
+     /// 处理底部越界
+
+    if (circleCenterY >= self.adjustFocal.gh_height - 40 + 20) {
+        circleCenterY = self.adjustFocal.gh_height - 40 + 20;
+    }
+    
+    /// 刷新圆圈的y值
+    self.adjustFocal.circleCenterY = circleCenterY;
+    /// 计算比例
+    CGFloat scale = (totalHeight - circleCenterY + 20)/totalHeight;
+    self.zoomScale = scale;
+    self.test.transform = CGAffineTransformMakeScale(scale, scale);
+    self.value.text = [NSString stringWithFormat:@"比例%.2f",scale];
+    /// 重置
+    [panGest setTranslation:CGPointZero inView:panGest.view];
+    /// 动态改变相机焦距
+    [self.cameraModule adjustFocalWtihValue:scale * 10];
+```
 ---
 
 
-## 相关知识点
+## 其他相关知识点
 ###  Gesture Recognizer 手势识别功能
 > 推出于iOS 3.2
 

@@ -53,7 +53,6 @@ typedef NS_ENUM (NSUInteger,GHCameraModuleType) {
 - (void)turnTorchOn:(BOOL)on;
 /** 选择相册 */
 - (void)chosePhoto ;
-
 /** 调整镜头焦距 */
 - (void)adjustFocalWtihValue: (CGFloat)value;
 

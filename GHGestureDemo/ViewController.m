@@ -34,7 +34,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.zoomScale = 1;
-
+    [self.cameraModule adjustFocalWtihValue:10];
+    
     [self.cameraModule start];
     [self.view addSubview:self.adjustFocal];
 
@@ -91,7 +92,7 @@
     
     self.test.transform = CGAffineTransformMakeScale(currentScale, currentScale);
     
-    self.value.text = [NSString stringWithFormat:@"比例%.2f,circleCenterY%2f",currentScale,height];
+    self.value.text = [NSString stringWithFormat:@"比例%.2f",currentScale];
 
     [self.cameraModule adjustFocalWtihValue:currentScale * 10];
     
@@ -104,6 +105,7 @@
 
 #pragma mark - 拖拽手势
 - (void)panView:(UIPanGestureRecognizer *)panGest{
+    
     CGPoint trans = [panGest translationInView:panGest.view];
 
     CGFloat circleCenterY = [self.adjustFocal getCircleCenterY]; /// circleY
@@ -121,11 +123,10 @@
     }
     
     self.adjustFocal.circleCenterY = circleCenterY;
-
     CGFloat scale = (totalHeight - circleCenterY + 20)/totalHeight;
     self.zoomScale = scale;
     self.test.transform = CGAffineTransformMakeScale(scale, scale);
-    self.value.text = [NSString stringWithFormat:@"比例%.2f,circleCenterY%2f",scale,circleCenterY];
+    self.value.text = [NSString stringWithFormat:@"比例%.2f",scale];
     [panGest setTranslation:CGPointZero inView:panGest.view];
     [self.cameraModule adjustFocalWtihValue:scale * 10];
 }
