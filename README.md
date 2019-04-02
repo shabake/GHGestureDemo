@@ -8,7 +8,8 @@
 
 ![image.png](https://upload-images.jianshu.io/upload_images/1419035-13e1431e4e114b45.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/620)
 
-捏合手势和拖拽手势并存,实现调整焦距
+捏合手势和拖拽手势并存,实现调整焦距<br/>
+
 
 **git较大且不清晰请下载demo运行到真机查看**
 
