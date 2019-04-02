@@ -23,16 +23,10 @@
  */
 @property (nonatomic , strong) UIView *circle;
 
-@property (nonatomic , strong) UILabel *value;
-
 /**
  滑杆
  */
 @property (nonatomic , strong) UIView *slider;
-
-//@property (nonatomic , strong) GHCameraModule *cameraModule;
-//@property (nonatomic , strong) UIView *test;
-//@property (nonatomic, assign) CGFloat zoomScale;
 
 /**
  "+"
@@ -50,17 +44,12 @@
 
 - (void)setCircleY:(CGFloat)circleY {
     _circleY = circleY;
-    self.circle.gh_top = circleY + 20;
-}
-
-- (CGFloat)getCircleY {
-    return self.circle.gh_top;
+    self.circle.gh_top = circleY;
 }
 
 - (instancetype)init {
     if (self == [super init]) {
         [self setupUI];
-        [self configuration];
     }
     return self;
 }
@@ -68,64 +57,8 @@
 - (instancetype)initWithFrame:(CGRect)frame {
     if (self == [super initWithFrame:frame]) {
         [self setupUI];
-        [self configuration];
     }
     return self;
-}
-
-- (void)configuration {
-    
-    UIPanGestureRecognizer *pan = [[UIPanGestureRecognizer alloc]initWithTarget:self action:@selector(pan:)];
-    pan.minimumNumberOfTouches = 1;
-
-    [self.circle addGestureRecognizer:pan];
-}
-
-#pragma mark - 捏合手势
-/*
-- (void)pinchView:(UIPinchGestureRecognizer *)pinchGest{
-    
-    CGFloat currentZoomScale = self.zoomScale + (pinchGest.scale - 1);
-    
-    if (currentZoomScale > 1) {
-        currentZoomScale = 1;
-    }
-    if (currentZoomScale < 0) {
-        currentZoomScale = 0;
-    }
-    
-    /// 范围是1 - 5
-    CGFloat height = (1 -currentZoomScale)/1 * kSliderHeight;
-    
-    self.circle.gh_top = height + 20;
-    
-    self.test.transform = CGAffineTransformMakeScale(currentZoomScale, currentZoomScale);
-    self.value.text = [NSString stringWithFormat:@"%.2f",currentZoomScale];
-    if (pinchGest.state == UIGestureRecognizerStateEnded || pinchGest.state == UIGestureRecognizerStateCancelled) {
-        self.zoomScale = currentZoomScale;
-    }
-    
-    [self getValueWithCircle: self.circle];
-//}
-*/
-#pragma mark - 拖拽手势
-- (void)pan:(UIPanGestureRecognizer *)panGest{
-    CGPoint trans = [panGest translationInView:panGest.view];
-    
-    CGPoint center = self.circle.center;
-    center.y += trans.y;
-    CGFloat value = (self.slider.gh_height - self.circle.gh_top +10)/self.slider.gh_height;
-    
-    
-//    self.zoomScale = value;
-//    self.value.text = [NSString stringWithFormat:@"%.2f",value];
-    self.circle.center = center;
-    [panGest setTranslation:CGPointZero inView:panGest.view];
-    
-    if (self.focalValueBlock) {
-        self.focalValueBlock(self,value);
-    }
-//    [self.cameraModule adjustFocalWtihValue:value * 10];
 }
 
 #pragma mark - 创建UI
@@ -201,4 +134,12 @@
     return _backGround;
 }
 
+
+- (CGFloat)getCircleY {
+    return self.circle.gh_top;
+}
+
+- (CGFloat)getSliderHeight {
+    return self.slider.gh_height;
+}
 @end

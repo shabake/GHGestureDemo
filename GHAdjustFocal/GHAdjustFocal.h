@@ -22,7 +22,15 @@ typedef void(^GHAdjustFocalValueBlock)(GHAdjustFocal *sdjustFocal, CGFloat value
 
 @property (nonatomic , assign) CGFloat circleY;
 
+
 - (CGFloat)getCircleY;
+
+/**
+ 获取滑杆的高度
+
+ @return 返回滑杆的高度
+ */
+- (CGFloat)getSliderHeight;
 
 @end
 
