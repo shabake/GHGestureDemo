@@ -79,8 +79,12 @@
     [self.view addGestureRecognizer:pinchGest];
 //
     UILabel *value = [[UILabel alloc]initWithFrame:CGRectMake(200, 100, 100, 30)];
-    value.textColor = [UIColor whiteColor];
-    value.text = @"0.00";
+    value.textColor = [UIColor redColor];
+    CGFloat totalHeight = [self.adjustFocal getSliderHeight]; /// 滑动总长度
+
+    CGFloat scale = (totalHeight - [self.adjustFocal getCircleCenterY] + 20)/totalHeight;
+
+    value.text = [NSString stringWithFormat:@"%.2f",scale];
     [self.view addSubview:value];
     self.value = value;
 }
@@ -98,8 +102,19 @@
     }
     
     /// 范围是1 - 5
-    CGFloat height = (1 -currentZoomScale)/1 * kSliderHeight;
-    self.adjustFocal.circleY = height + 20;
+    CGFloat totalHeight = [self.adjustFocal getSliderHeight]; /// 滑动总长度
+
+    CGFloat height = (1 -currentZoomScale) * totalHeight;
+    
+    if (height <= 20) {
+        height = 20; /// 处理顶部
+    }
+    
+    if (height >= self.adjustFocal.gh_height - 40 + 20) {
+        height = self.adjustFocal.gh_height - 40 + 20;
+    }
+    
+    self.adjustFocal.circleCenterY = height ;
     
     self.test.transform = CGAffineTransformMakeScale(currentZoomScale, currentZoomScale);
     self.value.text = [NSString stringWithFormat:@"%.2f",currentZoomScale];
@@ -114,17 +129,29 @@
 - (void)panView:(UIPanGestureRecognizer *)panGest{
     CGPoint trans = [panGest translationInView:panGest.view];
 
-    CGPoint center = CGPointMake(0, [self.adjustFocal getCircleY]);
-    center.y += trans.y;
+    CGFloat circleCenterY = [self.adjustFocal getCircleCenterY]; /// circleY
+    
+    circleCenterY += trans.y;
+    
+    CGFloat totalHeight = [self.adjustFocal getSliderHeight]; /// 滑动总长度
+  
+    if (circleCenterY <= 20) {
+        circleCenterY = 20; /// 处理顶部
+    }
+    
+    if (circleCenterY >= self.adjustFocal.gh_height - 40 + 20) {
+        circleCenterY = self.adjustFocal.gh_height - 40 + 20;
+    }
+    
+    self.adjustFocal.circleCenterY = circleCenterY;
 
-    CGFloat value = ([self.adjustFocal getSliderHeight] - [self.adjustFocal getCircleY]+10)/[self.adjustFocal getSliderHeight];
-
-    self.zoomScale = value;
-    self.test.transform = CGAffineTransformMakeScale(self.zoomScale,    self.zoomScale);
-    self.value.text = [NSString stringWithFormat:@"%.2f",value];
-    self.adjustFocal.circleY = center.y;
+    CGFloat scale = (totalHeight - circleCenterY + 20)/totalHeight;
+    
+    self.zoomScale = scale;
+    self.test.transform = CGAffineTransformMakeScale(scale, scale);
+    self.value.text = [NSString stringWithFormat:@"%.2f",scale];
     [panGest setTranslation:CGPointZero inView:panGest.view];
-    [self.cameraModule adjustFocalWtihValue:value * 10];
+    [self.cameraModule adjustFocalWtihValue:scale * 10];
 }
 
 - (void)getValueWithCircle: (UIView *)circle {
@@ -138,7 +165,7 @@
 #pragma mark - 懒加载
 - (GHAdjustFocal *)adjustFocal {
     if (_adjustFocal == nil) {
-        _adjustFocal = [[GHAdjustFocal alloc]initWithFrame:CGRectMake(100, 100, 30,  500)];
+        _adjustFocal = [[GHAdjustFocal alloc]initWithFrame:CGRectMake(100, 100, 30,  200)];
     }
     return _adjustFocal;
 }

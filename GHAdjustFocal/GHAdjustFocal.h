@@ -21,9 +21,11 @@ typedef void(^GHAdjustFocalValueBlock)(GHAdjustFocal *sdjustFocal, CGFloat value
 @property (nonatomic , copy) GHAdjustFocalValueBlock focalValueBlock;
 
 @property (nonatomic , assign) CGFloat circleY;
+@property (nonatomic , assign) CGFloat circleCenterY;
 
 
 - (CGFloat)getCircleY;
+- (CGFloat)getCircleCenterY;
 
 /**
  获取滑杆的高度

@@ -42,11 +42,11 @@
 
 @implementation GHAdjustFocal
 
-- (void)setCircleY:(CGFloat)circleY {
-    _circleY = circleY;
-    self.circle.gh_top = circleY;
+- (void)setCircleCenterY:(CGFloat)circleCenterY {
+    self.circle.gh_centery = circleCenterY;
 }
 
+#pragma mark - 初始化
 - (instancetype)init {
     if (self == [super init]) {
         [self setupUI];
@@ -54,9 +54,10 @@
     return self;
 }
 
+#pragma mark - 初始化
 - (instancetype)initWithFrame:(CGRect)frame {
     if (self == [super initWithFrame:frame]) {
-        [self setupUI];
+        [self setupUI];        
     }
     return self;
 }
@@ -64,16 +65,38 @@
 #pragma mark - 创建UI
 - (void)setupUI {
 
-    self.backGround.frame = CGRectMake(0, 0, self.bounds.size.width, self.bounds.size.height);
-
-    CGFloat sliderY = 20;
-    self.slider.frame = CGRectMake(10, sliderY, 10, self.bounds.size.height - sliderY * 2);
+    CGFloat totalHeight = self.bounds.size.height; /// 总长度
+    CGFloat totalWidth = self.bounds.size.width;   /// 总宽度
     
-    self.circle.frame = CGRectMake(5,20, 20, 20);
+    CGFloat sliderY = 20;
+    CGFloat sliderH = totalHeight - 40;
+    CGFloat backGroundY = 0;
+    CGFloat backGroundW = totalWidth;
+    CGFloat backGroundX = 0;
+    CGFloat backGroundH = totalHeight;
+    self.backGround.frame = CGRectMake(backGroundX, backGroundY, backGroundW, backGroundH);
 
-    self.add.frame = CGRectMake(5,5, 20, 10);
+    CGFloat sliderW = 10;
+    CGFloat sliderX = (totalWidth - sliderW) *.5;
+    self.slider.frame = CGRectMake(sliderX, sliderY, sliderW, sliderH);
+    
+    CGFloat circleY = sliderY * 0.5; /// 初始化的时候圆圈的circleY = 20 centerY = 10;
+    CGFloat circleW = 20;
+    CGFloat circleH = circleW;
+    CGFloat circleX = (totalWidth - circleW) *.5;
+    self.circle.frame = CGRectMake(circleX,circleY, circleW, circleH);
 
-    self.sub.frame = CGRectMake(5,self.slider.gh_height + self.slider.gh_top + 5, 20, 5);
+    CGFloat addY = 5;
+    CGFloat addW = 20;
+    CGFloat addH = 10;
+    CGFloat addX = (totalWidth - addW) *.5;
+    self.add.frame = CGRectMake(addX,addY, addW, addH);
+
+    CGFloat subX = addX;
+    CGFloat subW = addW;
+    CGFloat subH = addH;
+    CGFloat subY = self.slider.gh_height + self.slider.gh_top;
+    self.sub.frame = CGRectMake(subX, subY, subW, subH);
 
     [self addSubview:self.backGround];
     [self.backGround addSubview:self.slider];
@@ -134,12 +157,16 @@
     return _backGround;
 }
 
+- (CGFloat)getCircleCenterY {
+    return self.circle.gh_centery;
+}
 
 - (CGFloat)getCircleY {
     return self.circle.gh_top;
 }
 
 - (CGFloat)getSliderHeight {
-    return self.slider.gh_height;
+    return self.bounds.size.height;
 }
+
 @end
