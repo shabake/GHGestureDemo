@@ -15,7 +15,14 @@
 <!--
 ![Untitled.gif](https://upload-images.jianshu.io/upload_images/1419035-75858481f750f451.gif?imageMogr2/auto-orient/strip)-->
 
+### 功能
+```diff
++ 封装权限检查工具
++ 封装相机模块实现一行代码调用
++ 相机权限判断,app从后台激活到前台相机权限判断
++ 拖拽和捏合手势动态调整相机镜头焦距
 
+```
 ### 复习拖拽手势 `UIPanGestureRecognizer `
 
 先看api提供集成属性和方法
