@@ -10,10 +10,10 @@
 		D62D9A8C2253079200B51E89 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = D62D9A8B2253079200B51E89 /* README.md */; };
 		D62D9A9022530A2800B51E89 /* GHAdjustFocal.m in Sources */ = {isa = PBXBuildFile; fileRef = D62D9A8F22530A2800B51E89 /* GHAdjustFocal.m */; };
 		D62D9A9422537B9300B51E89 /* GHPrivacyAuthTool.m in Sources */ = {isa = PBXBuildFile; fileRef = D62D9A9322537B9200B51E89 /* GHPrivacyAuthTool.m */; };
+		D62D9A96225387F100B51E89 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D62D9A95225387F100B51E89 /* Assets.xcassets */; };
 		D6A75CD12251A9430074D683 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D6A75CD02251A9430074D683 /* AppDelegate.m */; };
 		D6A75CD42251A9430074D683 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6A75CD32251A9430074D683 /* ViewController.m */; };
 		D6A75CD72251A9430074D683 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6A75CD52251A9430074D683 /* Main.storyboard */; };
-		D6A75CD92251A9450074D683 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D6A75CD82251A9450074D683 /* Assets.xcassets */; };
 		D6A75CDC2251A9450074D683 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6A75CDA2251A9450074D683 /* LaunchScreen.storyboard */; };
 		D6A75CDF2251A9450074D683 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D6A75CDE2251A9450074D683 /* main.m */; };
 		D6A75CE72251B0860074D683 /* UIView+GHAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = D6A75CE62251B0860074D683 /* UIView+GHAdd.m */; };
@@ -26,13 +26,13 @@
 		D62D9A8F22530A2800B51E89 /* GHAdjustFocal.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GHAdjustFocal.m; sourceTree = "<group>"; };
 		D62D9A9222537B9200B51E89 /* GHPrivacyAuthTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHPrivacyAuthTool.h; sourceTree = "<group>"; };
 		D62D9A9322537B9200B51E89 /* GHPrivacyAuthTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHPrivacyAuthTool.m; sourceTree = "<group>"; };
+		D62D9A95225387F100B51E89 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D6A75CCC2251A9430074D683 /* GHGestureDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GHGestureDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6A75CCF2251A9430074D683 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		D6A75CD02251A9430074D683 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		D6A75CD22251A9430074D683 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		D6A75CD32251A9430074D683 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		D6A75CD62251A9430074D683 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		D6A75CD82251A9450074D683 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D6A75CDB2251A9450074D683 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D6A75CDD2251A9450074D683 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D6A75CDE2251A9450074D683 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -100,8 +100,8 @@
 				D6A75CD02251A9430074D683 /* AppDelegate.m */,
 				D6A75CD22251A9430074D683 /* ViewController.h */,
 				D6A75CD32251A9430074D683 /* ViewController.m */,
+				D62D9A95225387F100B51E89 /* Assets.xcassets */,
 				D6A75CD52251A9430074D683 /* Main.storyboard */,
-				D6A75CD82251A9450074D683 /* Assets.xcassets */,
 				D6A75CDA2251A9450074D683 /* LaunchScreen.storyboard */,
 				D6A75CDD2251A9450074D683 /* Info.plist */,
 				D6A75CDE2251A9450074D683 /* main.m */,
@@ -176,8 +176,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				D6A75CDC2251A9450074D683 /* LaunchScreen.storyboard in Resources */,
-				D6A75CD92251A9450074D683 /* Assets.xcassets in Resources */,
 				D62D9A8C2253079200B51E89 /* README.md in Resources */,
+				D62D9A96225387F100B51E89 /* Assets.xcassets in Resources */,
 				D6A75CD72251A9430074D683 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
