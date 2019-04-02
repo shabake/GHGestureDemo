@@ -30,41 +30,37 @@
 
 ```
 UIPinchGestureRecognizer *pinchGest = [[UIPinchGestureRecognizer alloc]initWithTarget:self action:@selector(pinchView:)];
-
 UIPanGestureRecognizer *panGest = [[UIPanGestureRecognizer alloc]initWithTarget:self action:@selector(panView:)];
-
 ```
 分别实现监听方法
 
 ```
 - (void)pinchView:(UIPinchGestureRecognizer *)pinchGest{
 }
-
 - (void)panView:(UIPanGestureRecognizer *)panGest{
 }
 ```
 
+---
 
-相关知识点
 
+## 相关知识点
 ###  Gesture Recognizer 手势识别功能
 > 推出于iOS 3.2
 
 #### 初始化方法
 
 ```
+/// 初始化
 - (instancetype)initWithTarget:(nullable id)target action:(nullable SEL)action
-
 ```
 ```
 /// 添加监听
 - (void)addTarget:(id)target action:(SEL)action;
-
 ```
 ```
 /// 移除监听
 - (void)removeTarget:(nullable id)target action:(nullable SEL)action;
-
 ```
 #### state
 
@@ -101,7 +97,6 @@ typedef NS_ENUM(NSInteger, UIGestureRecognizerState) {
 ```
 [A requireGestureRecognizerToFail：B]手势互斥 它可以指定当A手势发生时，即便A已经滿足条件了，也不会立刻触发，会等到指定的手势B确定失败之后才触发。
 - (void)requireGestureRecognizerToFail:(UIGestureRecognizer *)otherGestureRecognizer;
-
 ```
 ```
 //获取当前触摸的点
@@ -116,3 +111,4 @@ typedef NS_ENUM(NSInteger, UIGestureRecognizerState) {
 //获取某一个触摸点的触摸位置
 - (CGPoint)locationOfTouch:(NSUInteger)touchIndex inView:(nullable UIView*)view; 
 ```
+--
