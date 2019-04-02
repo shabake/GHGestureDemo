@@ -9,6 +9,8 @@
 #import "ViewController.h"
 #import "UIView+GHAdd.h"
 #import "GHCameraModule.h"
+#import "GHAdjustFocal.h"
+
 #define kScreenWidth  [UIScreen mainScreen].bounds.size.width
 #define kScreenHeight [UIScreen mainScreen].bounds.size.height
 #define kAutoWithSize(r) r*kScreenWidth / 375.0
@@ -22,62 +24,69 @@
 @property (nonatomic , strong) UIView *slider;
 @property (nonatomic , strong) GHCameraModule *cameraModule;
 @property (nonatomic , strong) UIView *test;
-@property (nonatomic, assign) CGFloat zoomScale;
+@property (nonatomic , assign) CGFloat zoomScale;
+@property (nonatomic , strong) GHAdjustFocal *adjustFocal;
 
 #define kSliderHeight 460
 @end
 
 @implementation ViewController
 
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.zoomScale = 0.0;
 
     [self.cameraModule start];
-    UIView *backGround = [[UIView alloc]initWithFrame:CGRectMake(100, 100, 30, 500)];
-    backGround.backgroundColor = ColorRGBA(0, 0, 0, 102.0/255);
-
-    backGround.layer.masksToBounds = YES;
-    backGround.layer.cornerRadius = 15;
-    backGround.alpha = 0.3;
-    [self.view addSubview:backGround];
-    
-    self.backGround = backGround;
-    
-    UIView *slider = [[UIView alloc]initWithFrame:CGRectMake(10, 20, 10, 460 -46)];
-    slider.backgroundColor = [UIColor lightGrayColor];
-    slider.layer.masksToBounds = YES;
-    slider.layer.cornerRadius = 5;
-    [backGround addSubview:slider];
-    self.slider = slider;
-
-    UIView *circle = [[UIView alloc]initWithFrame:CGRectMake(5,20, 20, 20)];
-    circle.backgroundColor = [UIColor yellowColor];
-    circle.layer.masksToBounds = YES;
-    circle.layer.cornerRadius = 10;
-    [backGround addSubview:circle];
-    self.circle = circle;
-
+    [self.view addSubview:self.adjustFocal];
+    self.adjustFocal.focalValueBlock = ^(GHAdjustFocal * _Nonnull sdjustFocal, CGFloat value) {
+        self.zoomScale = value;
+        [self.cameraModule adjustFocalWtihValue:value * 10];
+    };
+ 
+//    UIView *backGround = [[UIView alloc]initWithFrame:CGRectMake(100, 100, 30, 500)];
+//    backGround.backgroundColor = ColorRGBA(0, 0, 0, 102.0/255);
+//
+//    backGround.layer.masksToBounds = YES;
+//    backGround.layer.cornerRadius = 15;
+//    backGround.alpha = 0.3;
+//    [self.view addSubview:backGround];
+//
+//    self.backGround = backGround;
+//
+//    UIView *slider = [[UIView alloc]initWithFrame:CGRectMake(10, 20, 10, 460 -46)];
+//    slider.backgroundColor = [UIColor lightGrayColor];
+//    slider.layer.masksToBounds = YES;
+//    slider.layer.cornerRadius = 5;
+//    [backGround addSubview:slider];
+//    self.slider = slider;
+//
+//    UIView *circle = [[UIView alloc]initWithFrame:CGRectMake(5,20, 20, 20)];
+//    circle.backgroundColor = [UIColor yellowColor];
+//    circle.layer.masksToBounds = YES;
+//    circle.layer.cornerRadius = 10;
+//    [backGround addSubview:circle];
+//    self.circle = circle;
+//
     UIPanGestureRecognizer *panGest = [[UIPanGestureRecognizer alloc]initWithTarget:self action:@selector(panView:)];
     panGest.minimumNumberOfTouches = 1;
 
     [self.view addGestureRecognizer:panGest];
-
-    UIView *test = [[UIView alloc]initWithFrame:CGRectMake(300, 100, 100, 100)];
-    test.backgroundColor = [UIColor redColor];
-    [self.view addSubview:test];
-    self.test = test;
-    self.test.transform = CGAffineTransformMakeScale(self.zoomScale, self.zoomScale);
-
+//
+//    UIView *test = [[UIView alloc]initWithFrame:CGRectMake(300, 100, 100, 100)];
+//    test.backgroundColor = [UIColor redColor];
+//    [self.view addSubview:test];
+//    self.test = test;
+//    self.test.transform = CGAffineTransformMakeScale(self.zoomScale, self.zoomScale);
+//
     UIPinchGestureRecognizer *pinchGest = [[UIPinchGestureRecognizer alloc]initWithTarget:self action:@selector(pinchView:)];
     [self.view addGestureRecognizer:pinchGest];
-
-    UILabel *value = [[UILabel alloc]initWithFrame:CGRectMake(200, 100, 100, 30)];
-    value.textColor = [UIColor whiteColor];
-    value.text = @"0.00";
-    [self.view addSubview:value];
-    self.value = value;
-    
+//
+//    UILabel *value = [[UILabel alloc]initWithFrame:CGRectMake(200, 100, 100, 30)];
+//    value.textColor = [UIColor whiteColor];
+//    value.text = @"0.00";
+//    [self.view addSubview:value];
+//    self.value = value;
 }
 
 #pragma mark - 捏合手势
@@ -96,14 +105,19 @@
     CGFloat height = (1 -currentZoomScale)/1 * kSliderHeight;
     
     self.circle.gh_top = height + 20;
-    
+    self.adjustFocal.circleY = height + 20;;
     self.test.transform = CGAffineTransformMakeScale(currentZoomScale, currentZoomScale);
     self.value.text = [NSString stringWithFormat:@"%.2f",currentZoomScale];
     if (pinchGest.state == UIGestureRecognizerStateEnded || pinchGest.state == UIGestureRecognizerStateCancelled) {
         self.zoomScale = currentZoomScale;
     }
     
-    [self getValueWithCircle: self.circle];
+    CGFloat value = (self.adjustFocal.gh_height - [self.adjustFocal getCircleY] +10)/(self.adjustFocal.gh_height );
+    NSInteger o = value * 10;
+    if (o > 10) o = 10;
+    if (o < 0 ) o = 0;
+    [self.cameraModule adjustFocalWtihValue:o];
+//    [self getValueWithCircle: self.circle];
 }
 
 #pragma mark - 拖拽手势
@@ -146,9 +160,15 @@
     return _cameraModule;
 }
 
+- (GHAdjustFocal *)adjustFocal {
+    if (_adjustFocal == nil) {
+        _adjustFocal = [[GHAdjustFocal alloc]initWithFrame:CGRectMake(100, 100, 30, 500)];
+    }
+    return _adjustFocal;
+}
+
 
 -(BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldRecognizeSimultaneouslyWithGestureRecognizer:(UIGestureRecognizer *)otherGestureRecognizer{
-    
     return YES;
 }
 

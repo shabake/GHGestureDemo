@@ -16,3 +16,29 @@
 > `(CGPoint)translationInView:(nullable UIView *)view;` 获取当前位置  
 > `(void)setTranslation:(CGPoint)translation inView:(nullable UIView *)view;`设置当前位置 
 > `(void)setTranslation:(CGPoint)translation inView:(nullable UIView *)view;` 设置拖拽速度
+
+
+### 捏合手势 `UIPinchGestureRecognizer `
+
+>`scale` 缩放比例
+
+>`velocity` 拖拽速度 
+
+两种手势都可以在初始化的时候添加监听事件
+
+```
+UIPinchGestureRecognizer *pinchGest = [[UIPinchGestureRecognizer alloc]initWithTarget:self action:@selector(pinchView:)];
+
+UIPanGestureRecognizer *panGest = [[UIPanGestureRecognizer alloc]initWithTarget:self action:@selector(panView:)];
+
+```
+分别实现监听方法
+
+```
+- (void)pinchView:(UIPinchGestureRecognizer *)pinchGest{
+}
+
+- (void)panView:(UIPanGestureRecognizer *)panGest{
+}
+```
+
