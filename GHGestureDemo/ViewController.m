@@ -12,6 +12,8 @@
 #define kScreenWidth  [UIScreen mainScreen].bounds.size.width
 #define kScreenHeight [UIScreen mainScreen].bounds.size.height
 #define kAutoWithSize(r) r*kScreenWidth / 375.0
+#define ColorRGBA(r, g, b, a) ([UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:(a)])
+
 @interface ViewController ()
 
 @property (nonatomic , strong) UIView *backGround;
@@ -33,7 +35,8 @@
 
     [self.cameraModule start];
     UIView *backGround = [[UIView alloc]initWithFrame:CGRectMake(100, 100, 30, 500)];
-    backGround.backgroundColor = [UIColor redColor];
+    backGround.backgroundColor = ColorRGBA(0, 0, 0, 102.0/255);
+
     backGround.layer.masksToBounds = YES;
     backGround.layer.cornerRadius = 15;
     backGround.alpha = 0.3;
@@ -56,6 +59,8 @@
     self.circle = circle;
 
     UIPanGestureRecognizer *panGest = [[UIPanGestureRecognizer alloc]initWithTarget:self action:@selector(panView:)];
+    panGest.minimumNumberOfTouches = 1;
+
     [self.view addGestureRecognizer:panGest];
 
     UIView *test = [[UIView alloc]initWithFrame:CGRectMake(300, 100, 100, 100)];
@@ -75,6 +80,7 @@
     
 }
 
+#pragma mark - 捏合手势
 - (void)pinchView:(UIPinchGestureRecognizer *)pinchGest{
     
     CGFloat currentZoomScale = self.zoomScale + (pinchGest.scale - 1);
@@ -100,6 +106,7 @@
     [self getValueWithCircle: self.circle];
 }
 
+#pragma mark - 拖拽手势
 - (void)panView:(UIPanGestureRecognizer *)panGest{
     CGPoint trans = [panGest translationInView:panGest.view];
 
@@ -107,15 +114,13 @@
     center.y += trans.y;
     CGFloat value = (kSliderHeight - self.circle.gh_top +10)/(kSliderHeight);
 
-    NSInteger o = value * 10;
-    if (o > 10) o = 10;
-    if (o < 1 ) o = 1;
+
     self.zoomScale = value;
     self.test.transform = CGAffineTransformMakeScale(self.zoomScale,    self.zoomScale);
     self.value.text = [NSString stringWithFormat:@"%.2f",value];
     self.circle.center = center;
     [panGest setTranslation:CGPointZero inView:panGest.view];
-    [self.cameraModule adjustFocalWtihValue:o];
+    [self.cameraModule adjustFocalWtihValue:value * 10];
 }
 
 - (void)getValueWithCircle: (UIView *)circle {

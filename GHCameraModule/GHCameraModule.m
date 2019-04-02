@@ -16,18 +16,18 @@
 @end
 
 @interface GHCameraModule()<AVCaptureVideoDataOutputSampleBufferDelegate,AVCaptureMetadataOutputObjectsDelegate,AVCaptureMetadataOutputObjectsDelegate,UIImagePickerControllerDelegate,UINavigationControllerDelegate>
-/** 硬件设备*/
+/** 硬件设备 */
 @property (nonatomic , strong) AVCaptureDevice *device;
-//输入流
+/** 输入流 */
 @property (nonatomic , strong) AVCaptureDeviceInput *input;
-//协调输入输出流的数据
+/** 协调输入输出流的数据 */
 @property (nonatomic , strong) AVCaptureSession *session;
-
-//输出流
+/** 输出流 */
 @property (nonatomic , strong) AVCaptureStillImageOutput *stillImageOutput;  //用于捕捉静态图片
 @property (nonatomic , strong) AVCaptureVideoDataOutput *videoDataOutput;    //原始视频帧，用于获取实时图像以及视频录制
 @property (nonatomic , strong) AVCaptureMetadataOutput *metadataOutput;      //用于二维码识别以及人脸识别
 @property (nonatomic , strong) UIImagePickerController *imagePickerController;
+
 @property (nonatomic , copy) CameraModuleBlock cameraModuleBlock;
 @property (nonatomic , copy) CameraModuleCodeBlock cameraModuleCodeBlock;
 
@@ -43,14 +43,13 @@
 
 - (instancetype)creatCameraModuleWithCameraModuleBlock: (CameraModuleBlock)cameraModuleBlock
                                  cameraModuleCodeBlock: (CameraModuleCodeBlock)cameraModuleCodeBlock {
-    
+
     if (self == [super init]) {
         self.cameraModuleBlock = cameraModuleBlock;
         self.cameraModuleCodeBlock = cameraModuleCodeBlock;
     }
     return self;
 }
-
 
 - (void)chosePhoto {
     [[UIApplication sharedApplication].keyWindow.rootViewController presentViewController:self.imagePickerController animated:YES completion:^{
@@ -61,6 +60,7 @@
         [picker dismissViewControllerAnimated:YES completion:^{
     }];
 }
+
 #pragma mark - 选取相册回调
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
     weakself(self);
@@ -79,21 +79,20 @@
     [self stop];
     [self.session startRunning];
 }
+
 - (void)stop {
     [self.session stopRunning];
 }
+
 - (void)takePhoto {
-    
     [self screenshot];
 }
+
 - (void)adjustFocalWtihValue: (CGFloat)value {
     
     AVCaptureConnection * videoConnection = [self.stillImageOutput connectionWithMediaType:AVMediaTypeVideo];
-    if (value < 1) {
-        return;
-    }
     [self.previewLayer setAffineTransform:CGAffineTransformMakeScale(value, value)];
-    videoConnection.videoScaleAndCropFactor = value;
+    videoConnection.videoScaleAndCropFactor = 1 + value;
 }
 
 - (void)turnTorchOn:(BOOL)on{

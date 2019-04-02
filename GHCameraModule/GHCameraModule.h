@@ -54,8 +54,11 @@ typedef NS_ENUM (NSUInteger,GHCameraModuleType) {
 /** 选择相册 */
 - (void)chosePhoto ;
 
+/** 调整镜头焦距 */
 - (void)adjustFocalWtihValue: (CGFloat)value;
+
 @property (nonatomic , strong) AVCaptureVideoPreviewLayer *previewLayer;
+
 @property (nonatomic , weak) id <GHCameraModuleDelegate> delegate;
 
 @end
