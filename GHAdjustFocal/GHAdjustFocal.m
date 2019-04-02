@@ -46,7 +46,16 @@
     
     self.circle.gh_centery = circleCenterY;
     
-    [self layoutIfNeeded];
+    for (CAShapeLayer *layer in self.slider.layer.sublayers) {
+        [layer removeFromSuperlayer];
+    }
+    
+    CAShapeLayer *layer = [CAShapeLayer layer];
+    layer.frame = CGRectMake(0, 0, self.slider.gh_width, circleCenterY - 20);
+    
+    layer.backgroundColor = [UIColor redColor].CGColor;
+
+    [self.slider.layer addSublayer:layer];
 }
 
 #pragma mark - 初始化
@@ -107,6 +116,8 @@
     [self.backGround addSubview:self.circle];
     [self.backGround addSubview:self.add];
     [self.backGround addSubview:self.sub];
+    
+    
 }
 
 #pragma mark - get
@@ -133,7 +144,7 @@
 - (UIView *)circle {
     if (_circle == nil) {
         _circle = [[UIView alloc]init];
-        _circle.backgroundColor = [UIColor yellowColor];
+        _circle.backgroundColor = [UIColor whiteColor];
         _circle.layer.masksToBounds = YES;
         _circle.layer.cornerRadius = 5;
     }
