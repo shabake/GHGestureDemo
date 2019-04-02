@@ -34,6 +34,17 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    if (TARGET_IPHONE_SIMULATOR) {
+        UILabel *tip = [[UILabel alloc]initWithFrame:self.view.bounds];
+        tip.text = @"请用真机运行此demo";
+        tip.font = [UIFont systemFontOfSize:30];
+        tip.textAlignment = NSTextAlignmentCenter;
+        tip.textColor = [UIColor redColor];
+        [self.view addSubview:tip];
+        return;
+    }
+    
     self.zoomScale = 1;
     
     weakself(self);
@@ -73,11 +84,20 @@
 }
 
 - (void)enterFore{
-    self.zoomScale = 1;
+    
+    self.adjustFocal.circleCenterY = 20;
+
+    CGFloat totalHeight = [self.adjustFocal getSliderHeight]; /// 滑动总长度
+    
+    CGFloat scale = (totalHeight - [self.adjustFocal getCircleCenterY] + 20)/totalHeight;
+    
+    self.value.text = [NSString stringWithFormat:@"%.2f",scale];
+    self.test.transform = CGAffineTransformMakeScale(1, 1);
     
     weakself(self);
     [[GHPrivacyAuthTool share] checkPrivacyAuthWithType:GHPrivacyCamera isPushSetting:YES title:@"提示" message:@"请在设置中开启相机权限" withHandle:^(BOOL granted, GHAuthStatus status) {
         if (granted) {
+            weakSelf.zoomScale = 1;
             [weakSelf.cameraModule adjustFocalWtihValue:10];
             [weakSelf.cameraModule start];
         }
