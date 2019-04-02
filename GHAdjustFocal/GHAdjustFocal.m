@@ -8,6 +8,7 @@
 
 #import "GHAdjustFocal.h"
 #import "UIView+GHAdd.h"
+
 #define ColorRGBA(r, g, b, a) ([UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:(a)])
 
 @interface GHAdjustFocal()
@@ -127,6 +128,7 @@
 //    [self.cameraModule adjustFocalWtihValue:value * 10];
 }
 
+#pragma mark - 创建UI
 - (void)setupUI {
 
     self.backGround.frame = CGRectMake(0, 0, self.bounds.size.width, self.bounds.size.height);
@@ -147,10 +149,7 @@
     [self.backGround addSubview:self.sub];
 }
 
-- (void)layoutSubviews {
-    [super layoutSubviews];
-}
-
+#pragma mark - get
 - (UILabel *)sub {
     if (_sub == nil) {
         _sub = [[UILabel alloc]init];
@@ -198,7 +197,6 @@
         _backGround.layer.masksToBounds = YES;
         _backGround.layer.cornerRadius = 15;
         _backGround.alpha = 0.3;
-        
     }
     return _backGround;
 }
