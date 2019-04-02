@@ -221,4 +221,10 @@ typedef NS_ENUM(NSInteger, UIGestureRecognizerState) {
 //获取某一个触摸点的触摸位置
 - (CGPoint)locationOfTouch:(NSUInteger)touchIndex inView:(nullable UIView*)view; 
 ```
+
+
+### 在使用中如有任何问题欢迎骚扰我,如果对你有帮助请点帮我一个✨,小弟感激不尽:blush:
+
+### 邮箱 `45329453@qq.com `
+
 ---

@@ -105,6 +105,7 @@
 }
 
 #pragma mark - 捏合手势
+
 - (void)pinchView:(UIPinchGestureRecognizer *)pinchGest{
     
     CGFloat currentScale = self.zoomScale + pinchGest.scale - 1.00f;
