@@ -190,4 +190,4 @@ typedef NS_ENUM(NSInteger, UIGestureRecognizerState) {
 //获取某一个触摸点的触摸位置
 - (CGPoint)locationOfTouch:(NSUInteger)touchIndex inView:(nullable UIView*)view; 
 ```
---
+---
