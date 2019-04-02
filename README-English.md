@@ -5,7 +5,7 @@
 
 ## GHGestureDemo
 
-Chinese | English
+[Chinese](https://github.com/shabake/GHGestureDemo) | [English](https://github.com/shabake/GHGestureDemo/blob/master/README-English.md)
 
 The pinch gesture and the drag gesture coexist to achieve the adjustment of the focal length<br/>
 

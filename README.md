@@ -5,7 +5,7 @@
 
 ## GHGestureDemo
 
-中文 | English
+[中文](https://github.com/shabake/GHGestureDemo) | [English](https://github.com/shabake/GHGestureDemo/blob/master/README-English.md)
 
 捏合手势和拖拽手势并存,实现调整焦距<br/>
 
