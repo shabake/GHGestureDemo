@@ -5,6 +5,8 @@
 
 ## GHGestureDemo
 
+中文 | English
+
 捏合手势和拖拽手势并存,实现调整焦距<br/>
 
 
