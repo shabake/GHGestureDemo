@@ -23,7 +23,7 @@
 @property (nonatomic , strong) UIView *circle;
 @property (nonatomic , strong) UIView *slider;
 @property (nonatomic , strong) GHCameraModule *cameraModule;
-@property (nonatomic , strong) UIView *test;
+@property (nonatomic , strong) UIImageView *test;
 @property (nonatomic , assign) CGFloat zoomScale;
 @property (nonatomic , strong) GHAdjustFocal *adjustFocal;
 
@@ -60,8 +60,8 @@
     panGest.minimumNumberOfTouches = 1;
 
     [self.view addGestureRecognizer:panGest];
-    UIView *test = [[UIView alloc]initWithFrame:CGRectMake(300, 100, 100, 100)];
-    test.backgroundColor = [UIColor redColor];
+    UIImageView *test = [[UIImageView alloc]initWithFrame:CGRectMake(300, 100, 100, 100)];
+    test.image = [UIImage imageNamed:@"tian"];
     [self.view addSubview:test];
     self.test = test;
     self.test.transform = CGAffineTransformMakeScale(self.zoomScale, self.zoomScale);
@@ -86,7 +86,7 @@
     
     CGFloat scale = (totalHeight - [self.adjustFocal getCircleCenterY] + 20)/totalHeight;
     
-    self.navigationItem.title = [NSString stringWithFormat:@"%.2f",scale];
+    self.navigationItem.title = [NSString stringWithFormat:@"比例%.2f",scale];
     self.test.transform = CGAffineTransformMakeScale(1, 1);
     
     weakself(self);
