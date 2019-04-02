@@ -21,7 +21,6 @@
 
 @property (nonatomic , strong) UIView *backGround;
 @property (nonatomic , strong) UIView *circle;
-@property (nonatomic , strong) UILabel *value;
 @property (nonatomic , strong) UIView *slider;
 @property (nonatomic , strong) GHCameraModule *cameraModule;
 @property (nonatomic , strong) UIView *test;
@@ -70,15 +69,11 @@
     UIPinchGestureRecognizer *pinchGest = [[UIPinchGestureRecognizer alloc]initWithTarget:self action:@selector(pinchView:)];
     [self.view addGestureRecognizer:pinchGest];
 
-    UILabel *value = [[UILabel alloc]initWithFrame:CGRectMake(200, 100, 400, 30)];
-    value.textColor = [UIColor blueColor];
     CGFloat totalHeight = [self.adjustFocal getSliderHeight]; /// 滑动总长度
 
     CGFloat scale = (totalHeight - [self.adjustFocal getCircleCenterY] + 20)/totalHeight;
 
-    value.text = [NSString stringWithFormat:@"%.2f",scale];
-    [self.view addSubview:value];
-    self.value = value;
+    self.navigationItem.title = [NSString stringWithFormat:@"比例%.2f",scale];
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(enterFore) name:UIApplicationWillEnterForegroundNotification object:[UIApplication sharedApplication]];
 }
@@ -91,7 +86,7 @@
     
     CGFloat scale = (totalHeight - [self.adjustFocal getCircleCenterY] + 20)/totalHeight;
     
-    self.value.text = [NSString stringWithFormat:@"%.2f",scale];
+    self.navigationItem.title = [NSString stringWithFormat:@"%.2f",scale];
     self.test.transform = CGAffineTransformMakeScale(1, 1);
     
     weakself(self);
@@ -134,7 +129,7 @@
     
     self.test.transform = CGAffineTransformMakeScale(currentScale, currentScale);
     
-    self.value.text = [NSString stringWithFormat:@"比例%.2f",currentScale];
+   self.navigationItem.title = [NSString stringWithFormat:@"比例%.2f",currentScale];
 
     [self.cameraModule adjustFocalWtihValue:currentScale * 10];
     
@@ -168,18 +163,17 @@
     CGFloat scale = (totalHeight - circleCenterY + 20)/totalHeight;
     self.zoomScale = scale;
     self.test.transform = CGAffineTransformMakeScale(scale, scale);
-    self.value.text = [NSString stringWithFormat:@"比例%.2f",scale];
+    self.navigationItem.title = [NSString stringWithFormat:@"比例%.2f",scale];
     [panGest setTranslation:CGPointZero inView:panGest.view];
     [self.cameraModule adjustFocalWtihValue:scale * 10];
 }
 
-#pragma mark - 懒加载
-- (GHAdjustFocal *)adjustFocal {
-    if (_adjustFocal == nil) {
-        _adjustFocal = [[GHAdjustFocal alloc]initWithFrame:CGRectMake(100, 100, 20,  200)];
-    }
-    return _adjustFocal;
+- (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldRecognizeSimultaneouslyWithGestureRecognizer:(UIGestureRecognizer *)otherGestureRecognizer{
+    
+    return YES;
 }
+
+#pragma mark - 懒加载
 
 - (GHCameraModule *)cameraModule {
     if (_cameraModule == nil) {
@@ -199,9 +193,11 @@
     [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
-- (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldRecognizeSimultaneouslyWithGestureRecognizer:(UIGestureRecognizer *)otherGestureRecognizer{
-    
-    return YES;
+- (GHAdjustFocal *)adjustFocal {
+    if (_adjustFocal == nil) {
+        _adjustFocal = [[GHAdjustFocal alloc]initWithFrame:CGRectMake(30, 88, 20,  200)];
+    }
+    return _adjustFocal;
 }
 
 @end

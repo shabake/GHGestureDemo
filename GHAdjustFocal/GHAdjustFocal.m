@@ -52,9 +52,7 @@
     
     CAShapeLayer *layer = [CAShapeLayer layer];
     layer.frame = CGRectMake(0, 0, self.slider.gh_width, circleCenterY - 20);
-    
     layer.backgroundColor = [UIColor redColor].CGColor;
-
     [self.slider.layer addSublayer:layer];
 }
 
@@ -116,8 +114,6 @@
     [self.backGround addSubview:self.circle];
     [self.backGround addSubview:self.add];
     [self.backGround addSubview:self.sub];
-    
-    
 }
 
 #pragma mark - get
