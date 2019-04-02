@@ -27,12 +27,9 @@
 @property (nonatomic , assign) CGFloat zoomScale;
 @property (nonatomic , strong) GHAdjustFocal *adjustFocal;
 
-#define kSliderHeight 460
-
 @end
 
 @implementation ViewController
-
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -40,46 +37,22 @@
 
     [self.cameraModule start];
     [self.view addSubview:self.adjustFocal];
-//    UIView *backGround = [[UIView alloc]initWithFrame:CGRectMake(100, 100, 30, 500)];
-//    backGround.backgroundColor = ColorRGBA(0, 0, 0, 102.0/255);
-//
-//    backGround.layer.masksToBounds = YES;
-//    backGround.layer.cornerRadius = 15;
-//    backGround.alpha = 0.3;
-//    [self.view addSubview:backGround];
-//    
-//    self.backGround = backGround;
-//    
-//    UIView *slider = [[UIView alloc]initWithFrame:CGRectMake(10, 20, 10, 460 -46)];
-//    slider.backgroundColor = [UIColor lightGrayColor];
-//    slider.layer.masksToBounds = YES;
-//    slider.layer.cornerRadius = 5;
-//    [backGround addSubview:slider];
-//    self.slider = slider;
-//
-//    UIView *circle = [[UIView alloc]initWithFrame:CGRectMake(5,20, 20, 20)];
-//    circle.backgroundColor = [UIColor yellowColor];
-//    circle.layer.masksToBounds = YES;
-//    circle.layer.cornerRadius = 10;
-//    [backGround addSubview:circle];
-//    self.circle = circle;
-//
+
     UIPanGestureRecognizer *panGest = [[UIPanGestureRecognizer alloc]initWithTarget:self action:@selector(panView:)];
     panGest.minimumNumberOfTouches = 1;
 
     [self.view addGestureRecognizer:panGest];
-//
     UIView *test = [[UIView alloc]initWithFrame:CGRectMake(300, 100, 100, 100)];
     test.backgroundColor = [UIColor redColor];
     [self.view addSubview:test];
     self.test = test;
     self.test.transform = CGAffineTransformMakeScale(self.zoomScale, self.zoomScale);
-//
+
     UIPinchGestureRecognizer *pinchGest = [[UIPinchGestureRecognizer alloc]initWithTarget:self action:@selector(pinchView:)];
     [self.view addGestureRecognizer:pinchGest];
-//
-    UILabel *value = [[UILabel alloc]initWithFrame:CGRectMake(200, 100, 100, 30)];
-    value.textColor = [UIColor redColor];
+
+    UILabel *value = [[UILabel alloc]initWithFrame:CGRectMake(200, 100, 400, 30)];
+    value.textColor = [UIColor blueColor];
     CGFloat totalHeight = [self.adjustFocal getSliderHeight]; /// 滑动总长度
 
     CGFloat scale = (totalHeight - [self.adjustFocal getCircleCenterY] + 20)/totalHeight;
@@ -92,20 +65,20 @@
 #pragma mark - 捏合手势
 - (void)pinchView:(UIPinchGestureRecognizer *)pinchGest{
     
-    CGFloat currentZoomScale = self.zoomScale + (pinchGest.scale - 1);
+    CGFloat currentScale = self.zoomScale + pinchGest.scale - 1.00f;
     
-    if (currentZoomScale > 1) {
-        currentZoomScale = 1;
-    }
-    if (currentZoomScale < 0) {
-        currentZoomScale = 0;
+    if (currentScale > 1) {
+        currentScale = 1;
     }
     
-    /// 范围是1 - 5
-    CGFloat totalHeight = [self.adjustFocal getSliderHeight]; /// 滑动总长度
+    if (currentScale < 0) {
+        currentScale = 0;
+    }
+    
+    CGFloat totalHeight = [self.adjustFocal getSliderHeight] + 20; /// 滑动总长度
 
-    CGFloat height = (1 -currentZoomScale) * totalHeight;
-    
+    CGFloat height = (1 - currentScale) * totalHeight;
+
     if (height <= 20) {
         height = 20; /// 处理顶部
     }
@@ -114,15 +87,19 @@
         height = self.adjustFocal.gh_height - 40 + 20;
     }
     
-    self.adjustFocal.circleCenterY = height ;
+    self.adjustFocal.circleCenterY = height + 10;
     
-    self.test.transform = CGAffineTransformMakeScale(currentZoomScale, currentZoomScale);
-    self.value.text = [NSString stringWithFormat:@"%.2f",currentZoomScale];
-    if (pinchGest.state == UIGestureRecognizerStateEnded || pinchGest.state == UIGestureRecognizerStateCancelled) {
-        self.zoomScale = currentZoomScale;
+    self.test.transform = CGAffineTransformMakeScale(currentScale, currentScale);
+    
+    self.value.text = [NSString stringWithFormat:@"比例%.2f,circleCenterY%2f",currentScale,height];
+
+    [self.cameraModule adjustFocalWtihValue:currentScale * 10];
+    
+    if (pinchGest.state == UIGestureRecognizerStateEnded
+        ||
+        pinchGest.state == UIGestureRecognizerStateCancelled) {
+        self.zoomScale = currentScale;
     }
-    
-    [self getValueWithCircle: self.circle];
 }
 
 #pragma mark - 拖拽手势
@@ -146,26 +123,17 @@
     self.adjustFocal.circleCenterY = circleCenterY;
 
     CGFloat scale = (totalHeight - circleCenterY + 20)/totalHeight;
-    
     self.zoomScale = scale;
     self.test.transform = CGAffineTransformMakeScale(scale, scale);
-    self.value.text = [NSString stringWithFormat:@"%.2f",scale];
+    self.value.text = [NSString stringWithFormat:@"比例%.2f,circleCenterY%2f",scale,circleCenterY];
     [panGest setTranslation:CGPointZero inView:panGest.view];
     [self.cameraModule adjustFocalWtihValue:scale * 10];
-}
-
-- (void)getValueWithCircle: (UIView *)circle {
-    CGFloat value = (kSliderHeight - circle.gh_top +10)/(kSliderHeight);
-    NSInteger o = value * 10;
-    if (o > 10) o = 10;
-    if (o < 0 ) o = 0;
-    [self.cameraModule adjustFocalWtihValue:o];
 }
 
 #pragma mark - 懒加载
 - (GHAdjustFocal *)adjustFocal {
     if (_adjustFocal == nil) {
-        _adjustFocal = [[GHAdjustFocal alloc]initWithFrame:CGRectMake(100, 100, 30,  200)];
+        _adjustFocal = [[GHAdjustFocal alloc]initWithFrame:CGRectMake(100, 100, 20,  200)];
     }
     return _adjustFocal;
 }

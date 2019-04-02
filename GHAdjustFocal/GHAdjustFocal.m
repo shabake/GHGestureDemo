@@ -43,7 +43,10 @@
 @implementation GHAdjustFocal
 
 - (void)setCircleCenterY:(CGFloat)circleCenterY {
+    
     self.circle.gh_centery = circleCenterY;
+    
+    [self layoutIfNeeded];
 }
 
 #pragma mark - 初始化
@@ -70,20 +73,21 @@
     
     CGFloat sliderY = 20;
     CGFloat sliderH = totalHeight - 40;
+    
     CGFloat backGroundY = 0;
     CGFloat backGroundW = totalWidth;
     CGFloat backGroundX = 0;
     CGFloat backGroundH = totalHeight;
     self.backGround.frame = CGRectMake(backGroundX, backGroundY, backGroundW, backGroundH);
 
-    CGFloat sliderW = 10;
+    CGFloat sliderW = 3;
     CGFloat sliderX = (totalWidth - sliderW) *.5;
     self.slider.frame = CGRectMake(sliderX, sliderY, sliderW, sliderH);
     
-    CGFloat circleY = sliderY * 0.5; /// 初始化的时候圆圈的circleY = 20 centerY = 10;
-    CGFloat circleW = 20;
+    CGFloat circleW = 10;
     CGFloat circleH = circleW;
     CGFloat circleX = (totalWidth - circleW) *.5;
+    CGFloat circleY = 15; /// 初始化的时候圆圈的circleY = 20 centerY = 10;
     self.circle.frame = CGRectMake(circleX,circleY, circleW, circleH);
 
     CGFloat addY = 5;
@@ -131,7 +135,7 @@
         _circle = [[UIView alloc]init];
         _circle.backgroundColor = [UIColor yellowColor];
         _circle.layer.masksToBounds = YES;
-        _circle.layer.cornerRadius = 10;
+        _circle.layer.cornerRadius = 5;
     }
     return _circle;
 }
@@ -151,7 +155,7 @@
         _backGround = [[UIView alloc]init];
         _backGround.backgroundColor = ColorRGBA(0, 0, 0, 102.0/255);
         _backGround.layer.masksToBounds = YES;
-        _backGround.layer.cornerRadius = 15;
+        _backGround.layer.cornerRadius = 10;
         _backGround.alpha = 0.3;
     }
     return _backGround;
@@ -161,12 +165,8 @@
     return self.circle.gh_centery;
 }
 
-- (CGFloat)getCircleY {
-    return self.circle.gh_top;
-}
-
 - (CGFloat)getSliderHeight {
-    return self.bounds.size.height;
+    return self.bounds.size.height - 40;
 }
 
 @end

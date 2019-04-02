@@ -91,7 +91,8 @@
 - (void)adjustFocalWtihValue: (CGFloat)value {
     
     AVCaptureConnection * videoConnection = [self.stillImageOutput connectionWithMediaType:AVMediaTypeVideo];
-    [self.previewLayer setAffineTransform:CGAffineTransformMakeScale(value, value)];
+
+    [self.previewLayer setAffineTransform:CGAffineTransformMakeScale(1+value, 1+value)];
     videoConnection.videoScaleAndCropFactor = 1 + value;
 }
 
