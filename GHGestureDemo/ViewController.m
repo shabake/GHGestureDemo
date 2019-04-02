@@ -60,9 +60,12 @@
     panGest.minimumNumberOfTouches = 1;
 
     [self.view addGestureRecognizer:panGest];
-    UIImageView *test = [[UIImageView alloc]initWithFrame:CGRectMake(300, 100, 100, 100)];
+    UIImageView *test = [[UIImageView alloc]initWithFrame:CGRectMake(self.view.gh_centerx, 88, 200, 200)];
     test.image = [UIImage imageNamed:@"tian"];
+    test.layer.masksToBounds = YES;
+    test.layer.cornerRadius = 10;
     [self.view addSubview:test];
+    
     self.test = test;
     self.test.transform = CGAffineTransformMakeScale(self.zoomScale, self.zoomScale);
 
