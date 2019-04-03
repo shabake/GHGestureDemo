@@ -35,6 +35,10 @@
 
 @property (nonatomic , strong) GHAdjustFocal *adjustFocal;
 
+@property (nonatomic , strong) NSTimer *timer;
+
+@property (nonatomic , assign) NSInteger count;
+
 @end
 
 @implementation GHCameraModuleView
@@ -48,6 +52,12 @@
 }
 - (CGFloat)getSliderHeight {
     return [self.adjustFocal getSliderHeight];
+}
+
+- (void)actionAdjustFocalWith: (BOOL)hidden {
+    [UIView animateWithDuration:0.25 animations:^{
+        self.adjustFocal.alpha = 1;
+    }];
 }
 
 #pragma mark - private
@@ -71,7 +81,29 @@
 }
 
 - (void)configuration {
+    self.count = 0;
     self.backgroundColor = [UIColor clearColor];
+    
+    self.timer = [NSTimer timerWithTimeInterval:1.0 target:self selector:@selector(timerMethod) userInfo:nil repeats:NO];
+    [[NSRunLoop currentRunLoop] addTimer:self.timer forMode:NSRunLoopCommonModes];
+}
+
+- (void)addTimer {
+    self.timer = [NSTimer timerWithTimeInterval:1.0 target:self selector:@selector(timerMethod) userInfo:nil repeats:YES];
+    [[NSRunLoop currentRunLoop] addTimer:self.timer forMode:NSRunLoopCommonModes];
+}
+
+- (void)timerMethod {
+    self.count++;
+   
+    if (self.count == 3) {
+        [UIView animateWithDuration:0.25 animations:^{
+            self.adjustFocal.alpha = 0;
+        }];
+        [self.timer invalidate];
+        self.timer = nil;
+        self.count = 0;
+    }
 }
 
 - (void)setupUI {
@@ -123,6 +155,7 @@
 - (GHAdjustFocal *)adjustFocal {
     if (_adjustFocal == nil) {
         _adjustFocal = [[GHAdjustFocal alloc]initWithFrame:CGRectMake(self.scanView.x +self.scanView.width - 30-1, self.scanView.y, 15, 200)];
+        _adjustFocal.alpha = 0;
     }
     return _adjustFocal;
 }

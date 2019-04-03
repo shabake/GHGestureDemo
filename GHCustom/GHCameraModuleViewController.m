@@ -98,6 +98,8 @@
     UIPinchGestureRecognizer *pinchGest = [[UIPinchGestureRecognizer alloc]initWithTarget:self action:@selector(pinchView:)];
     [self.view addGestureRecognizer:pinchGest];
 
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(tap:)];
+    [self.view addGestureRecognizer:tap];
     CGFloat totalHeight = [self.cameraModuleView getSliderHeight]; /// 滑动总长度
 
     CGFloat scale = (totalHeight - [self.cameraModuleView getCircleCenterY])/totalHeight;
@@ -106,6 +108,10 @@
 
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(enterFore) name:UIApplicationWillEnterForegroundNotification object:[UIApplication sharedApplication]];
     
+}
+
+- (void)tap: (UITapGestureRecognizer *)gesture {
+    [self.cameraModuleView actionAdjustFocalWith:YES];
 }
 
 - (void)enterFore{
@@ -130,6 +136,7 @@
 
 #pragma mark - 捏合手势
 - (void)pinchView:(UIPinchGestureRecognizer *)pinchGest{
+    [self.cameraModuleView actionAdjustFocalWith:YES];
 
     CGFloat currentScale = self.scale + pinchGest.scale - 1.00f;
 
@@ -157,12 +164,15 @@
         ||
         pinchGest.state == UIGestureRecognizerStateCancelled) {
         self.scale = currentScale;
+        [self.cameraModuleView addTimer];
+
     }
 }
 
 #pragma mark - 拖拽手势
 - (void)panView:(UIPanGestureRecognizer *)panGest{
 
+    [self.cameraModuleView actionAdjustFocalWith:YES];
     CGPoint trans = [panGest translationInView:panGest.view];
 
     CGFloat circleCenterY = [self.cameraModuleView getCircleCenterY]; /// 获取到circleY
@@ -179,6 +189,12 @@
     self.navigationItem.title = [NSString stringWithFormat:@"比例%.2f yyyy%2.f",scale,[self.cameraModuleView getCircleCenterY]];
     [panGest setTranslation:CGPointZero inView:panGest.view];
     [self.cameraModule adjustFocalWtihValue:scale * 10];
+    
+    if (panGest.state == UIGestureRecognizerStateEnded
+        ||
+        panGest.state == UIGestureRecognizerStateCancelled) {
+        [self.cameraModuleView addTimer];
+    }
 }
 
 - (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldRecognizeSimultaneouslyWithGestureRecognizer:(UIGestureRecognizer *)otherGestureRecognizer{

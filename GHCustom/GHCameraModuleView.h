@@ -37,6 +37,11 @@ NS_ASSUME_NONNULL_BEGIN
 - (CGFloat)getSliderHeight;
 
 - (CGFloat)actionCircleCenterY: (CGFloat)circleCenterY;
+
+- (void)actionAdjustFocalWith: (BOOL)hidden;
+
+- (void)addTimer;
+
 @end
 
 NS_ASSUME_NONNULL_END
