@@ -46,10 +46,12 @@
 
 @implementation GHAdjustFocal
 
+
 #pragma mark - set
 - (void)setCircleCenterY:(CGFloat)circleCenterY {
     
     _circleCenterY = circleCenterY;
+    
     self.circle.gh_centery = circleCenterY;
     
     for (CAShapeLayer *layer in self.slider.layer.sublayers) {
@@ -60,6 +62,12 @@
     layer.frame = CGRectMake(0, 0, self.slider.gh_width, circleCenterY);
     layer.backgroundColor = [UIColor lightGrayColor].CGColor;
     [self.slider.layer addSublayer:layer];
+    
+    CGFloat scale = ([self getSliderHeight] - circleCenterY)/[self getSliderHeight] ;/// 计算比例
+
+    if (self.scaleBlock) {
+        self.scaleBlock(scale);
+    }
 }
 
 #pragma mark - 初始化
@@ -134,6 +142,18 @@
     [self.backGround addSubview:self.add];
     [self.backGround addSubview:self.sub];
     
+}
+
+#pragma mark - private
+- (CGFloat)actionCircleCenterY: (CGFloat)circleCenterY {
+    if (circleCenterY <= 0) {
+        circleCenterY = 0;
+    }
+    
+    if (circleCenterY >= [self getSliderHeight]) {
+        circleCenterY = [self getSliderHeight];
+    }
+    return circleCenterY;
 }
 
 #pragma mark - get

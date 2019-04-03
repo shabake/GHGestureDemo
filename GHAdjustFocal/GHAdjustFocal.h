@@ -10,13 +10,24 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+typedef void(^GHAdjustFocalScaleBlock)(CGFloat scale);
 /**
  * 调整焦距组件
  */
 @interface GHAdjustFocal : UIView
 
+/**
+ * 设置circleCenterY
+ */
 @property (nonatomic , assign) CGFloat circleCenterY;
 
+@property (nonatomic , copy) GHAdjustFocalScaleBlock scaleBlock;
+
+/**
+ 获取到circleCenterY
+
+ @return circleCenterY
+ */
 - (CGFloat)getCircleCenterY;
 
 /**
@@ -25,6 +36,14 @@ NS_ASSUME_NONNULL_BEGIN
  @return 返回滑杆的高度
  */
 - (CGFloat)getSliderHeight;
+
+/**
+ 处理circleCenterY 两端越界
+
+ @param circleCenterY circleCenterY
+ @return circleCenterY
+ */
+- (CGFloat)actionCircleCenterY: (CGFloat)circleCenterY;
 
 @end
 

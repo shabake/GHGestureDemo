@@ -42,7 +42,6 @@
     }
     
     self.scale = 0;
-    
     weakself(self);
     [[GHPrivacyAuthTool share] checkPrivacyAuthWithType:GHPrivacyCamera isPushSetting:YES title:@"提示" message:@"请在设置中开启相机权限" withHandle:^(BOOL granted, GHAuthStatus status) {
         if (granted) {
@@ -116,14 +115,8 @@
     CGFloat totalHeight = [self.adjustFocal getSliderHeight]; /// 滑动总长度
     
     CGFloat circleCenterY = (1 - currentScale) * totalHeight;
-    
-    if (circleCenterY <= 0) {
-        circleCenterY = 0; /// 处理顶部
-    }
-    
-    if (circleCenterY >= self.adjustFocal.gh_height - 40) {
-        circleCenterY = self.adjustFocal.gh_height - 40;
-    }
+ 
+    circleCenterY = [self.adjustFocal actionCircleCenterY:circleCenterY];
     
     self.adjustFocal.circleCenterY = circleCenterY;
     
@@ -151,14 +144,8 @@
     
     CGFloat totalHeight = [self.adjustFocal getSliderHeight]; /// 获取滑动总长度
     
-    if (circleCenterY <= 0) {
-        circleCenterY = 0; /// 处理顶部越界
-    }
-    
-    if (circleCenterY >= self.adjustFocal.gh_height - 40) {
-        circleCenterY = self.adjustFocal.gh_height - 40; /// 处理底部越界
-    }
-    
+    circleCenterY = [self.adjustFocal actionCircleCenterY:circleCenterY];
+
     self.adjustFocal.circleCenterY = circleCenterY; /// 设置circleCenterY
     CGFloat scale = (totalHeight - circleCenterY)/totalHeight;/// 计算比例
     self.scale = scale;
