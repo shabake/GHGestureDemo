@@ -46,7 +46,6 @@
 
 @implementation GHAdjustFocal
 
-
 #pragma mark - set
 - (void)setCircleCenterY:(CGFloat)circleCenterY {
     
@@ -68,6 +67,21 @@
     if (self.scaleBlock) {
         self.scaleBlock(scale);
     }
+}
+
+- (void)setCircleLocation:(GHAdjustFocalCircleLocation)circleLocation {
+    _circleLocation = circleLocation;
+    self.circle.gh_top = self.circleLocation == GHAdjustFocalCircleLocationBottom ? self.slider.gh_height -self.circle.gh_height * 0.5 :-self.circle.gh_height * 0.5;
+}
+
+#pragma mark - 自定义初始化
+- (instancetype)initWithFrame:(CGRect)frame circleLocation: (GHAdjustFocalCircleLocation)circleLocation {
+    if (self == [super initWithFrame:frame]) {
+        [self setupUI];
+        [self configuration];
+        self.circleLocation = circleLocation;
+    }
+    return self;
 }
 
 #pragma mark - 初始化
@@ -120,7 +134,7 @@
     CGFloat circleW = 10;
     CGFloat circleH = circleW;
     CGFloat circleX = (totalWidth - circleW) *.5;
-    CGFloat circleY = sliderH -circleH * 0.5;
+    CGFloat circleY = self.circleLocation == GHAdjustFocalCircleLocationBottom ? sliderH -circleH * 0.5 :-circleH * 0.5;
     self.circle.frame = CGRectMake(circleX,circleY, circleW, circleH);
     
     CGFloat addY = 5;

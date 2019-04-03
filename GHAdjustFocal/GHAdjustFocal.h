@@ -10,6 +10,16 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+/**
+ * 圆圈位置枚举
+ */
+typedef NS_ENUM (NSUInteger,GHAdjustFocalCircleLocation) {
+    /// 默认最底部
+    GHAdjustFocalCircleLocationBottom = 0,
+    /// 顶部
+    GHAdjustFocalCircleLocationTop,
+};
+
 typedef void(^GHAdjustFocalScaleBlock)(CGFloat scale);
 /**
  * 调整焦距组件
@@ -17,10 +27,18 @@ typedef void(^GHAdjustFocalScaleBlock)(CGFloat scale);
 @interface GHAdjustFocal : UIView
 
 /**
- * 设置circleCenterY
+ * 圆圈的位置的枚举
+ */
+@property (nonatomic , assign) GHAdjustFocalCircleLocation circleLocation;
+
+/**
+ * 设置circleCenterY 范围 [0 - [self getSliderHeight]]
  */
 @property (nonatomic , assign) CGFloat circleCenterY;
 
+/**
+ * 返回比例block
+ */
 @property (nonatomic , copy) GHAdjustFocalScaleBlock scaleBlock;
 
 /**
@@ -44,6 +62,15 @@ typedef void(^GHAdjustFocalScaleBlock)(CGFloat scale);
  @return circleCenterY
  */
 - (CGFloat)actionCircleCenterY: (CGFloat)circleCenterY;
+
+/**
+ 初始化方法
+
+ @param frame frame
+ @param circleLocation GHAdjustFocalCircleLocation
+ @return GHAdjustFocal
+ */
+- (instancetype)initWithFrame:(CGRect)frame circleLocation: (GHAdjustFocalCircleLocation)circleLocation;
 
 @end
 

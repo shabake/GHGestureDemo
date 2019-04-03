@@ -183,6 +183,7 @@
 - (GHAdjustFocal *)adjustFocal {
     if (_adjustFocal == nil) {
         _adjustFocal = [[GHAdjustFocal alloc]initWithFrame:CGRectMake(30, 88, 20,  200)];
+        _adjustFocal.circleLocation = 1;
     }
     return _adjustFocal;
 }
