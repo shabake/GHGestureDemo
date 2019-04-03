@@ -46,14 +46,27 @@
 
 @implementation GHAdjustFocal
 
+#pragma mark - set
 - (void)setCircleCenterY:(CGFloat)circleCenterY {
+    
+    _circleCenterY = circleCenterY;
     self.circle.gh_centery = circleCenterY;
+    
+    for (CAShapeLayer *layer in self.slider.layer.sublayers) {
+        [layer removeFromSuperlayer];
+    }
+    
+    CAShapeLayer *layer = [CAShapeLayer layer];
+    layer.frame = CGRectMake(0, 0, self.slider.gh_width, circleCenterY);
+    layer.backgroundColor = [UIColor lightGrayColor].CGColor;
+    [self.slider.layer addSublayer:layer];
 }
 
 #pragma mark - 初始化
 - (instancetype)init {
     if (self == [super init]) {
         [self setupUI];
+        [self configuration];
     }
     return self;
 }
@@ -62,8 +75,16 @@
 - (instancetype)initWithFrame:(CGRect)frame {
     if (self == [super initWithFrame:frame]) {
         [self setupUI];
+        [self configuration];
     }
     return self;
+}
+
+- (void)configuration {
+    CAShapeLayer *layer = [CAShapeLayer layer];
+    layer.frame = CGRectMake(0, 0, self.slider.gh_width, self.slider.gh_height);
+    layer.backgroundColor = [UIColor lightGrayColor].CGColor;
+    [self.slider.layer addSublayer:layer];
 }
 
 #pragma mark - 创建UI
@@ -91,7 +112,7 @@
     CGFloat circleW = 10;
     CGFloat circleH = circleW;
     CGFloat circleX = (totalWidth - circleW) *.5;
-    CGFloat circleY = -5;
+    CGFloat circleY = sliderH -circleH * 0.5;
     self.circle.frame = CGRectMake(circleX,circleY, circleW, circleH);
     
     CGFloat addY = 5;
@@ -108,11 +129,11 @@
     
     [self addSubview:self.backGround];
     [self.backGround addSubview:self.inBackGround];
-    
     [self.inBackGround addSubview:self.slider];
     [self.inBackGround addSubview:self.circle];
     [self.backGround addSubview:self.add];
     [self.backGround addSubview:self.sub];
+    
 }
 
 #pragma mark - get
@@ -149,7 +170,7 @@
 - (UIView *)slider {
     if (_slider == nil) {
         _slider = [[UIView alloc]init];
-        _slider.backgroundColor = [UIColor lightGrayColor];
+        _slider.backgroundColor = [UIColor whiteColor];
         _slider.layer.masksToBounds = YES;
         _slider.layer.cornerRadius = 5;
     }

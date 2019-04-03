@@ -19,12 +19,9 @@
 
 @interface ViewController ()
 
-@property (nonatomic , strong) UIView *backGround;
-@property (nonatomic , strong) UIView *circle;
-@property (nonatomic , strong) UIView *slider;
 @property (nonatomic , strong) GHCameraModule *cameraModule;
 @property (nonatomic , strong) UIImageView *test;
-@property (nonatomic , assign) CGFloat zoomScale;
+@property (nonatomic , assign) CGFloat scale;
 @property (nonatomic , strong) GHAdjustFocal *adjustFocal;
 
 @end
@@ -44,12 +41,12 @@
         return;
     }
     
-    self.zoomScale = 1;
+    self.scale = 0;
     
     weakself(self);
     [[GHPrivacyAuthTool share] checkPrivacyAuthWithType:GHPrivacyCamera isPushSetting:YES title:@"提示" message:@"请在设置中开启相机权限" withHandle:^(BOOL granted, GHAuthStatus status) {
         if (granted) {
-            [weakSelf.cameraModule adjustFocalWtihValue:10];
+            [weakSelf.cameraModule adjustFocalWtihValue:1];
             [weakSelf.cameraModule start];
         }
     }];
@@ -67,7 +64,7 @@
     [self.view addSubview:test];
     
     self.test = test;
-    self.test.transform = CGAffineTransformMakeScale(self.zoomScale, self.zoomScale);
+    self.test.transform = CGAffineTransformMakeScale(self.scale, self.scale);
     
     UIPinchGestureRecognizer *pinchGest = [[UIPinchGestureRecognizer alloc]initWithTarget:self action:@selector(pinchView:)];
     [self.view addGestureRecognizer:pinchGest];
@@ -83,20 +80,20 @@
 
 - (void)enterFore{
     
-    self.adjustFocal.circleCenterY = 20;
+    self.adjustFocal.circleCenterY = [self.adjustFocal getSliderHeight];
     
     CGFloat totalHeight = [self.adjustFocal getSliderHeight]; /// 滑动总长度
     
-    CGFloat scale = (totalHeight - [self.adjustFocal getCircleCenterY] + 20)/totalHeight;
+    CGFloat scale = (totalHeight - [self.adjustFocal getCircleCenterY])/totalHeight;
     
     self.navigationItem.title = [NSString stringWithFormat:@"比例%.2f",scale];
-    self.test.transform = CGAffineTransformMakeScale(1, 1);
+    self.test.transform = CGAffineTransformMakeScale(scale, scale);
     
     weakself(self);
     [[GHPrivacyAuthTool share] checkPrivacyAuthWithType:GHPrivacyCamera isPushSetting:YES title:@"提示" message:@"请在设置中开启相机权限" withHandle:^(BOOL granted, GHAuthStatus status) {
         if (granted) {
-            weakSelf.zoomScale = 1;
-            [weakSelf.cameraModule adjustFocalWtihValue:10];
+            weakSelf.scale = 0;
+            [weakSelf.cameraModule adjustFocalWtihValue:1];
             [weakSelf.cameraModule start];
         }
     }];
@@ -106,7 +103,7 @@
 
 - (void)pinchView:(UIPinchGestureRecognizer *)pinchGest{
     
-    CGFloat currentScale = self.zoomScale + pinchGest.scale - 1.00f;
+    CGFloat currentScale = self.scale + pinchGest.scale - 1.00f;
     
     if (currentScale > 1) {
         currentScale = 1;
@@ -118,17 +115,17 @@
     
     CGFloat totalHeight = [self.adjustFocal getSliderHeight]; /// 滑动总长度
     
-    CGFloat height = (1 - currentScale) * totalHeight;
+    CGFloat circleCenterY = (1 - currentScale) * totalHeight;
     
-    if (height <= 0) {
-        height = 0; /// 处理顶部
+    if (circleCenterY <= 0) {
+        circleCenterY = 0; /// 处理顶部
     }
     
-    if (height >= self.adjustFocal.gh_height - 40 ) {
-        height = self.adjustFocal.gh_height - 40;
+    if (circleCenterY >= self.adjustFocal.gh_height - 40) {
+        circleCenterY = self.adjustFocal.gh_height - 40;
     }
     
-    self.adjustFocal.circleCenterY = height;
+    self.adjustFocal.circleCenterY = circleCenterY;
     
     self.test.transform = CGAffineTransformMakeScale(currentScale, currentScale);
     
@@ -139,7 +136,7 @@
     if (pinchGest.state == UIGestureRecognizerStateEnded
         ||
         pinchGest.state == UIGestureRecognizerStateCancelled) {
-        self.zoomScale = currentScale;
+        self.scale = currentScale;
     }
 }
 
@@ -164,8 +161,7 @@
     
     self.adjustFocal.circleCenterY = circleCenterY; /// 设置circleCenterY
     CGFloat scale = (totalHeight - circleCenterY)/totalHeight;/// 计算比例
-    
-    self.zoomScale = scale;
+    self.scale = scale;
     self.test.transform = CGAffineTransformMakeScale(scale, scale);
     self.navigationItem.title = [NSString stringWithFormat:@"比例%.2f yyyy%2.f",scale,[self.adjustFocal getCircleCenterY]];
     [panGest setTranslation:CGPointZero inView:panGest.view];
