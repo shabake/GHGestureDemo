@@ -10,6 +10,7 @@
 #import "UIView+Extension.h"
 #import "GHScanView.h"
 #import "GHAdjustFocal.h"
+#import "GHTimerManager.h"
 
 #define kImageNameCameraNormal @"cameraModule_cameraNormal"
 #define kImageNameCameraSeleted @"cameraModule_cameraSeleted"
@@ -47,9 +48,11 @@
     _circleCenterY = circleCenterY;
     self.adjustFocal.circleCenterY = circleCenterY;
 }
+
 - (CGFloat)getCircleCenterY {
     return [self.adjustFocal getCircleCenterY];
 }
+
 - (CGFloat)getSliderHeight {
     return [self.adjustFocal getSliderHeight];
 }
@@ -81,30 +84,21 @@
 }
 
 - (void)configuration {
-    self.count = 0;
     self.backgroundColor = [UIColor clearColor];
-    
-    self.timer = [NSTimer timerWithTimeInterval:1.0 target:self selector:@selector(timerMethod) userInfo:nil repeats:NO];
-    [[NSRunLoop currentRunLoop] addTimer:self.timer forMode:NSRunLoopCommonModes];
 }
 
 - (void)addTimer {
-    self.timer = [NSTimer timerWithTimeInterval:1.0 target:self selector:@selector(timerMethod) userInfo:nil repeats:YES];
-    [[NSRunLoop currentRunLoop] addTimer:self.timer forMode:NSRunLoopCommonModes];
+    
+    [[GHTimerManager sharedManager] timerStartWithTimerActionBlock:^(GHTimerManager *timerManager, NSInteger count) {
+        if (count == 3) {
+            [UIView animateWithDuration:0.25 animations:^{
+                self.adjustFocal.alpha = 0;
+            }];
+            [timerManager timerRemove];
+        }
+    }];
 }
 
-- (void)timerMethod {
-    self.count++;
-   
-    if (self.count == 3) {
-        [UIView animateWithDuration:0.25 animations:^{
-            self.adjustFocal.alpha = 0;
-        }];
-        [self.timer invalidate];
-        self.timer = nil;
-        self.count = 0;
-    }
-}
 
 - (void)setupUI {
     [self addSubview:self.scanView];

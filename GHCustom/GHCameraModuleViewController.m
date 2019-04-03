@@ -112,6 +112,11 @@
 
 - (void)tap: (UITapGestureRecognizer *)gesture {
     [self.cameraModuleView actionAdjustFocalWith:YES];
+    if (gesture.state == UIGestureRecognizerStateEnded
+        ||
+        gesture.state == UIGestureRecognizerStateCancelled) {
+        [self.cameraModuleView addTimer];
+    }
 }
 
 - (void)enterFore{

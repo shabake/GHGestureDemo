@@ -36,6 +36,7 @@
 		D6A75CDC2251A9450074D683 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6A75CDA2251A9450074D683 /* LaunchScreen.storyboard */; };
 		D6A75CDF2251A9450074D683 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D6A75CDE2251A9450074D683 /* main.m */; };
 		D6A75CEF2251BA950074D683 /* GHCameraModule.m in Sources */ = {isa = PBXBuildFile; fileRef = D6A75CEE2251BA950074D683 /* GHCameraModule.m */; };
+		D6B20493225562FF004849E5 /* GHTimerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D6B20490225562E1004849E5 /* GHTimerManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -68,6 +69,8 @@
 		D6A75CDE2251A9450074D683 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		D6A75CED2251BA950074D683 /* GHCameraModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHCameraModule.h; sourceTree = "<group>"; };
 		D6A75CEE2251BA950074D683 /* GHCameraModule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHCameraModule.m; sourceTree = "<group>"; };
+		D6B2048F225562E1004849E5 /* GHTimerManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHTimerManager.h; sourceTree = "<group>"; };
+		D6B20490225562E1004849E5 /* GHTimerManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHTimerManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +128,7 @@
 		D6A75CC32251A9430074D683 = {
 			isa = PBXGroup;
 			children = (
+				D6B2048E225562E1004849E5 /* GHTimerManager */,
 				D62D9AA42254655600B51E89 /* GHCustom */,
 				D62D9A9122537B9200B51E89 /* GHPrivacyAuthTool */,
 				D62D9A8D225309D300B51E89 /* GHAdjustFocal */,
@@ -169,6 +173,15 @@
 				D6A75CEE2251BA950074D683 /* GHCameraModule.m */,
 			);
 			path = GHCameraModule;
+			sourceTree = "<group>";
+		};
+		D6B2048E225562E1004849E5 /* GHTimerManager */ = {
+			isa = PBXGroup;
+			children = (
+				D6B2048F225562E1004849E5 /* GHTimerManager.h */,
+				D6B20490225562E1004849E5 /* GHTimerManager.m */,
+			);
+			path = GHTimerManager;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -290,6 +303,7 @@
 			files = (
 				D6A75CD42251A9430074D683 /* ViewController.m in Sources */,
 				D62D9AB12254655700B51E89 /* UIView+Extension.m in Sources */,
+				D6B20493225562FF004849E5 /* GHTimerManager.m in Sources */,
 				D62D9AB422547A1F00B51E89 /* GHViewController.m in Sources */,
 				D62D9A9422537B9300B51E89 /* GHPrivacyAuthTool.m in Sources */,
 				D6A75CDF2251A9450074D683 /* main.m in Sources */,
