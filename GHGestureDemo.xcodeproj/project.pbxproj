@@ -30,6 +30,7 @@
 		D62D9AC422547A8600B51E89 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6A75CDA2251A9450074D683 /* LaunchScreen.storyboard */; };
 		D62D9AC522547A8600B51E89 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = D62D9A8B2253079200B51E89 /* README.md */; };
 		D62D9AC622547A8600B51E89 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D62D9A95225387F100B51E89 /* Assets.xcassets */; };
+		D62D9ACF22547EED00B51E89 /* GHGestureCameraModuleDemo.plist in Resources */ = {isa = PBXBuildFile; fileRef = D62D9ACD22547EE900B51E89 /* GHGestureCameraModuleDemo.plist */; };
 		D6A75CD12251A9430074D683 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D6A75CD02251A9430074D683 /* AppDelegate.m */; };
 		D6A75CD42251A9430074D683 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6A75CD32251A9430074D683 /* ViewController.m */; };
 		D6A75CDC2251A9450074D683 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6A75CDA2251A9450074D683 /* LaunchScreen.storyboard */; };
@@ -56,7 +57,7 @@
 		D62D9AB222547A1F00B51E89 /* GHViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GHViewController.h; sourceTree = "<group>"; };
 		D62D9AB322547A1F00B51E89 /* GHViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GHViewController.m; sourceTree = "<group>"; };
 		D62D9ACB22547A8600B51E89 /* GHGestureCameraModuleDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GHGestureCameraModuleDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		D62D9ACC22547A8600B51E89 /* GHGestureCameraModuleDemo.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = GHGestureCameraModuleDemo.plist; path = /Users/zhaozhiwei/Desktop/demo/GHGestureDemo/GHGestureCameraModuleDemo.plist; sourceTree = "<absolute>"; };
+		D62D9ACD22547EE900B51E89 /* GHGestureCameraModuleDemo.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = GHGestureCameraModuleDemo.plist; sourceTree = "<group>"; };
 		D6A75CCC2251A9430074D683 /* GHGestureDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GHGestureDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6A75CCF2251A9430074D683 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		D6A75CD02251A9430074D683 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -130,7 +131,6 @@
 				D6A75CEC2251BA950074D683 /* GHCameraModule */,
 				D6A75CCE2251A9430074D683 /* GHGestureDemo */,
 				D6A75CCD2251A9430074D683 /* Products */,
-				D62D9ACC22547A8600B51E89 /* GHGestureCameraModuleDemo.plist */,
 			);
 			sourceTree = "<group>";
 		};
@@ -156,6 +156,7 @@
 				D62D9A95225387F100B51E89 /* Assets.xcassets */,
 				D6A75CDA2251A9450074D683 /* LaunchScreen.storyboard */,
 				D6A75CDD2251A9450074D683 /* Info.plist */,
+				D62D9ACD22547EE900B51E89 /* GHGestureCameraModuleDemo.plist */,
 				D6A75CDE2251A9450074D683 /* main.m */,
 			);
 			path = GHGestureDemo;
@@ -248,6 +249,7 @@
 				D62D9AC422547A8600B51E89 /* LaunchScreen.storyboard in Resources */,
 				D62D9AC522547A8600B51E89 /* README.md in Resources */,
 				D62D9AC622547A8600B51E89 /* Assets.xcassets in Resources */,
+				D62D9ACF22547EED00B51E89 /* GHGestureCameraModuleDemo.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -321,7 +323,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = KZ9JB9ZT4S;
 				GCC_PREPROCESSOR_DEFINITIONS = DEVELOPMENT1;
-				INFOPLIST_FILE = "$(SRCROOT)/GHGestureCameraModuleDemo.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/GHGestureDemo/GHGestureCameraModuleDemo.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -340,7 +342,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = KZ9JB9ZT4S;
 				GCC_PREPROCESSOR_DEFINITIONS = "";
-				INFOPLIST_FILE = "$(SRCROOT)/GHGestureCameraModuleDemo.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/GHGestureDemo/GHGestureCameraModuleDemo.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
