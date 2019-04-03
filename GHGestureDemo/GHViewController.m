@@ -4,7 +4,7 @@
 //
 //  Created by zhaozhiwei on 2019/4/3.
 //  Copyright © 2019年 GHome. All rights reserved.
-//
+//  https://github.com/shabake/GHGestureDemo
 
 #import "GHViewController.h"
 #import "GHCameraModule.h"
@@ -29,7 +29,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
+    
     if (TARGET_IPHONE_SIMULATOR) {
         UILabel *tip = [[UILabel alloc]initWithFrame:self.view.bounds];
         tip.text = @"请用真机运行此demo";
