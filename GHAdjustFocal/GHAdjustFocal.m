@@ -7,7 +7,7 @@
 //
 
 #import "GHAdjustFocal.h"
-#import "UIView+GHAdd.h"
+#import "UIView+Extension.h"
 
 #define ColorRGBA(r, g, b, a) ([UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:(a)])
 
@@ -51,15 +51,15 @@
     
     _circleCenterY = circleCenterY;
     
-    self.circle.gh_centery = circleCenterY;
+    self.circle.centery = circleCenterY;
     
     for (CAShapeLayer *layer in self.slider.layer.sublayers) {
         [layer removeFromSuperlayer];
     }
     
     CAShapeLayer *layer = [CAShapeLayer layer];
-    layer.frame = CGRectMake(0, 0, self.slider.gh_width, circleCenterY);
-    layer.backgroundColor = [UIColor lightGrayColor].CGColor;
+    layer.frame = CGRectMake(0, 0, self.slider.width, circleCenterY);
+    layer.backgroundColor = [UIColor darkGrayColor].CGColor;
     [self.slider.layer addSublayer:layer];
     
     CGFloat scale = ([self getSliderHeight] - circleCenterY)/[self getSliderHeight] ;/// 计算比例
@@ -71,12 +71,17 @@
 
 - (void)setCircleLocation:(GHAdjustFocalCircleLocation)circleLocation {
     _circleLocation = circleLocation;
-    self.circle.gh_top = self.circleLocation == GHAdjustFocalCircleLocationBottom ? self.slider.gh_height -self.circle.gh_height * 0.5 :-self.circle.gh_height * 0.5;
+    self.circle.y = self.circleLocation == GHAdjustFocalCircleLocationBottom ? self.slider.height -self.circle.height * 0.5 :-self.circle.height * 0.5;
+}
+
+- (void)setMarginY:(CGFloat)marginY {
+    _marginY = marginY;
 }
 
 #pragma mark - 自定义初始化
 - (instancetype)initWithFrame:(CGRect)frame circleLocation: (GHAdjustFocalCircleLocation)circleLocation {
     if (self == [super initWithFrame:frame]) {
+        self.marginY = 20;
         [self setupUI];
         [self configuration];
         self.circleLocation = circleLocation;
@@ -87,6 +92,7 @@
 #pragma mark - 初始化
 - (instancetype)init {
     if (self == [super init]) {
+        self.marginY = 20;
         [self setupUI];
         [self configuration];
     }
@@ -96,6 +102,7 @@
 #pragma mark - 初始化
 - (instancetype)initWithFrame:(CGRect)frame {
     if (self == [super initWithFrame:frame]) {
+        self.marginY = 20;
         [self setupUI];
         [self configuration];
     }
@@ -104,8 +111,8 @@
 
 - (void)configuration {
     CAShapeLayer *layer = [CAShapeLayer layer];
-    layer.frame = CGRectMake(0, 0, self.slider.gh_width, self.slider.gh_height);
-    layer.backgroundColor = [UIColor lightGrayColor].CGColor;
+    layer.frame = CGRectMake(0, 0, self.slider.width, self.slider.height);
+    layer.backgroundColor = [UIColor darkGrayColor].CGColor;
     [self.slider.layer addSublayer:layer];
 }
 
@@ -123,11 +130,11 @@
     CGFloat backGroundH = totalHeight;
     self.backGround.frame = CGRectMake(backGroundX, backGroundY, backGroundW, backGroundH);
     
-    self.inBackGround.frame = CGRectMake(0, 20, backGroundW, totalHeight - 40);
+    self.inBackGround.frame = CGRectMake(0, self.marginY, backGroundW, totalHeight - self.marginY * 2);
     
     CGFloat sliderW = 3;
     CGFloat sliderX = (totalWidth - sliderW) *.5;
-    CGFloat sliderH = totalHeight - 40;
+    CGFloat sliderH = totalHeight - self.marginY * 2;
     
     self.slider.frame = CGRectMake(sliderX, sliderY, sliderW, sliderH);
     
@@ -146,7 +153,7 @@
     CGFloat subX = addX;
     CGFloat subW = addW;
     CGFloat subH = addH;
-    CGFloat subY = self.inBackGround.gh_height + self.inBackGround.gh_top + 5;
+    CGFloat subY = self.inBackGround.height + self.inBackGround.y + 5;
     self.sub.frame = CGRectMake(subX, subY, subW, subH);
     
     [self addSubview:self.backGround];
@@ -214,7 +221,7 @@
 - (UIView *)inBackGround {
     if (_inBackGround == nil) {
         _inBackGround = [[UIView alloc]init];
-        _inBackGround.backgroundColor = [UIColor redColor];
+        _inBackGround.backgroundColor = [UIColor clearColor];
     }
     return _inBackGround;
 }
@@ -224,14 +231,14 @@
         _backGround = [[UIView alloc]init];
         _backGround.backgroundColor = [UIColor blackColor];
         _backGround.layer.masksToBounds = YES;
-        _backGround.layer.cornerRadius = 10;
+        _backGround.layer.cornerRadius = 6;
         _backGround.alpha = 0.3;
     }
     return _backGround;
 }
 
 - (CGFloat)getCircleCenterY {
-    return self.circle.gh_centery;
+    return self.circle.centery;
 }
 
 - (CGFloat)getSliderHeight {

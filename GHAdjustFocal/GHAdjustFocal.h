@@ -56,6 +56,11 @@ typedef void(^GHAdjustFocalScaleBlock)(CGFloat scale);
 - (CGFloat)getSliderHeight;
 
 /**
+ * 顶部间距
+ */
+@property (nonatomic , assign) CGFloat marginY;
+
+/**
  处理circleCenterY 两端越界
 
  @param circleCenterY circleCenterY

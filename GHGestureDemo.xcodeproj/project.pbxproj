@@ -11,12 +11,29 @@
 		D62D9A9022530A2800B51E89 /* GHAdjustFocal.m in Sources */ = {isa = PBXBuildFile; fileRef = D62D9A8F22530A2800B51E89 /* GHAdjustFocal.m */; };
 		D62D9A9422537B9300B51E89 /* GHPrivacyAuthTool.m in Sources */ = {isa = PBXBuildFile; fileRef = D62D9A9322537B9200B51E89 /* GHPrivacyAuthTool.m */; };
 		D62D9A96225387F100B51E89 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D62D9A95225387F100B51E89 /* Assets.xcassets */; };
+		D62D9AAE2254655700B51E89 /* GHScanView.m in Sources */ = {isa = PBXBuildFile; fileRef = D62D9AAA2254655600B51E89 /* GHScanView.m */; };
+		D62D9AAF2254655700B51E89 /* GHCameraModuleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D62D9AAB2254655600B51E89 /* GHCameraModuleViewController.m */; };
+		D62D9AB02254655700B51E89 /* GHCameraModuleView.m in Sources */ = {isa = PBXBuildFile; fileRef = D62D9AAC2254655600B51E89 /* GHCameraModuleView.m */; };
+		D62D9AB12254655700B51E89 /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = D62D9AAD2254655600B51E89 /* UIView+Extension.m */; };
+		D62D9AB422547A1F00B51E89 /* GHViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D62D9AB322547A1F00B51E89 /* GHViewController.m */; };
+		D62D9AB722547A8600B51E89 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6A75CD32251A9430074D683 /* ViewController.m */; };
+		D62D9AB822547A8600B51E89 /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = D62D9AAD2254655600B51E89 /* UIView+Extension.m */; };
+		D62D9AB922547A8600B51E89 /* GHViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D62D9AB322547A1F00B51E89 /* GHViewController.m */; };
+		D62D9ABA22547A8600B51E89 /* GHPrivacyAuthTool.m in Sources */ = {isa = PBXBuildFile; fileRef = D62D9A9322537B9200B51E89 /* GHPrivacyAuthTool.m */; };
+		D62D9ABB22547A8600B51E89 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D6A75CDE2251A9450074D683 /* main.m */; };
+		D62D9ABC22547A8600B51E89 /* GHCameraModuleView.m in Sources */ = {isa = PBXBuildFile; fileRef = D62D9AAC2254655600B51E89 /* GHCameraModuleView.m */; };
+		D62D9ABD22547A8600B51E89 /* GHCameraModuleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D62D9AAB2254655600B51E89 /* GHCameraModuleViewController.m */; };
+		D62D9ABE22547A8600B51E89 /* GHAdjustFocal.m in Sources */ = {isa = PBXBuildFile; fileRef = D62D9A8F22530A2800B51E89 /* GHAdjustFocal.m */; };
+		D62D9ABF22547A8600B51E89 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D6A75CD02251A9430074D683 /* AppDelegate.m */; };
+		D62D9AC022547A8600B51E89 /* GHScanView.m in Sources */ = {isa = PBXBuildFile; fileRef = D62D9AAA2254655600B51E89 /* GHScanView.m */; };
+		D62D9AC122547A8600B51E89 /* GHCameraModule.m in Sources */ = {isa = PBXBuildFile; fileRef = D6A75CEE2251BA950074D683 /* GHCameraModule.m */; };
+		D62D9AC422547A8600B51E89 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6A75CDA2251A9450074D683 /* LaunchScreen.storyboard */; };
+		D62D9AC522547A8600B51E89 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = D62D9A8B2253079200B51E89 /* README.md */; };
+		D62D9AC622547A8600B51E89 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D62D9A95225387F100B51E89 /* Assets.xcassets */; };
 		D6A75CD12251A9430074D683 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D6A75CD02251A9430074D683 /* AppDelegate.m */; };
 		D6A75CD42251A9430074D683 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6A75CD32251A9430074D683 /* ViewController.m */; };
-		D6A75CD72251A9430074D683 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6A75CD52251A9430074D683 /* Main.storyboard */; };
 		D6A75CDC2251A9450074D683 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6A75CDA2251A9450074D683 /* LaunchScreen.storyboard */; };
 		D6A75CDF2251A9450074D683 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D6A75CDE2251A9450074D683 /* main.m */; };
-		D6A75CE72251B0860074D683 /* UIView+GHAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = D6A75CE62251B0860074D683 /* UIView+GHAdd.m */; };
 		D6A75CEF2251BA950074D683 /* GHCameraModule.m in Sources */ = {isa = PBXBuildFile; fileRef = D6A75CEE2251BA950074D683 /* GHCameraModule.m */; };
 /* End PBXBuildFile section */
 
@@ -27,22 +44,39 @@
 		D62D9A9222537B9200B51E89 /* GHPrivacyAuthTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHPrivacyAuthTool.h; sourceTree = "<group>"; };
 		D62D9A9322537B9200B51E89 /* GHPrivacyAuthTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHPrivacyAuthTool.m; sourceTree = "<group>"; };
 		D62D9A95225387F100B51E89 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D62D9AA52254655600B51E89 /* GHCameraModuleHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHCameraModuleHeader.h; sourceTree = "<group>"; };
+		D62D9AA62254655600B51E89 /* GHScanView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHScanView.h; sourceTree = "<group>"; };
+		D62D9AA72254655600B51E89 /* GHCameraModuleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHCameraModuleViewController.h; sourceTree = "<group>"; };
+		D62D9AA82254655600B51E89 /* UIView+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Extension.h"; sourceTree = "<group>"; };
+		D62D9AA92254655600B51E89 /* GHCameraModuleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHCameraModuleView.h; sourceTree = "<group>"; };
+		D62D9AAA2254655600B51E89 /* GHScanView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHScanView.m; sourceTree = "<group>"; };
+		D62D9AAB2254655600B51E89 /* GHCameraModuleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHCameraModuleViewController.m; sourceTree = "<group>"; };
+		D62D9AAC2254655600B51E89 /* GHCameraModuleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHCameraModuleView.m; sourceTree = "<group>"; };
+		D62D9AAD2254655600B51E89 /* UIView+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extension.m"; sourceTree = "<group>"; };
+		D62D9AB222547A1F00B51E89 /* GHViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GHViewController.h; sourceTree = "<group>"; };
+		D62D9AB322547A1F00B51E89 /* GHViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GHViewController.m; sourceTree = "<group>"; };
+		D62D9ACB22547A8600B51E89 /* GHGestureCameraModuleDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GHGestureCameraModuleDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D62D9ACC22547A8600B51E89 /* GHGestureCameraModuleDemo.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = GHGestureCameraModuleDemo.plist; path = /Users/zhaozhiwei/Desktop/demo/GHGestureDemo/GHGestureCameraModuleDemo.plist; sourceTree = "<absolute>"; };
 		D6A75CCC2251A9430074D683 /* GHGestureDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GHGestureDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6A75CCF2251A9430074D683 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		D6A75CD02251A9430074D683 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		D6A75CD22251A9430074D683 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		D6A75CD32251A9430074D683 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		D6A75CD62251A9430074D683 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D6A75CDB2251A9450074D683 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D6A75CDD2251A9450074D683 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D6A75CDE2251A9450074D683 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		D6A75CE52251B0860074D683 /* UIView+GHAdd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+GHAdd.h"; sourceTree = "<group>"; };
-		D6A75CE62251B0860074D683 /* UIView+GHAdd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+GHAdd.m"; sourceTree = "<group>"; };
 		D6A75CED2251BA950074D683 /* GHCameraModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHCameraModule.h; sourceTree = "<group>"; };
 		D6A75CEE2251BA950074D683 /* GHCameraModule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHCameraModule.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		D62D9AC222547A8600B51E89 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D6A75CC92251A9430074D683 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -71,14 +105,32 @@
 			path = GHPrivacyAuthTool;
 			sourceTree = "<group>";
 		};
+		D62D9AA42254655600B51E89 /* GHCustom */ = {
+			isa = PBXGroup;
+			children = (
+				D62D9AA52254655600B51E89 /* GHCameraModuleHeader.h */,
+				D62D9AA72254655600B51E89 /* GHCameraModuleViewController.h */,
+				D62D9AA92254655600B51E89 /* GHCameraModuleView.h */,
+				D62D9AAC2254655600B51E89 /* GHCameraModuleView.m */,
+				D62D9AAA2254655600B51E89 /* GHScanView.m */,
+				D62D9AA62254655600B51E89 /* GHScanView.h */,
+				D62D9AAB2254655600B51E89 /* GHCameraModuleViewController.m */,
+				D62D9AAD2254655600B51E89 /* UIView+Extension.m */,
+				D62D9AA82254655600B51E89 /* UIView+Extension.h */,
+			);
+			path = GHCustom;
+			sourceTree = "<group>";
+		};
 		D6A75CC32251A9430074D683 = {
 			isa = PBXGroup;
 			children = (
+				D62D9AA42254655600B51E89 /* GHCustom */,
 				D62D9A9122537B9200B51E89 /* GHPrivacyAuthTool */,
 				D62D9A8D225309D300B51E89 /* GHAdjustFocal */,
 				D6A75CEC2251BA950074D683 /* GHCameraModule */,
 				D6A75CCE2251A9430074D683 /* GHGestureDemo */,
 				D6A75CCD2251A9430074D683 /* Products */,
+				D62D9ACC22547A8600B51E89 /* GHGestureCameraModuleDemo.plist */,
 			);
 			sourceTree = "<group>";
 		};
@@ -86,6 +138,7 @@
 			isa = PBXGroup;
 			children = (
 				D6A75CCC2251A9430074D683 /* GHGestureDemo.app */,
+				D62D9ACB22547A8600B51E89 /* GHGestureCameraModuleDemo.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -93,15 +146,14 @@
 		D6A75CCE2251A9430074D683 /* GHGestureDemo */ = {
 			isa = PBXGroup;
 			children = (
-				D6A75CE52251B0860074D683 /* UIView+GHAdd.h */,
-				D6A75CE62251B0860074D683 /* UIView+GHAdd.m */,
 				D62D9A8B2253079200B51E89 /* README.md */,
 				D6A75CCF2251A9430074D683 /* AppDelegate.h */,
 				D6A75CD02251A9430074D683 /* AppDelegate.m */,
 				D6A75CD22251A9430074D683 /* ViewController.h */,
 				D6A75CD32251A9430074D683 /* ViewController.m */,
+				D62D9AB222547A1F00B51E89 /* GHViewController.h */,
+				D62D9AB322547A1F00B51E89 /* GHViewController.m */,
 				D62D9A95225387F100B51E89 /* Assets.xcassets */,
-				D6A75CD52251A9430074D683 /* Main.storyboard */,
 				D6A75CDA2251A9450074D683 /* LaunchScreen.storyboard */,
 				D6A75CDD2251A9450074D683 /* Info.plist */,
 				D6A75CDE2251A9450074D683 /* main.m */,
@@ -121,6 +173,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		D62D9AB522547A8600B51E89 /* GHGestureCameraModuleDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D62D9AC822547A8600B51E89 /* Build configuration list for PBXNativeTarget "GHGestureCameraModuleDemo" */;
+			buildPhases = (
+				D62D9AB622547A8600B51E89 /* Sources */,
+				D62D9AC222547A8600B51E89 /* Frameworks */,
+				D62D9AC322547A8600B51E89 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GHGestureCameraModuleDemo;
+			productName = GHGestureDemo;
+			productReference = D62D9ACB22547A8600B51E89 /* GHGestureCameraModuleDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
 		D6A75CCB2251A9430074D683 /* GHGestureDemo */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = D6A75CE22251A9450074D683 /* Build configuration list for PBXNativeTarget "GHGestureDemo" */;
@@ -166,11 +235,22 @@
 			projectRoot = "";
 			targets = (
 				D6A75CCB2251A9430074D683 /* GHGestureDemo */,
+				D62D9AB522547A8600B51E89 /* GHGestureCameraModuleDemo */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		D62D9AC322547A8600B51E89 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D62D9AC422547A8600B51E89 /* LaunchScreen.storyboard in Resources */,
+				D62D9AC522547A8600B51E89 /* README.md in Resources */,
+				D62D9AC622547A8600B51E89 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D6A75CCA2251A9430074D683 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -178,23 +258,44 @@
 				D6A75CDC2251A9450074D683 /* LaunchScreen.storyboard in Resources */,
 				D62D9A8C2253079200B51E89 /* README.md in Resources */,
 				D62D9A96225387F100B51E89 /* Assets.xcassets in Resources */,
-				D6A75CD72251A9430074D683 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		D62D9AB622547A8600B51E89 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D62D9AB722547A8600B51E89 /* ViewController.m in Sources */,
+				D62D9AB822547A8600B51E89 /* UIView+Extension.m in Sources */,
+				D62D9AB922547A8600B51E89 /* GHViewController.m in Sources */,
+				D62D9ABA22547A8600B51E89 /* GHPrivacyAuthTool.m in Sources */,
+				D62D9ABB22547A8600B51E89 /* main.m in Sources */,
+				D62D9ABC22547A8600B51E89 /* GHCameraModuleView.m in Sources */,
+				D62D9ABD22547A8600B51E89 /* GHCameraModuleViewController.m in Sources */,
+				D62D9ABE22547A8600B51E89 /* GHAdjustFocal.m in Sources */,
+				D62D9ABF22547A8600B51E89 /* AppDelegate.m in Sources */,
+				D62D9AC022547A8600B51E89 /* GHScanView.m in Sources */,
+				D62D9AC122547A8600B51E89 /* GHCameraModule.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D6A75CC82251A9430074D683 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				D6A75CD42251A9430074D683 /* ViewController.m in Sources */,
-				D6A75CE72251B0860074D683 /* UIView+GHAdd.m in Sources */,
+				D62D9AB12254655700B51E89 /* UIView+Extension.m in Sources */,
+				D62D9AB422547A1F00B51E89 /* GHViewController.m in Sources */,
 				D62D9A9422537B9300B51E89 /* GHPrivacyAuthTool.m in Sources */,
 				D6A75CDF2251A9450074D683 /* main.m in Sources */,
+				D62D9AB02254655700B51E89 /* GHCameraModuleView.m in Sources */,
+				D62D9AAF2254655700B51E89 /* GHCameraModuleViewController.m in Sources */,
 				D62D9A9022530A2800B51E89 /* GHAdjustFocal.m in Sources */,
 				D6A75CD12251A9430074D683 /* AppDelegate.m in Sources */,
+				D62D9AAE2254655700B51E89 /* GHScanView.m in Sources */,
 				D6A75CEF2251BA950074D683 /* GHCameraModule.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -202,14 +303,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		D6A75CD52251A9430074D683 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				D6A75CD62251A9430074D683 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		D6A75CDA2251A9450074D683 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -221,6 +314,44 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		D62D9AC922547A8600B51E89 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = KZ9JB9ZT4S;
+				GCC_PREPROCESSOR_DEFINITIONS = DEVELOPMENT1;
+				INFOPLIST_FILE = "$(SRCROOT)/GHGestureCameraModuleDemo.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = GHome.GHGestureDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D62D9ACA22547A8600B51E89 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = KZ9JB9ZT4S;
+				GCC_PREPROCESSOR_DEFINITIONS = "";
+				INFOPLIST_FILE = "$(SRCROOT)/GHGestureCameraModuleDemo.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = GHome.GHGestureDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		D6A75CE02251A9450074D683 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -339,6 +470,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = KZ9JB9ZT4S;
+				GCC_PREPROCESSOR_DEFINITIONS = DEVELOPMENT0;
 				INFOPLIST_FILE = GHGestureDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -357,6 +489,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = KZ9JB9ZT4S;
+				GCC_PREPROCESSOR_DEFINITIONS = DEVELOPMENT0;
 				INFOPLIST_FILE = GHGestureDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -372,6 +505,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		D62D9AC822547A8600B51E89 /* Build configuration list for PBXNativeTarget "GHGestureCameraModuleDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D62D9AC922547A8600B51E89 /* Debug */,
+				D62D9ACA22547A8600B51E89 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		D6A75CC72251A9430074D683 /* Build configuration list for PBXProject "GHGestureDemo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
