@@ -61,14 +61,14 @@
 #pragma mark - 初始化
 - (instancetype)initWithFrame:(CGRect)frame {
     if (self == [super initWithFrame:frame]) {
-        [self setupUI];
+        [self setupUI];        
     }
     return self;
 }
 
 #pragma mark - 创建UI
 - (void)setupUI {
-    
+
     CGFloat totalHeight = self.bounds.size.height; /// 总长度
     CGFloat totalWidth = self.bounds.size.width;   /// 总宽度
     
@@ -79,13 +79,13 @@
     CGFloat backGroundX = 0;
     CGFloat backGroundH = totalHeight;
     self.backGround.frame = CGRectMake(backGroundX, backGroundY, backGroundW, backGroundH);
-    
+
     self.inBackGround.frame = CGRectMake(0, 20, backGroundW, totalHeight - 40);
-    
+
     CGFloat sliderW = 3;
     CGFloat sliderX = (totalWidth - sliderW) *.5;
     CGFloat sliderH = totalHeight - 40;
-    
+
     self.slider.frame = CGRectMake(sliderX, sliderY, sliderW, sliderH);
     
     CGFloat circleW = 10;
@@ -93,22 +93,22 @@
     CGFloat circleX = (totalWidth - circleW) *.5;
     CGFloat circleY = -5;
     self.circle.frame = CGRectMake(circleX,circleY, circleW, circleH);
-    
+
     CGFloat addY = 5;
     CGFloat addW = 20;
     CGFloat addH = 10;
     CGFloat addX = (totalWidth - addW) *.5;
     self.add.frame = CGRectMake(addX,addY, addW, addH);
-    
+
     CGFloat subX = addX;
     CGFloat subW = addW;
     CGFloat subH = addH;
-    CGFloat subY = self.inBackGround.gh_height + self.inBackGround.gh_top + 5;
+    CGFloat subY = self.inBackGround.gh_height + self.inBackGround.gh_top;
     self.sub.frame = CGRectMake(subX, subY, subW, subH);
-    
+
     [self addSubview:self.backGround];
     [self.backGround addSubview:self.inBackGround];
-    
+
     [self.inBackGround addSubview:self.slider];
     [self.inBackGround addSubview:self.circle];
     [self.backGround addSubview:self.add];
@@ -184,4 +184,3 @@
 }
 
 @end
-

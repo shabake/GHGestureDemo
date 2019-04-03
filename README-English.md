@@ -10,7 +10,7 @@
 The pinch gesture and the drag gesture coexist to achieve the adjustment of the focal length<br/>
 
 
-**git is large and unclear, please download demo to run to see **
+**git is large and unclear, please download demo to run to see**
 
 **If you run crash, add key `Privacy - Camera Usage Description`** to iofo.plist
 

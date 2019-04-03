@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		D62D9A8C2253079200B51E89 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = D62D9A8B2253079200B51E89 /* README.md */; };
 		D62D9A9022530A2800B51E89 /* GHAdjustFocal.m in Sources */ = {isa = PBXBuildFile; fileRef = D62D9A8F22530A2800B51E89 /* GHAdjustFocal.m */; };
 		D62D9A9422537B9300B51E89 /* GHPrivacyAuthTool.m in Sources */ = {isa = PBXBuildFile; fileRef = D62D9A9322537B9200B51E89 /* GHPrivacyAuthTool.m */; };
 		D62D9A96225387F100B51E89 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D62D9A95225387F100B51E89 /* Assets.xcassets */; };
@@ -21,7 +20,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		D62D9A8B2253079200B51E89 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
 		D62D9A8E22530A2800B51E89 /* GHAdjustFocal.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GHAdjustFocal.h; sourceTree = "<group>"; };
 		D62D9A8F22530A2800B51E89 /* GHAdjustFocal.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GHAdjustFocal.m; sourceTree = "<group>"; };
 		D62D9A9222537B9200B51E89 /* GHPrivacyAuthTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHPrivacyAuthTool.h; sourceTree = "<group>"; };
@@ -95,7 +93,6 @@
 			children = (
 				D6A75CE52251B0860074D683 /* UIView+GHAdd.h */,
 				D6A75CE62251B0860074D683 /* UIView+GHAdd.m */,
-				D62D9A8B2253079200B51E89 /* README.md */,
 				D6A75CCF2251A9430074D683 /* AppDelegate.h */,
 				D6A75CD02251A9430074D683 /* AppDelegate.m */,
 				D6A75CD22251A9430074D683 /* ViewController.h */,
@@ -176,7 +173,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				D6A75CDC2251A9450074D683 /* LaunchScreen.storyboard in Resources */,
-				D62D9A8C2253079200B51E89 /* README.md in Resources */,
 				D62D9A96225387F100B51E89 /* Assets.xcassets in Resources */,
 				D6A75CD72251A9430074D683 /* Main.storyboard in Resources */,
 			);

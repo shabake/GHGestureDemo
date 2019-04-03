@@ -53,12 +53,12 @@
             [weakSelf.cameraModule start];
         }
     }];
-    
+ 
     [self.view addSubview:self.adjustFocal];
-    
+
     UIPanGestureRecognizer *panGest = [[UIPanGestureRecognizer alloc]initWithTarget:self action:@selector(panView:)];
     panGest.minimumNumberOfTouches = 1;
-    
+
     [self.view addGestureRecognizer:panGest];
     UIImageView *test = [[UIImageView alloc]initWithFrame:CGRectMake(self.view.gh_centerx, 88, 200, 200)];
     test.image = [UIImage imageNamed:@"tian"];
@@ -68,14 +68,14 @@
     
     self.test = test;
     self.test.transform = CGAffineTransformMakeScale(self.zoomScale, self.zoomScale);
-    
+
     UIPinchGestureRecognizer *pinchGest = [[UIPinchGestureRecognizer alloc]initWithTarget:self action:@selector(pinchView:)];
     [self.view addGestureRecognizer:pinchGest];
-    
+
     CGFloat totalHeight = [self.adjustFocal getSliderHeight]; /// 滑动总长度
-    
+
     CGFloat scale = (totalHeight - [self.adjustFocal getCircleCenterY])/totalHeight;
-    
+
     self.navigationItem.title = [NSString stringWithFormat:@"比例%.2f",scale];
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(enterFore) name:UIApplicationWillEnterForegroundNotification object:[UIApplication sharedApplication]];
@@ -84,7 +84,7 @@
 - (void)enterFore{
     
     self.adjustFocal.circleCenterY = 20;
-    
+
     CGFloat totalHeight = [self.adjustFocal getSliderHeight]; /// 滑动总长度
     
     CGFloat scale = (totalHeight - [self.adjustFocal getCircleCenterY] + 20)/totalHeight;
@@ -115,11 +115,11 @@
     if (currentScale < 0) {
         currentScale = 0;
     }
-    
+
     CGFloat totalHeight = [self.adjustFocal getSliderHeight]; /// 滑动总长度
-    
+
     CGFloat height = (1 - currentScale) * totalHeight;
-    
+
     if (height <= 0) {
         height = 0; /// 处理顶部
     }
@@ -133,7 +133,7 @@
     self.test.transform = CGAffineTransformMakeScale(currentScale, currentScale);
     
     self.navigationItem.title = [NSString stringWithFormat:@"比例%.2f yyyy%2.f",currentScale,[self.adjustFocal getCircleCenterY]];
-    
+
     [self.cameraModule adjustFocalWtihValue:currentScale * 10];
     
     if (pinchGest.state == UIGestureRecognizerStateEnded
@@ -147,13 +147,13 @@
 - (void)panView:(UIPanGestureRecognizer *)panGest{
     
     CGPoint trans = [panGest translationInView:panGest.view];
-    
+
     CGFloat circleCenterY = [self.adjustFocal getCircleCenterY]; /// 获取到circleY
     
     circleCenterY += trans.y; /// circleCenterY 累加
     
     CGFloat totalHeight = [self.adjustFocal getSliderHeight]; /// 获取滑动总长度
-    
+  
     if (circleCenterY <= 0) {
         circleCenterY = 0; /// 处理顶部越界
     }
