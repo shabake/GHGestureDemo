@@ -37,6 +37,7 @@
 		D6A75CDF2251A9450074D683 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D6A75CDE2251A9450074D683 /* main.m */; };
 		D6A75CEF2251BA950074D683 /* GHCameraModule.m in Sources */ = {isa = PBXBuildFile; fileRef = D6A75CEE2251BA950074D683 /* GHCameraModule.m */; };
 		D6B20493225562FF004849E5 /* GHTimerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D6B20490225562E1004849E5 /* GHTimerManager.m */; };
+		D6B204AD2255C58C004849E5 /* GHTimerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D6B20490225562E1004849E5 /* GHTimerManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -285,6 +286,7 @@
 			files = (
 				D62D9AB722547A8600B51E89 /* ViewController.m in Sources */,
 				D62D9AB822547A8600B51E89 /* UIView+Extension.m in Sources */,
+				D6B204AD2255C58C004849E5 /* GHTimerManager.m in Sources */,
 				D62D9AB922547A8600B51E89 /* GHViewController.m in Sources */,
 				D62D9ABA22547A8600B51E89 /* GHPrivacyAuthTool.m in Sources */,
 				D62D9ABB22547A8600B51E89 /* main.m in Sources */,

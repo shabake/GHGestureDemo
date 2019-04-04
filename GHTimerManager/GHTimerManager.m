@@ -52,7 +52,6 @@
 
 - (void)timerAction {
     self.count++;
-    NSLog(@"%ld",(long)self.count);
     if (self.timerActionBlock) {
         self.timerActionBlock(self, self.count);
     }

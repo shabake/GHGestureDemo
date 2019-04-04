@@ -121,7 +121,7 @@
 
     self.test.transform = CGAffineTransformMakeScale(currentScale, currentScale);
 
-    self.navigationItem.title = [NSString stringWithFormat:@"比例%.2f yyyy%2.f",currentScale,[self.adjustFocal getCircleCenterY]];
+    self.navigationItem.title = [NSString stringWithFormat:@"比例%.2f",currentScale];
 
     [self.cameraModule adjustFocalWtihValue:currentScale * 10];
 
@@ -149,7 +149,7 @@
     CGFloat scale = (totalHeight - circleCenterY)/totalHeight;/// 计算比例
     self.scale = scale;
     self.test.transform = CGAffineTransformMakeScale(scale, scale);
-    self.navigationItem.title = [NSString stringWithFormat:@"比例%.2f yyyy%2.f",scale,[self.adjustFocal getCircleCenterY]];
+    self.navigationItem.title = [NSString stringWithFormat:@"比例%.2f",scale];
     [panGest setTranslation:CGPointZero inView:panGest.view];
     [self.cameraModule adjustFocalWtihValue:scale * 10];
 }

@@ -103,7 +103,7 @@
 
     CGFloat scale = (totalHeight - [self.cameraModuleView getCircleCenterY])/totalHeight;
 
-    self.navigationItem.title = [NSString stringWithFormat:@"比例%.2f",scale];    
+    self.navigationItem.title = [NSString stringWithFormat:@"比例%.2f",scale];
 }
 
 - (void)tap: (UITapGestureRecognizer *)gesture {
@@ -137,7 +137,7 @@
 
     self.cameraModuleView.circleCenterY = circleCenterY;
 
-    self.navigationItem.title = [NSString stringWithFormat:@"比例%.2f yyyy%2.f",currentScale,[self.cameraModuleView getCircleCenterY]];
+    self.navigationItem.title = [NSString stringWithFormat:@"比例%.2f",currentScale];
 
     [self.cameraModule adjustFocalWtihValue:currentScale * 10];
 
@@ -167,7 +167,7 @@
     self.cameraModuleView.circleCenterY = circleCenterY; /// 设置circleCenterY
     CGFloat scale = (totalHeight - circleCenterY)/totalHeight;/// 计算比例
     self.scale = scale;
-    self.navigationItem.title = [NSString stringWithFormat:@"比例%.2f yyyy%2.f",scale,[self.cameraModuleView getCircleCenterY]];
+    self.navigationItem.title = [NSString stringWithFormat:@"比例%.2f",scale];
     [panGest setTranslation:CGPointZero inView:panGest.view];
     [self.cameraModule adjustFocalWtihValue:scale * 10];
     
