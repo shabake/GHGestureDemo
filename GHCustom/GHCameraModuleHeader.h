@@ -22,6 +22,7 @@ typedef NS_ENUM (NSUInteger,GHCameraModuleViewButtonType) {
     GHCameraModuleViewButtonTypeTakephotos,
     
 };
+
 #define KAlert(title,msg) [[[UIAlertView alloc] initWithTitle:title message:msg delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil] show]
 
 #define kScreenWidth  [UIScreen mainScreen].bounds.size.width

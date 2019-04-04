@@ -83,7 +83,6 @@
     self.scale = 0;
     [[GHPrivacyAuthTool share] checkPrivacyAuthWithType:GHPrivacyCamera isPushSetting:YES title:@"提示" message:@"请在设置中开启相机权限" withHandle:^(BOOL granted, GHAuthStatus status) {
         if (granted) {
-            [weakSelf.cameraModule adjustFocalWtihValue:1];
             [weakSelf.cameraModule start];
         }
     }];
@@ -104,10 +103,7 @@
 
     CGFloat scale = (totalHeight - [self.cameraModuleView getCircleCenterY])/totalHeight;
 
-    self.navigationItem.title = [NSString stringWithFormat:@"比例%.2f",scale];
-
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(enterFore) name:UIApplicationWillEnterForegroundNotification object:[UIApplication sharedApplication]];
-    
+    self.navigationItem.title = [NSString stringWithFormat:@"比例%.2f",scale];    
 }
 
 - (void)tap: (UITapGestureRecognizer *)gesture {
@@ -117,26 +113,6 @@
         gesture.state == UIGestureRecognizerStateCancelled) {
         [self.cameraModuleView addTimer];
     }
-}
-
-- (void)enterFore{
-
-    self.cameraModuleView.circleCenterY = [self.cameraModuleView getSliderHeight];
-
-    CGFloat totalHeight = [self.cameraModuleView getSliderHeight]; /// 滑动总长度
-
-    CGFloat scale = (totalHeight - [self.cameraModuleView getCircleCenterY])/totalHeight;
-
-    self.navigationItem.title = [NSString stringWithFormat:@"比例%.2f",scale];
-
-    weakself(self);
-    [[GHPrivacyAuthTool share] checkPrivacyAuthWithType:GHPrivacyCamera isPushSetting:YES title:@"提示" message:@"请在设置中开启相机权限" withHandle:^(BOOL granted, GHAuthStatus status) {
-        if (granted) {
-            weakSelf.scale = 0;
-            [weakSelf.cameraModule adjustFocalWtihValue:1];
-            [weakSelf.cameraModule start];
-        }
-    }];
 }
 
 #pragma mark - 捏合手势
