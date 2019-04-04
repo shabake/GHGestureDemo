@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "ViewController.h"
 #import "GHViewController.h"
+#import "GHGestureDraggingViewController.h"
 
 @interface AppDelegate ()
 
@@ -28,6 +29,10 @@
     
 #elif DEVELOPMENT1
     GHViewController *vc = [[GHViewController alloc]init];
+    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:vc];
+    self.window.rootViewController = nav;
+#elif DEVELOPMENT2
+    GHGestureDraggingViewController *vc = [[GHGestureDraggingViewController alloc]init];
     UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:vc];
     self.window.rootViewController = nav;
 #else

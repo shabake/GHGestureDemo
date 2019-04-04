@@ -30,6 +30,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.view.backgroundColor = [UIColor whiteColor];
     if (TARGET_IPHONE_SIMULATOR) {
         UILabel *tip = [[UILabel alloc]initWithFrame:self.view.bounds];
         tip.text = @"请用真机运行此demo";
