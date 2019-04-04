@@ -54,8 +54,11 @@
 		D6B204BF225641C2004849E5 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = D62D9A8B2253079200B51E89 /* README.md */; };
 		D6B204C0225641C2004849E5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D62D9A95225387F100B51E89 /* Assets.xcassets */; };
 		D6B204C1225641C2004849E5 /* GHGestureCameraModuleDemo.plist in Resources */ = {isa = PBXBuildFile; fileRef = D62D9ACD22547EE900B51E89 /* GHGestureCameraModuleDemo.plist */; };
-		D6B204CA225642A9004849E5 /* GHGestureDraggingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6B204C822564259004849E5 /* GHGestureDraggingViewController.m */; };
 		D6B204CC22564300004849E5 /* GHGestureDraggingDemo.plist in Resources */ = {isa = PBXBuildFile; fileRef = D6B204CB22564300004849E5 /* GHGestureDraggingDemo.plist */; };
+		D6B204D522564B9F004849E5 /* GHGestureDraggingView.m in Sources */ = {isa = PBXBuildFile; fileRef = D6B204D422564B9F004849E5 /* GHGestureDraggingView.m */; };
+		D6B204D822564C5E004849E5 /* GHGestureDraggingHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = D6B204D722564C5E004849E5 /* GHGestureDraggingHeader.m */; };
+		D6B204DB22564E44004849E5 /* GHGestureDraggingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6B204DA22564E44004849E5 /* GHGestureDraggingViewController.m */; };
+		D6B204DE225655FE004849E5 /* GHGestureDraggingCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D6B204DD225655FE004849E5 /* GHGestureDraggingCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -91,9 +94,16 @@
 		D6B2048F225562E1004849E5 /* GHTimerManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHTimerManager.h; sourceTree = "<group>"; };
 		D6B20490225562E1004849E5 /* GHTimerManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHTimerManager.m; sourceTree = "<group>"; };
 		D6B204C5225641C2004849E5 /* GHGestureDraggingDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GHGestureDraggingDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		D6B204C722564259004849E5 /* GHGestureDraggingViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GHGestureDraggingViewController.h; sourceTree = "<group>"; };
-		D6B204C822564259004849E5 /* GHGestureDraggingViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GHGestureDraggingViewController.m; sourceTree = "<group>"; };
 		D6B204CB22564300004849E5 /* GHGestureDraggingDemo.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = GHGestureDraggingDemo.plist; sourceTree = "<group>"; };
+		D6B204CE225644AE004849E5 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		D6B204D322564B9F004849E5 /* GHGestureDraggingView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GHGestureDraggingView.h; sourceTree = "<group>"; };
+		D6B204D422564B9F004849E5 /* GHGestureDraggingView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GHGestureDraggingView.m; sourceTree = "<group>"; };
+		D6B204D622564C5E004849E5 /* GHGestureDraggingHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GHGestureDraggingHeader.h; sourceTree = "<group>"; };
+		D6B204D722564C5E004849E5 /* GHGestureDraggingHeader.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GHGestureDraggingHeader.m; sourceTree = "<group>"; };
+		D6B204D922564E44004849E5 /* GHGestureDraggingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHGestureDraggingViewController.h; sourceTree = "<group>"; };
+		D6B204DA22564E44004849E5 /* GHGestureDraggingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHGestureDraggingViewController.m; sourceTree = "<group>"; };
+		D6B204DC225655FE004849E5 /* GHGestureDraggingCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GHGestureDraggingCell.h; sourceTree = "<group>"; };
+		D6B204DD225655FE004849E5 /* GHGestureDraggingCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GHGestureDraggingCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,11 +153,11 @@
 			isa = PBXGroup;
 			children = (
 				D62D9AA52254655600B51E89 /* GHCameraModuleHeader.h */,
-				D62D9AA72254655600B51E89 /* GHCameraModuleViewController.h */,
 				D62D9AA92254655600B51E89 /* GHCameraModuleView.h */,
 				D62D9AAC2254655600B51E89 /* GHCameraModuleView.m */,
 				D62D9AAA2254655600B51E89 /* GHScanView.m */,
 				D62D9AA62254655600B51E89 /* GHScanView.h */,
+				D62D9AA72254655600B51E89 /* GHCameraModuleViewController.h */,
 				D62D9AAB2254655600B51E89 /* GHCameraModuleViewController.m */,
 				D62D9AAD2254655600B51E89 /* UIView+Extension.m */,
 				D62D9AA82254655600B51E89 /* UIView+Extension.h */,
@@ -158,6 +168,7 @@
 		D6A75CC32251A9430074D683 = {
 			isa = PBXGroup;
 			children = (
+				D6B204CF22564B30004849E5 /* GHGestureDraggingDemo */,
 				D6B2048E225562E1004849E5 /* GHTimerManager */,
 				D62D9AA42254655600B51E89 /* GHCustom */,
 				D62D9A9122537B9200B51E89 /* GHPrivacyAuthTool */,
@@ -188,8 +199,7 @@
 				D6A75CD32251A9430074D683 /* ViewController.m */,
 				D62D9AB222547A1F00B51E89 /* GHViewController.h */,
 				D62D9AB322547A1F00B51E89 /* GHViewController.m */,
-				D6B204C722564259004849E5 /* GHGestureDraggingViewController.h */,
-				D6B204C822564259004849E5 /* GHGestureDraggingViewController.m */,
+				D6B204CD2256449E004849E5 /* Other */,
 				D62D9A95225387F100B51E89 /* Assets.xcassets */,
 				D6A75CDA2251A9450074D683 /* LaunchScreen.storyboard */,
 				D6A75CDD2251A9450074D683 /* Info.plist */,
@@ -216,6 +226,54 @@
 				D6B20490225562E1004849E5 /* GHTimerManager.m */,
 			);
 			path = GHTimerManager;
+			sourceTree = "<group>";
+		};
+		D6B204CD2256449E004849E5 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				D6B204CE225644AE004849E5 /* PrefixHeader.pch */,
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		D6B204CF22564B30004849E5 /* GHGestureDraggingDemo */ = {
+			isa = PBXGroup;
+			children = (
+				D6B204D122564B4C004849E5 /* Controller */,
+				D6B204D022564B4C004849E5 /* Model */,
+				D6B204D222564B4C004849E5 /* View */,
+			);
+			name = GHGestureDraggingDemo;
+			path = GHGestureDemo/GHGestureDraggingDemo;
+			sourceTree = "<group>";
+		};
+		D6B204D022564B4C004849E5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D6B204D122564B4C004849E5 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D6B204D922564E44004849E5 /* GHGestureDraggingViewController.h */,
+				D6B204DA22564E44004849E5 /* GHGestureDraggingViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		D6B204D222564B4C004849E5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D6B204D322564B9F004849E5 /* GHGestureDraggingView.h */,
+				D6B204D422564B9F004849E5 /* GHGestureDraggingView.m */,
+				D6B204D622564C5E004849E5 /* GHGestureDraggingHeader.h */,
+				D6B204D722564C5E004849E5 /* GHGestureDraggingHeader.m */,
+				D6B204DC225655FE004849E5 /* GHGestureDraggingCell.h */,
+				D6B204DD225655FE004849E5 /* GHGestureDraggingCell.m */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -385,7 +443,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D6B204D822564C5E004849E5 /* GHGestureDraggingHeader.m in Sources */,
 				D6B204B0225641C2004849E5 /* ViewController.m in Sources */,
+				D6B204DB22564E44004849E5 /* GHGestureDraggingViewController.m in Sources */,
+				D6B204DE225655FE004849E5 /* GHGestureDraggingCell.m in Sources */,
 				D6B204B1225641C2004849E5 /* UIView+Extension.m in Sources */,
 				D6B204B2225641C2004849E5 /* GHTimerManager.m in Sources */,
 				D6B204B3225641C2004849E5 /* GHViewController.m in Sources */,
@@ -395,8 +456,8 @@
 				D6B204B7225641C2004849E5 /* GHCameraModuleViewController.m in Sources */,
 				D6B204B8225641C2004849E5 /* GHAdjustFocal.m in Sources */,
 				D6B204B9225641C2004849E5 /* AppDelegate.m in Sources */,
+				D6B204D522564B9F004849E5 /* GHGestureDraggingView.m in Sources */,
 				D6B204BA225641C2004849E5 /* GHScanView.m in Sources */,
-				D6B204CA225642A9004849E5 /* GHGestureDraggingViewController.m in Sources */,
 				D6B204BB225641C2004849E5 /* GHCameraModule.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -609,6 +670,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = KZ9JB9ZT4S;
+				GCC_PREFIX_HEADER = GHGestureDemo/Other/PrefixHeader.pch;
 				GCC_PREPROCESSOR_DEFINITIONS = DEVELOPMENT2;
 				INFOPLIST_FILE = "$(SRCROOT)/GHGestureDemo/GHGestureDraggingDemo.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
@@ -628,6 +690,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = KZ9JB9ZT4S;
+				GCC_PREFIX_HEADER = GHGestureDemo/Other/PrefixHeader.pch;
 				GCC_PREPROCESSOR_DEFINITIONS = "";
 				INFOPLIST_FILE = "$(SRCROOT)/GHGestureDemo/GHGestureDraggingDemo.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
