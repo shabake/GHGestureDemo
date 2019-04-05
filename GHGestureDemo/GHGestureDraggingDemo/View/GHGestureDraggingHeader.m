@@ -35,7 +35,7 @@
     self.title.frame = CGRectMake(10, 10, self.bounds.size.width - 20, 40);
     [self.backGround addSubview:self.title];
     
-    self.line.frame = CGRectMake(10, self.title.height + self.title.y, self.bounds.size.width - 20, 0.5);
+    self.line.frame = CGRectMake(10, self.title.height + self.title.y, kScreenWidthAMap3DMap - 20, 0.5);
     [self.backGround addSubview:self.line];
 
     self.info.frame = CGRectMake(10, CGRectGetMaxY(self.line.frame) + 10, self.bounds.size.width - 20, 20);
@@ -60,6 +60,8 @@
     if (_backGround == nil) {
         _backGround = [[UIView alloc]init];
         _backGround.backgroundColor = [UIColor whiteColor];
+        _backGround.layer.masksToBounds = YES;
+        _backGround.layer.cornerRadius = 10;
     }
     return _backGround;
 }
@@ -84,7 +86,7 @@
 - (UILabel *)title {
     if (_title == nil) {
         _title = [[UILabel alloc]init];
-        _title.font = [UIFont boldSystemFontOfSize:15];
+        _title.font = [UIFont boldSystemFontOfSize:20];
         _title.text = @"1分钟 91米";
     }
     return _title;
