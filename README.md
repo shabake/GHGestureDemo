@@ -14,7 +14,7 @@
 
 **如果运行崩溃请在iofo.plist中添加key `Privacy - Camera Usage Description`**
 
-![Untitled.gif](https://upload-images.jianshu.io/upload_images/1419035-75858481f750f451.gif?imageMogr2/auto-orient/strip)
+![www.alltoall.net_1554517967660633_VElU7L3HnI.gif](https://upload-images.jianshu.io/upload_images/1419035-e87501ab35e9b0d1.gif?imageMogr2/auto-orient/strip)
 
 ### 功能
 ```diff

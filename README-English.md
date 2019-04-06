@@ -14,7 +14,7 @@ The pinch gesture and the drag gesture coexist to achieve the adjustment of the 
 
 **If you run crash, add key `Privacy - Camera Usage Description`** to iofo.plist
 
-![Untitled.gif](https://upload-images.jianshu.io/upload_images/1419035-75858481f750f451.gif?imageMogr2/auto-orient/strip)
+![www.alltoall.net_1554517967660633_VElU7L3HnI.gif](https://upload-images.jianshu.io/upload_images/1419035-e87501ab35e9b0d1.gif?imageMogr2/auto-orient/strip)
 
 ### Features
 ```diff
