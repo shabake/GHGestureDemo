@@ -107,7 +107,7 @@
 }
 
 - (void)tap: (UITapGestureRecognizer *)gesture {
-    [self.cameraModuleView actionAdjustFocalWith:YES];
+    [self.cameraModuleView showAdjustFocal];
     if (gesture.state == UIGestureRecognizerStateEnded
         ||
         gesture.state == UIGestureRecognizerStateCancelled) {
@@ -117,7 +117,7 @@
 
 #pragma mark - 捏合手势
 - (void)pinchView:(UIPinchGestureRecognizer *)pinchGest{
-    [self.cameraModuleView actionAdjustFocalWith:YES];
+    [self.cameraModuleView showAdjustFocal];
 
     CGFloat currentScale = self.scale + pinchGest.scale - 1.00f;
 
@@ -153,7 +153,7 @@
 #pragma mark - 拖拽手势
 - (void)panView:(UIPanGestureRecognizer *)panGest{
 
-    [self.cameraModuleView actionAdjustFocalWith:YES];
+    [self.cameraModuleView showAdjustFocal];
     CGPoint trans = [panGest translationInView:panGest.view];
 
     CGFloat circleCenterY = [self.cameraModuleView getCircleCenterY]; /// 获取到circleY

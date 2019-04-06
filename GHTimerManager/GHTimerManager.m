@@ -9,7 +9,6 @@
 #import "GHTimerManager.h"
 @interface GHTimerManager()
 @property (nonatomic , strong) NSTimer *timer;
-@property (nonatomic , assign) NSInteger count;
 
 @end
 @implementation GHTimerManager
@@ -33,19 +32,23 @@
 
 - (void)timerStartWithTimerActionBlock: (TimerActionBlock)timerActionBlock {
     self.timerActionBlock = timerActionBlock;
+    [self timerRemove];
     [self creat];
     [self.timer fire];
 }
 
 - (void)timerStop {
     [self.timer setFireDate:[NSDate distantFuture]];
+    self.count = 0;
 }
 
 - (void)timerReStart {
     [self.timer setFireDate:[NSDate distantPast]];
+    self.count = 0;
 }
 
 - (void)timerRemove {
+    self.count = 0;
     [self.timer invalidate];
     self.timer = nil;
 }
@@ -58,3 +61,4 @@
 }
 
 @end
+

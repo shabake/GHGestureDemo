@@ -1,48 +1,56 @@
 //
-//  GHCameraModuleView.m
-//  GHCameraModuleDemo
+//  FSCameraModuleView.m
+//  FangShengyun
 //
-//  Created by mac on 2018/11/27.
-//  Copyright © 2018年 GHome. All rights reserved.
+//  Created by mac on 2018/11/20.
+//  Copyright © 2018年 http://www.xinfangsheng.com. All rights reserved.
 //
 
 #import "GHCameraModuleView.h"
-#import "UIView+Extension.h"
 #import "GHScanView.h"
 #import "GHAdjustFocal.h"
 #import "GHTimerManager.h"
+#import "UIView+Extension.h"
+
+#define kFont(size) kAutoWithSize(size)
 
 #define kImageNameCameraNormal @"cameraModule_cameraNormal"
 #define kImageNameCameraSeleted @"cameraModule_cameraSeleted"
 #define kImageNamePhoto @"cameraModule_photo"
 #define kImageNameFlashlightNormal @"cameraModule_torchNormal"
 #define kImageNameFlashlightSeleted @"cameraModule_torchSeleted"
+#define kImageNameSeleted @"cameraModule_photoSeleted"
 
 @interface GHCameraModuleView()
-/** 相册 */
-@property (nonatomic , strong) UIButton *photo;
-/** 相机 */
-@property (nonatomic , strong) UIButton *camera;
-/** 扫一扫 */
-@property (nonatomic , strong) UIButton *scan;
-/** 拍照 */
-@property (nonatomic , strong) UIButton *takephotos;
-/** 手电 */
-@property (nonatomic , strong) UIButton *flashlight;
-/** 点 */
-@property (nonatomic , strong) UIView *point;
 
+
+/**
+ * 矩形框
+ */
 @property (nonatomic , strong) GHScanView *scanView;
 
+/**
+ * 滑杆
+ */
 @property (nonatomic , strong) GHAdjustFocal *adjustFocal;
 
-@property (nonatomic , strong) NSTimer *timer;
-
-@property (nonatomic , assign) NSInteger count;
+/**
+ * 提示文字
+ */
+@property (nonatomic , strong) UILabel *tip;
 
 @end
 
 @implementation GHCameraModuleView
+
+
+- (void)startAnimation {
+    [self.scanView startAnimation];
+}
+
+- (void)endAnimation {
+    [self.scanView endAnimation];
+}
 
 - (void)setCircleCenterY:(CGFloat)circleCenterY {
     _circleCenterY = circleCenterY;
@@ -57,13 +65,6 @@
     return [self.adjustFocal getSliderHeight];
 }
 
-- (void)actionAdjustFocalWith: (BOOL)hidden {
-    [UIView animateWithDuration:0.25 animations:^{
-        self.adjustFocal.alpha = 1;
-    }];
-}
-
-#pragma mark - private
 - (CGFloat)actionCircleCenterY: (CGFloat)circleCenterY {
     if (circleCenterY <= 0) {
         circleCenterY = 0;
@@ -79,12 +80,20 @@
     if (self == [super initWithFrame:frame]) {
         [self setupUI];
         [self configuration];
+        [self startAnimation];
     }
     return self;
 }
 
 - (void)configuration {
     self.backgroundColor = [UIColor clearColor];
+}
+
+- (void)showAdjustFocal{
+    [UIView animateWithDuration:0.25 animations:^{
+        self.adjustFocal.alpha = 1;
+    }];
+    [GHTimerManager sharedManager].count = 0;
 }
 
 - (void)addTimer {
@@ -99,28 +108,18 @@
     }];
 }
 
-
 - (void)setupUI {
     [self addSubview:self.scanView];
+    [self addSubview:self.tip];
     [self addSubview:self.adjustFocal];
-    [self addSubview:self.camera];
-    [self addSubview:self.photo];
-    [self addSubview:self.flashlight];
-    [self addSubview:self.scan];
-    [self addSubview:self.takephotos];
-    [self addSubview:self.point];
 }
 
 - (void)moveWithType: (GHCameraModuleViewButtonType)type {
     if (type == GHCameraModuleViewButtonTypeScan) {
         [UIView animateWithDuration:0.5 animations:^{
             self.scanView.hidden = NO;
-            self.scan.x = CGRectGetMaxX(self.camera.frame) - kAutoWithSize(60);
-            self.takephotos.x = CGRectGetMaxX(self.scan.frame) + 20;
-            self.scan.titleLabel.font = [UIFont systemFontOfSize:16];
-            self.takephotos.titleLabel.font = [UIFont systemFontOfSize:14];
-            self.camera.alpha = 0;
-            self.adjustFocal.x = self.scanView.x +self.scanView.width - 15-1;
+            self.tip.alpha = 1;
+            self.adjustFocal.x = self.scanView.x +self.scanView.width + 15;
         } completion:^(BOOL finished) {
             
         }];
@@ -128,11 +127,7 @@
         [UIView animateWithDuration:0.5 animations:^{
             self.adjustFocal.x = kScreenWidth - 30 -20;
             self.scanView.hidden = YES;
-            self.takephotos.x = CGRectGetMaxX(self.camera.frame) - kAutoWithSize(60);
-            self.scan.x = CGRectGetMinX(self.takephotos.frame) - 100;
-            self.scan.titleLabel.font = [UIFont systemFontOfSize:14];
-            self.takephotos.titleLabel.font = [UIFont systemFontOfSize:16];
-            self.camera.alpha = 1;
+            self.tip.alpha = 0;
         } completion:^(BOOL finished) {
             
         }];
@@ -148,7 +143,7 @@
 
 - (GHAdjustFocal *)adjustFocal {
     if (_adjustFocal == nil) {
-        _adjustFocal = [[GHAdjustFocal alloc]initWithFrame:CGRectMake(self.scanView.x +self.scanView.width - 30-1, self.scanView.y, 15, 200)];
+        _adjustFocal = [[GHAdjustFocal alloc]initWithFrame:CGRectMake(self.scanView.x + self.scanView.width - 30-1, self.scanView.y , 15, self.scanView.height)];
         _adjustFocal.alpha = 0;
     }
     return _adjustFocal;
@@ -156,74 +151,23 @@
 
 - (GHScanView *)scanView {
     if (_scanView == nil) {
-        _scanView = [[GHScanView alloc]creatScanViewWithFrame:CGRectMake((kScreenWidth - 200) * 0.5, (kScreenHeight - 200) * 0.5 - 64 - 100, 200, 200)];
+        _scanView = [[GHScanView alloc]creatScanViewWithFrame:CGRectMake((kScreenWidth - kAutoWithSize(228)) * 0.5, (kScreenHeight - kAutoWithSize(228)) * 0.5 - 64 - 100, kAutoWithSize(228), kAutoWithSize(228))];
     }
     return _scanView;
 }
 
-- (UIView *)point {
-    if (_point == nil) {
-        _point = [[UIView alloc]initWithFrame:CGRectMake(CGRectGetMidX(self.camera.frame), CGRectGetMaxY(self.takephotos.frame) + 20, 10, 10)];
-        _point.backgroundColor = [UIColor whiteColor];
-        _point.layer.cornerRadius = 5;
-        _point.layer.masksToBounds = YES;
+- (UILabel *)tip {
+    if (_tip == nil) {
+        _tip = [[UILabel alloc]init];
+        _tip.text = @"请将二维码放入框内即可扫描";
+        _tip.textColor = [UIColor whiteColor];
+        _tip.font = [UIFont systemFontOfSize:kFont(14)];
+        _tip.frame = CGRectMake(0, CGRectGetMaxY(self.scanView.frame) + 10, kScreenWidth, 20);
+        _tip.textAlignment = NSTextAlignmentCenter;
+        _tip.alpha = 0;
     }
-    return _point;
-}
-
-- (UIButton *)takephotos {
-    if (_takephotos == nil) {
-        _takephotos = [[UIButton alloc]initWithFrame:CGRectMake((kScreenWidth - 80) *.5, CGRectGetMaxY(self.camera.frame) + 30, 80, 44)];
-        [_takephotos addTarget:self action:@selector(clickButton:) forControlEvents:UIControlEventTouchUpInside];
-        _takephotos.tag = GHCameraModuleViewButtonTypeTakephotos;
-        [_takephotos setTitle:@"拍照" forState:UIControlStateNormal];
-        _takephotos.titleLabel.font = [UIFont systemFontOfSize:14];
-        _takephotos.titleLabel.textAlignment = NSTextAlignmentCenter;
-    }
-    return _takephotos;
-}
-
-- (UIButton *)scan {
-    if (_scan == nil) {
-        _scan = [[UIButton alloc]initWithFrame:CGRectMake(CGRectGetMinX(self.takephotos.frame) - 100, CGRectGetMinY(self.takephotos.frame), 80, 44)];
-        [_scan addTarget:self action:@selector(clickButton:) forControlEvents:UIControlEventTouchUpInside];
-        _scan.tag = GHCameraModuleViewButtonTypeScan;
-        [_scan setTitle:@"扫一扫" forState:UIControlStateNormal];
-        _scan.titleLabel.font = [UIFont systemFontOfSize:14];
-        _scan.titleLabel.textAlignment = NSTextAlignmentCenter;
-    }
-    return _scan;
-}
-- (UIButton *)flashlight {
-    if (_flashlight == nil) {
-        _flashlight = [[UIButton alloc]initWithFrame:CGRectMake(self.camera.x +self.camera.width +60 , CGRectGetMinY(self.camera.frame) +  (kAutoWithSize(60) - kAutoWithSize(45))* .5, kAutoWithSize(45), kAutoWithSize(45))];
-        [_flashlight addTarget:self action:@selector(clickButton:) forControlEvents:UIControlEventTouchUpInside];
-  
-        _flashlight.tag = GHCameraModuleViewButtonTypeFlashlight;
-        [_flashlight setImage:[UIImage imageNamed:kImageNameFlashlightNormal] forState:UIControlStateNormal];
-        [_flashlight setImage:[UIImage imageNamed:kImageNameFlashlightSeleted] forState:UIControlStateSelected];
-    }
-    return _flashlight;
-}
-- (UIButton *)camera {
-    if (_camera == nil) {
-        _camera = [[UIButton alloc]initWithFrame:CGRectMake((kScreenWidth -  kAutoWithSize(60)) * 0.5, kScreenHeight - 300, kAutoWithSize(60), kAutoWithSize(60))];
-        [_camera addTarget:self action:@selector(clickButton:) forControlEvents:UIControlEventTouchUpInside];
-        _camera.tag = GHCameraModuleViewButtonTypeCamera;
-        [_camera setImage:[UIImage imageNamed:kImageNameCameraNormal] forState:UIControlStateNormal];
-        [_camera setImage:[UIImage imageNamed:kImageNameCameraSeleted] forState:UIControlStateHighlighted];
-    }
-    return _camera;
-}
-
-- (UIButton *)photo {
-    if (_photo == nil) {
-        _photo = [[UIButton alloc]initWithFrame:CGRectMake(self.camera.x - 60 - kAutoWithSize(45), CGRectGetMinY(self.camera.frame) +  (kAutoWithSize(60) - kAutoWithSize(45))* .5, kAutoWithSize(45), kAutoWithSize(45))];
-        [_photo addTarget:self action:@selector(clickButton:) forControlEvents:UIControlEventTouchUpInside];
-        _photo.tag = GHCameraModuleViewButtonTypePhoto;
-        [_photo setImage:[UIImage imageNamed:kImageNamePhoto] forState:UIControlStateNormal];
-    }
-    return _photo;
+    return _tip;
 }
 
 @end
+

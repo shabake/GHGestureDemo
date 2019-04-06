@@ -9,7 +9,10 @@
 #import <UIKit/UIKit.h>
 
 NS_ASSUME_NONNULL_BEGIN
-/** 自定义扫描视图ui */
+
+/**
+ 自定义扫描视图ui
+ */
 @interface GHScanView : UIView
 
 /**
@@ -19,10 +22,17 @@ NS_ASSUME_NONNULL_BEGIN
  @return 返回GHScanView
  */
 - (instancetype)creatScanViewWithFrame: (CGRect)frame;
-/** 开始动画 */
+
+/**
+ 开始动画
+ */
 - (void)startAnimation;
-/** 停止动画 */
+
+/**
+ 停止动画
+ */
 - (void)endAnimation;
+
 @end
 
 NS_ASSUME_NONNULL_END

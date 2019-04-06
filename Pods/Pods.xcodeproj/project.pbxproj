@@ -1,0 +1,632 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0570BDA1A6EB7B83965DAA59BB6E6CED /* Pods-GHGestureCameraModuleDemo-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = AB020C600A7C4DCCF983A249DD05B539 /* Pods-GHGestureCameraModuleDemo-dummy.m */; };
+		4F8AB774794F1ABD612798CD071D6A43 /* Pods-GHGestureDraggingDemo-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 91BB2419A7C0254B44A8BB58E128EF32 /* Pods-GHGestureDraggingDemo-dummy.m */; };
+		B4F9F19F1B676ABC08DDA28A7D991377 /* Pods-GHGestureDemo-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DF789D4A68807F3D16C103046A48D44 /* Pods-GHGestureDemo-dummy.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		03522BCAD2B0CB47A7EB206C4006BAC7 /* Pods-GHGestureDemo-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-GHGestureDemo-acknowledgements.plist"; sourceTree = "<group>"; };
+		0DF789D4A68807F3D16C103046A48D44 /* Pods-GHGestureDemo-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-GHGestureDemo-dummy.m"; sourceTree = "<group>"; };
+		19490763F44F7170FAD69ABA291565F3 /* Pods-GHGestureDraggingDemo-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-GHGestureDraggingDemo-frameworks.sh"; sourceTree = "<group>"; };
+		19AA8998BB3A06F736F136353BA9AC60 /* Pods-GHGestureDraggingDemo-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-GHGestureDraggingDemo-resources.sh"; sourceTree = "<group>"; };
+		218321BE3F4C011A8A9BAC4A7C7CBCF9 /* Pods-GHGestureCameraModuleDemo-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-GHGestureCameraModuleDemo-acknowledgements.plist"; sourceTree = "<group>"; };
+		32C617557FD2775EB2D06A81D127F6C2 /* Pods-GHGestureDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-GHGestureDemo.release.xcconfig"; sourceTree = "<group>"; };
+		357B85E7CB3C5385D30C542DECAE341D /* Pods-GHGestureDemo-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-GHGestureDemo-acknowledgements.markdown"; sourceTree = "<group>"; };
+		3DE9F04FE68F09813E21A102DB696FDE /* libPods-GHGestureDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-GHGestureDemo.a"; path = "libPods-GHGestureDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4DC13B6F261685624C88FD8D9D3660AB /* mapapi.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = mapapi.bundle; path = BaiduMapKit/BaiduMapAPI_Map.framework/mapapi.bundle; sourceTree = "<group>"; };
+		516935C41BE1066364CAA1F92DA91583 /* Pods-GHGestureDemo-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-GHGestureDemo-resources.sh"; sourceTree = "<group>"; };
+		531E2027260E09C17C7A249791977ADF /* BaiduMapAPI_Utils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BaiduMapAPI_Utils.framework; path = BaiduMapKit/BaiduMapAPI_Utils.framework; sourceTree = "<group>"; };
+		575ABEBEC669C5BBA6916364CFA94099 /* Pods-GHGestureCameraModuleDemo-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-GHGestureCameraModuleDemo-acknowledgements.markdown"; sourceTree = "<group>"; };
+		6E2EF1467970D2D535F25984DC7B5AE0 /* Pods-GHGestureDemo-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-GHGestureDemo-frameworks.sh"; sourceTree = "<group>"; };
+		71C4D5E495B0FF6294001DD2EB94D80B /* BaiduMapAPI_Map.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BaiduMapAPI_Map.framework; path = BaiduMapKit/BaiduMapAPI_Map.framework; sourceTree = "<group>"; };
+		7ACCB62E50000899BAEEA9E80467F074 /* Pods-GHGestureDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-GHGestureDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		84230C1CD9E22FB6115E7A18CFC5A58D /* BaiduMapAPI_Cloud.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BaiduMapAPI_Cloud.framework; path = BaiduMapKit/BaiduMapAPI_Cloud.framework; sourceTree = "<group>"; };
+		9023A1DB8B32B79DBE3146CC52473B0F /* Pods-GHGestureCameraModuleDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-GHGestureCameraModuleDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		91BB2419A7C0254B44A8BB58E128EF32 /* Pods-GHGestureDraggingDemo-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-GHGestureDraggingDemo-dummy.m"; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		94762E387C137CCE0485A8996B3115FA /* BaiduMapAPI_Search.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BaiduMapAPI_Search.framework; path = BaiduMapKit/BaiduMapAPI_Search.framework; sourceTree = "<group>"; };
+		96BB177BF6BB350FA23EEB4B4F5FEBE6 /* Pods-GHGestureDraggingDemo-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-GHGestureDraggingDemo-acknowledgements.plist"; sourceTree = "<group>"; };
+		9A38779E77AE18B0B005F393BC1712A1 /* Pods-GHGestureCameraModuleDemo-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-GHGestureCameraModuleDemo-resources.sh"; sourceTree = "<group>"; };
+		A7C87D2B347CA32D3A6F2921FF5EEA35 /* Pods-GHGestureDraggingDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-GHGestureDraggingDemo.release.xcconfig"; sourceTree = "<group>"; };
+		AB020C600A7C4DCCF983A249DD05B539 /* Pods-GHGestureCameraModuleDemo-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-GHGestureCameraModuleDemo-dummy.m"; sourceTree = "<group>"; };
+		BD7BDFB15BB530F14A6CAED9698F43F1 /* libcrypto.a */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = archive.ar; name = libcrypto.a; path = BaiduMapKit/thirdlibs/libcrypto.a; sourceTree = "<group>"; };
+		C32EAF3FD8B2C3997BFCC88A0891D846 /* Pods-GHGestureCameraModuleDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-GHGestureCameraModuleDemo.release.xcconfig"; sourceTree = "<group>"; };
+		C63B5744AAD8B82D4FF29D6285F85572 /* Pods-GHGestureCameraModuleDemo-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-GHGestureCameraModuleDemo-frameworks.sh"; sourceTree = "<group>"; };
+		CB435D7949A8FDDF49E0B9026B783C81 /* libPods-GHGestureDraggingDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-GHGestureDraggingDemo.a"; path = "libPods-GHGestureDraggingDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DD61DF643F43BAAF18086ECCB4C3E0B9 /* BaiduMapAPI_Base.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BaiduMapAPI_Base.framework; path = BaiduMapKit/BaiduMapAPI_Base.framework; sourceTree = "<group>"; };
+		EE6ECA3864BE5965D04380051302BE53 /* libPods-GHGestureCameraModuleDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-GHGestureCameraModuleDemo.a"; path = "libPods-GHGestureCameraModuleDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF60FF6EC17BF6FF4C99180F4925C4E3 /* Pods-GHGestureDraggingDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-GHGestureDraggingDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		FC38E00D8F9E22521BF780D143CED9F7 /* Pods-GHGestureDraggingDemo-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-GHGestureDraggingDemo-acknowledgements.markdown"; sourceTree = "<group>"; };
+		FE71282F21D742D6ACC535D0031A7C39 /* libssl.a */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = archive.ar; name = libssl.a; path = BaiduMapKit/thirdlibs/libssl.a; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		116E80A7D7C591DB43B175609CC106AA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		756E07D90EE5FF57E651B8693D2C9DF2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E98B1922911462AB2A7B1CA80A156980 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0F8D2E47FE03D3B91B51069F7C273AF4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2B50DA49CFE79F26897C90A115063971 /* Pods-GHGestureCameraModuleDemo */ = {
+			isa = PBXGroup;
+			children = (
+				575ABEBEC669C5BBA6916364CFA94099 /* Pods-GHGestureCameraModuleDemo-acknowledgements.markdown */,
+				218321BE3F4C011A8A9BAC4A7C7CBCF9 /* Pods-GHGestureCameraModuleDemo-acknowledgements.plist */,
+				AB020C600A7C4DCCF983A249DD05B539 /* Pods-GHGestureCameraModuleDemo-dummy.m */,
+				C63B5744AAD8B82D4FF29D6285F85572 /* Pods-GHGestureCameraModuleDemo-frameworks.sh */,
+				9A38779E77AE18B0B005F393BC1712A1 /* Pods-GHGestureCameraModuleDemo-resources.sh */,
+				9023A1DB8B32B79DBE3146CC52473B0F /* Pods-GHGestureCameraModuleDemo.debug.xcconfig */,
+				C32EAF3FD8B2C3997BFCC88A0891D846 /* Pods-GHGestureCameraModuleDemo.release.xcconfig */,
+			);
+			name = "Pods-GHGestureCameraModuleDemo";
+			path = "Target Support Files/Pods-GHGestureCameraModuleDemo";
+			sourceTree = "<group>";
+		};
+		487C96F6A688B56EAE45E24000B7840C /* Pods-GHGestureDemo */ = {
+			isa = PBXGroup;
+			children = (
+				357B85E7CB3C5385D30C542DECAE341D /* Pods-GHGestureDemo-acknowledgements.markdown */,
+				03522BCAD2B0CB47A7EB206C4006BAC7 /* Pods-GHGestureDemo-acknowledgements.plist */,
+				0DF789D4A68807F3D16C103046A48D44 /* Pods-GHGestureDemo-dummy.m */,
+				6E2EF1467970D2D535F25984DC7B5AE0 /* Pods-GHGestureDemo-frameworks.sh */,
+				516935C41BE1066364CAA1F92DA91583 /* Pods-GHGestureDemo-resources.sh */,
+				7ACCB62E50000899BAEEA9E80467F074 /* Pods-GHGestureDemo.debug.xcconfig */,
+				32C617557FD2775EB2D06A81D127F6C2 /* Pods-GHGestureDemo.release.xcconfig */,
+			);
+			name = "Pods-GHGestureDemo";
+			path = "Target Support Files/Pods-GHGestureDemo";
+			sourceTree = "<group>";
+		};
+		52AD045B3420B483002A5EC0C241097F /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				4DC13B6F261685624C88FD8D9D3660AB /* mapapi.bundle */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		77F83023C1B4EBA551726037F84301C2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F3FA3F609DED53AEBA8E7CFECEDAB186 /* BaiduMapKit */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				0F8D2E47FE03D3B91B51069F7C273AF4 /* Frameworks */,
+				77F83023C1B4EBA551726037F84301C2 /* Pods */,
+				805F9A5C30FF2DAE471D25AACDEBE3D6 /* Products */,
+				A3BB05DB080F84D6BEA19A7F4E37375F /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		805F9A5C30FF2DAE471D25AACDEBE3D6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EE6ECA3864BE5965D04380051302BE53 /* libPods-GHGestureCameraModuleDemo.a */,
+				3DE9F04FE68F09813E21A102DB696FDE /* libPods-GHGestureDemo.a */,
+				CB435D7949A8FDDF49E0B9026B783C81 /* libPods-GHGestureDraggingDemo.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		99CD722EC6C2DD15891C6D746238BEDF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DD61DF643F43BAAF18086ECCB4C3E0B9 /* BaiduMapAPI_Base.framework */,
+				84230C1CD9E22FB6115E7A18CFC5A58D /* BaiduMapAPI_Cloud.framework */,
+				71C4D5E495B0FF6294001DD2EB94D80B /* BaiduMapAPI_Map.framework */,
+				94762E387C137CCE0485A8996B3115FA /* BaiduMapAPI_Search.framework */,
+				531E2027260E09C17C7A249791977ADF /* BaiduMapAPI_Utils.framework */,
+				BD7BDFB15BB530F14A6CAED9698F43F1 /* libcrypto.a */,
+				FE71282F21D742D6ACC535D0031A7C39 /* libssl.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9B20DB8277251B86C5753E6086CEA8B8 /* Pods-GHGestureDraggingDemo */ = {
+			isa = PBXGroup;
+			children = (
+				FC38E00D8F9E22521BF780D143CED9F7 /* Pods-GHGestureDraggingDemo-acknowledgements.markdown */,
+				96BB177BF6BB350FA23EEB4B4F5FEBE6 /* Pods-GHGestureDraggingDemo-acknowledgements.plist */,
+				91BB2419A7C0254B44A8BB58E128EF32 /* Pods-GHGestureDraggingDemo-dummy.m */,
+				19490763F44F7170FAD69ABA291565F3 /* Pods-GHGestureDraggingDemo-frameworks.sh */,
+				19AA8998BB3A06F736F136353BA9AC60 /* Pods-GHGestureDraggingDemo-resources.sh */,
+				EF60FF6EC17BF6FF4C99180F4925C4E3 /* Pods-GHGestureDraggingDemo.debug.xcconfig */,
+				A7C87D2B347CA32D3A6F2921FF5EEA35 /* Pods-GHGestureDraggingDemo.release.xcconfig */,
+			);
+			name = "Pods-GHGestureDraggingDemo";
+			path = "Target Support Files/Pods-GHGestureDraggingDemo";
+			sourceTree = "<group>";
+		};
+		A3BB05DB080F84D6BEA19A7F4E37375F /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				2B50DA49CFE79F26897C90A115063971 /* Pods-GHGestureCameraModuleDemo */,
+				487C96F6A688B56EAE45E24000B7840C /* Pods-GHGestureDemo */,
+				9B20DB8277251B86C5753E6086CEA8B8 /* Pods-GHGestureDraggingDemo */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		F3FA3F609DED53AEBA8E7CFECEDAB186 /* BaiduMapKit */ = {
+			isa = PBXGroup;
+			children = (
+				99CD722EC6C2DD15891C6D746238BEDF /* Frameworks */,
+				52AD045B3420B483002A5EC0C241097F /* Resources */,
+			);
+			name = BaiduMapKit;
+			path = BaiduMapKit;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		2E8E341EB17EDF901F5A78F72B404823 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		31F8E5B4CAD813186599CE602AB03975 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B7F750F6F16B92AFE56EF456AD3DDF5E /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		85B305619BCF2C700E3FE886F15090A7 /* Pods-GHGestureCameraModuleDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2FC55DA6A82BD1AA03C7339D86C1EFD8 /* Build configuration list for PBXNativeTarget "Pods-GHGestureCameraModuleDemo" */;
+			buildPhases = (
+				31F8E5B4CAD813186599CE602AB03975 /* Headers */,
+				A048FFE55CB680C6DE778D79157DB43D /* Sources */,
+				116E80A7D7C591DB43B175609CC106AA /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-GHGestureCameraModuleDemo";
+			productName = "Pods-GHGestureCameraModuleDemo";
+			productReference = EE6ECA3864BE5965D04380051302BE53 /* libPods-GHGestureCameraModuleDemo.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		9F77DCFEE1D0B959B7DE1AA340578B1D /* Pods-GHGestureDraggingDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 924C6B32B2EF4F4554A566BC79773AD4 /* Build configuration list for PBXNativeTarget "Pods-GHGestureDraggingDemo" */;
+			buildPhases = (
+				B7F750F6F16B92AFE56EF456AD3DDF5E /* Headers */,
+				FE54B1B1FA48FA2B93C42DD58FCECAC8 /* Sources */,
+				E98B1922911462AB2A7B1CA80A156980 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-GHGestureDraggingDemo";
+			productName = "Pods-GHGestureDraggingDemo";
+			productReference = CB435D7949A8FDDF49E0B9026B783C81 /* libPods-GHGestureDraggingDemo.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		F4B05B7363F625EFCBF75C2641C6A8F5 /* Pods-GHGestureDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4F1D4BBAC2FD9AB22A4AE32F6DB6AA46 /* Build configuration list for PBXNativeTarget "Pods-GHGestureDemo" */;
+			buildPhases = (
+				2E8E341EB17EDF901F5A78F72B404823 /* Headers */,
+				27FE6D6C7A3F20C9A2F60615BE8A7124 /* Sources */,
+				756E07D90EE5FF57E651B8693D2C9DF2 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-GHGestureDemo";
+			productName = "Pods-GHGestureDemo";
+			productReference = 3DE9F04FE68F09813E21A102DB696FDE /* libPods-GHGestureDemo.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0930;
+				LastUpgradeCheck = 0930;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = 805F9A5C30FF2DAE471D25AACDEBE3D6 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				85B305619BCF2C700E3FE886F15090A7 /* Pods-GHGestureCameraModuleDemo */,
+				F4B05B7363F625EFCBF75C2641C6A8F5 /* Pods-GHGestureDemo */,
+				9F77DCFEE1D0B959B7DE1AA340578B1D /* Pods-GHGestureDraggingDemo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		27FE6D6C7A3F20C9A2F60615BE8A7124 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B4F9F19F1B676ABC08DDA28A7D991377 /* Pods-GHGestureDemo-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A048FFE55CB680C6DE778D79157DB43D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0570BDA1A6EB7B83965DAA59BB6E6CED /* Pods-GHGestureCameraModuleDemo-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FE54B1B1FA48FA2B93C42DD58FCECAC8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4F8AB774794F1ABD612798CD071D6A43 /* Pods-GHGestureDraggingDemo-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		077943BCB67B1FB577D1DEA8153FAE15 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7ACCB62E50000899BAEEA9E80467F074 /* Pods-GHGestureDemo.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MACH_O_TYPE = staticlib;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		188EF3111A18A21C8DEC03895472CFF7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9023A1DB8B32B79DBE3146CC52473B0F /* Pods-GHGestureCameraModuleDemo.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MACH_O_TYPE = staticlib;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		3333DAEC3F0FB68746FAFB398198189A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EF60FF6EC17BF6FF4C99180F4925C4E3 /* Pods-GHGestureDraggingDemo.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MACH_O_TYPE = staticlib;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		5DE734ABD787801184C181C385D15EA4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 4.2;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		63A5799275076365B0038BA7C69732E0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		6AB74F31FC8BF22CB9598193D5158FD5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A7C87D2B347CA32D3A6F2921FF5EEA35 /* Pods-GHGestureDraggingDemo.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MACH_O_TYPE = staticlib;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		9201E2C9E7C8A9F3A930BFC6C4AE40EC /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C32EAF3FD8B2C3997BFCC88A0891D846 /* Pods-GHGestureCameraModuleDemo.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MACH_O_TYPE = staticlib;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F565083F449F58CD909B0E1F0CC25D58 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 32C617557FD2775EB2D06A81D127F6C2 /* Pods-GHGestureDemo.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MACH_O_TYPE = staticlib;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				63A5799275076365B0038BA7C69732E0 /* Debug */,
+				5DE734ABD787801184C181C385D15EA4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2FC55DA6A82BD1AA03C7339D86C1EFD8 /* Build configuration list for PBXNativeTarget "Pods-GHGestureCameraModuleDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				188EF3111A18A21C8DEC03895472CFF7 /* Debug */,
+				9201E2C9E7C8A9F3A930BFC6C4AE40EC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4F1D4BBAC2FD9AB22A4AE32F6DB6AA46 /* Build configuration list for PBXNativeTarget "Pods-GHGestureDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				077943BCB67B1FB577D1DEA8153FAE15 /* Debug */,
+				F565083F449F58CD909B0E1F0CC25D58 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		924C6B32B2EF4F4554A566BC79773AD4 /* Build configuration list for PBXNativeTarget "Pods-GHGestureDraggingDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3333DAEC3F0FB68746FAFB398198189A /* Debug */,
+				6AB74F31FC8BF22CB9598193D5158FD5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}

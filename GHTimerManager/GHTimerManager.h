@@ -42,4 +42,6 @@ typedef void (^TimerActionBlock)(GHTimerManager *timerManager, NSInteger count);
  */
 - (void)timerRemove;
 
+@property (nonatomic , assign) NSInteger count;
+
 @end

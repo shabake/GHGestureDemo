@@ -36,6 +36,7 @@
     self.title = @"相机整合模块";
     [self.view addSubview:self.tableView];
 }
+
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return self.dataArray.count;
 }
@@ -51,19 +52,15 @@
 #if TARGET_IPHONE_SIMULATOR
     KAlert(@"提示", @"请在真机运行此demo");
 #else
-    if (indexPath.row == 0) {
-        GHCameraModuleViewController *cameraModuleVc = [GHCameraModuleViewController creatCameraModuleVcWithType:GHCameraModuleViewButtonTypeScan /** 扫一扫 */];
-        [self.navigationController pushViewController:cameraModuleVc animated:YES];
-    } else if (indexPath.row == 1) {
-        GHCameraModuleViewController *cameraModuleVc = [GHCameraModuleViewController  creatCameraModuleVcWithType:GHCameraModuleViewButtonTypeTakephotos];
-        [self.navigationController pushViewController:cameraModuleVc animated:YES];
-    }
+    GHCameraModuleViewController *cameraModuleVc = [GHCameraModuleViewController creatCameraModuleVcWithType:GHCameraModuleViewButtonTypeScan /** 扫一扫 */];
+    [self.navigationController pushViewController:cameraModuleVc animated:YES];
+
 #endif
     
 }
 - (NSMutableArray *)dataArray {
     if (_dataArray == nil) {
-        _dataArray = [NSMutableArray arrayWithObjects:@"扫一扫",@"相机", nil];
+        _dataArray = [NSMutableArray arrayWithObjects:@"扫一扫", nil];
     }
     return _dataArray;
 }

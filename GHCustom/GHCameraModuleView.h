@@ -38,9 +38,19 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (CGFloat)actionCircleCenterY: (CGFloat)circleCenterY;
 
-- (void)actionAdjustFocalWith: (BOOL)hidden;
+- (void)showAdjustFocal;
 
 - (void)addTimer;
+
+/**
+ 开始动画
+ */
+- (void)startAnimation;
+
+/**
+ 停止动画
+ */
+- (void)endAnimation;
 
 @end
 
