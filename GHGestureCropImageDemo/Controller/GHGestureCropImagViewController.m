@@ -22,7 +22,8 @@
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor blueColor];
     
-    TKImageView *tkImageView = [[TKImageView alloc] initWithFrame:CGRectMake(20, 0, kScreenWidth - 40, kScreenHeight - 120)];
+    TKImageView *tkImageView = [[TKImageView alloc] initWithFrame:CGRectMake(20, kSafeAreaTopHeight + 10, kScreenWidth - 40, kScreenHeight - 120)];
+    
     [self.view addSubview:tkImageView];
     //需要进行裁剪的图片对象
     tkImageView.toCropImage = [UIImage imageNamed:@"tian"];

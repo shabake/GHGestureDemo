@@ -837,16 +837,16 @@ typedef NS_ENUM(NSInteger, TKMidLineType) {
 - (void)resetImageView {
     
     CGFloat selfAspectRatio = WIDTH(self) / HEIGHT(self);
-    if(_imageAspectRatio > selfAspectRatio) {
-        _paddingLeftRight = 0;
-        _paddingTopBottom = floor((HEIGHT(self) - WIDTH(self) / _imageAspectRatio) / 2.0);
-        _imageView.frame = CGRectMake(0, _paddingTopBottom, WIDTH(self), floor(WIDTH(self) / _imageAspectRatio));
-    }
-    else {
-        _paddingTopBottom = 0;
-        _paddingLeftRight = floor((WIDTH(self) - HEIGHT(self) * _imageAspectRatio) / 2.0);
-        _imageView.frame = CGRectMake(_paddingLeftRight, 0, floor(HEIGHT(self) * _imageAspectRatio), HEIGHT(self));
-    }
+//    if(_imageAspectRatio > selfAspectRatio) {
+//        _paddingLeftRight = 0;
+//        _paddingTopBottom = floor((HEIGHT(self) - WIDTH(self) / _imageAspectRatio) / 2.0);
+//        _imageView.frame = CGRectMake(0, _paddingTopBottom, WIDTH(self), floor(WIDTH(self) / _imageAspectRatio));
+//    }
+//    else {
+//        _paddingTopBottom = 0;
+//        _paddingLeftRight = floor((WIDTH(self) - HEIGHT(self) * _imageAspectRatio) / 2.0);
+        _imageView.frame = CGRectMake(0, 0, self.bounds.size.width, self.bounds.size.height);
+//    }
     
 }
 - (void)resetCropAreaByAspectRatio {
@@ -878,6 +878,7 @@ typedef NS_ENUM(NSInteger, TKMidLineType) {
     [self resetCropTransparentArea];
     [self resetMinSpaceIfNeeded];
 }
+
 - (void)resetCropAreaByScaleFactor: (CGFloat)scaleFactor {
     
     CGPoint center = _cropAreaView.center;
