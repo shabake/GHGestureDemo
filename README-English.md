@@ -11,6 +11,9 @@
 
 ## note
 
+**Execute before running**`pod install`
+
+
 **please choose** `GHGestureDemo ` **run**
 **git is large and unclear, please download demo to run to see**
 
