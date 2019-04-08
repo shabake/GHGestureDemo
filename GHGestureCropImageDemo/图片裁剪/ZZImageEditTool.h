@@ -14,6 +14,6 @@
 @property (nonatomic, copy) void (^finishBlock)(UIImage *image);
 
 /// selectClipRatio 0 = 全屏 1 = 1:1
-+(instancetype)showViewWithImg:(UIImage *)image andSelectClipRatio:(CGFloat)selectClipRatio;
++ (instancetype)showViewWithImg:(UIImage *)image andSelectClipRatio:(CGFloat)selectClipRatio;
 
 @end

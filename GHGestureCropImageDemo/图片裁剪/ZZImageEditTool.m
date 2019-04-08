@@ -20,14 +20,16 @@ static const NSUInteger kRightBottomCircleView = 3;
 
 @property (nonatomic, strong) UIImage *image;
 @property (nonatomic, strong) UIImageView *imageView;
-/// 裁剪范围
+
 @property (nonatomic, assign) CGRect clippingRect;
 
+/**
+ * 比例
+ */
 @property (nonatomic, assign) CGFloat selectClipRatio;
 @end
 
-@implementation ZZImageEditTool
-{
+@implementation ZZImageEditTool {
     ZZCutGridLayer *_gridLayer;
     //4个角
     ZZCutCircle *_ltView;
@@ -121,10 +123,11 @@ static const NSUInteger kRightBottomCircleView = 3;
 - (ZZCutCircle *)clippingCircleWithTag:(NSInteger)tag
 {
     ZZCutCircle *view = [[ZZCutCircle alloc] initWithFrame:CGRectMake(0, 0, 50, 50)];
+   
     view.tag = tag;
-    
+    view.test.tag = tag;
     UIPanGestureRecognizer *panGesture = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(panCircleView:)];
-    [view addGestureRecognizer:panGesture];
+    [view.test addGestureRecognizer:panGesture];
     
     [self addSubview:view];
     
@@ -156,7 +159,6 @@ static const NSUInteger kRightBottomCircleView = 3;
 - (void)panCircleView:(UIPanGestureRecognizer*)sender
 {
     CGPoint point = [sender locationInView:_imageView];
-    CGPoint dp = [sender translationInView:_imageView];
     
     CGRect rct = self.clippingRect;
     
@@ -175,21 +177,10 @@ static const NSUInteger kRightBottomCircleView = 3;
             maxX = MAX((rct.origin.x + rct.size.width)  - 0.1 * W, 0.1 * W);
             maxY = MAX((rct.origin.y + rct.size.height) - 0.1 * H, 0.1 * H);
             
-            if (ratio!=0) {
-                CGFloat y0 = rct.origin.y - ratio * rct.origin.x;
-                CGFloat x0 = -y0 / ratio;
-                minX = MAX(x0, 0);
-                minY = MAX(y0, 0);
-                
-                point.x = MAX(minX, MIN(point.x, maxX));
-                point.y = MAX(minY, MIN(point.y, maxY));
-                
-                if(-dp.x*ratio + dp.y > 0){ point.x = (point.y - y0) / ratio; }
-                else{ point.y = point.x * ratio + y0; }
-            } else {
-                point.x = MAX(minX, MIN(point.x, maxX));
-                point.y = MAX(minY, MIN(point.y, maxY));
-            }
+ 
+            point.x = MAX(minX, MIN(point.x, maxX));
+            point.y = MAX(minY, MIN(point.y, maxY));
+        
             
             rct.size.width  = rct.size.width  - (point.x - rct.origin.x);
             rct.size.height = rct.size.height - (point.y - rct.origin.y);
@@ -202,21 +193,9 @@ static const NSUInteger kRightBottomCircleView = 3;
             maxX = MAX((rct.origin.x + rct.size.width)  - 0.1 * W, 0.1 * W);
             minY = MAX(rct.origin.y + 0.1 * H, 0.1 * H);
             
-            if (ratio!=0) {
-                CGFloat y0 = (rct.origin.y + rct.size.height) - ratio* rct.origin.x ;
-                CGFloat xh = (H - y0) / ratio;
-                minX = MAX(xh, 0);
-                maxY = MIN(y0, H);
-                
-                point.x = MAX(minX, MIN(point.x, maxX));
-                point.y = MAX(minY, MIN(point.y, maxY));
-                
-                if(-dp.x*ratio + dp.y < 0){ point.x = (point.y - y0) / ratio; }
-                else{ point.y = point.x * ratio + y0; }
-            } else {
-                point.x = MAX(minX, MIN(point.x, maxX));
-                point.y = MAX(minY, MIN(point.y, maxY));
-            }
+      
+            point.x = MAX(minX, MIN(point.x, maxX));
+            point.y = MAX(minY, MIN(point.y, maxY));
             
             rct.size.width  = rct.size.width  - (point.x - rct.origin.x);
             rct.size.height = point.y - rct.origin.y;
@@ -228,22 +207,10 @@ static const NSUInteger kRightBottomCircleView = 3;
             minX = MAX(rct.origin.x + 0.1 * W, 0.1 * W);
             maxY = MAX((rct.origin.y + rct.size.height) - 0.1 * H, 0.1 * H);
             
-            if (ratio!=0) {
-                CGFloat y0 = rct.origin.y - ratio * (rct.origin.x + rct.size.width);
-                CGFloat yw = ratio * W + y0;
-                CGFloat x0 = -y0 / ratio;
-                maxX = MIN(x0, W);
-                minY = MAX(yw, 0);
-                
-                point.x = MAX(minX, MIN(point.x, maxX));
-                point.y = MAX(minY, MIN(point.y, maxY));
-                
-                if(-dp.x*ratio + dp.y > 0){ point.x = (point.y - y0) / ratio; }
-                else{ point.y = point.x * ratio + y0; }
-            } else {
-                point.x = MAX(minX, MIN(point.x, maxX));
-                point.y = MAX(minY, MIN(point.y, maxY));
-            }
+     
+            point.x = MAX(minX, MIN(point.x, maxX));
+            point.y = MAX(minY, MIN(point.y, maxY));
+            
             
             rct.size.width  = point.x - rct.origin.x;
             rct.size.height = rct.size.height - (point.y - rct.origin.y);
@@ -255,22 +222,10 @@ static const NSUInteger kRightBottomCircleView = 3;
             minX = MAX(rct.origin.x + 0.1 * W, 0.1 * W);
             minY = MAX(rct.origin.y + 0.1 * H, 0.1 * H);
             
-            if (ratio!=0) {
-                CGFloat y0 = (rct.origin.y + rct.size.height) - ratio * (rct.origin.x + rct.size.width);
-                CGFloat yw = ratio * W + y0;
-                CGFloat xh = (H - y0) / ratio;
-                maxX = MIN(xh, W);
-                maxY = MIN(yw, H);
-                
-                point.x = MAX(minX, MIN(point.x, maxX));
-                point.y = MAX(minY, MIN(point.y, maxY));
-                
-                if(-dp.x*ratio + dp.y < 0){ point.x = (point.y - y0) / ratio; }
-                else{ point.y = point.x * ratio + y0; }
-            } else {
-                point.x = MAX(minX, MIN(point.x, maxX));
-                point.y = MAX(minY, MIN(point.y, maxY));
-            }
+
+            point.x = MAX(minX, MIN(point.x, maxX));
+            point.y = MAX(minY, MIN(point.y, maxY));
+        
             
             rct.size.width  = point.x - rct.origin.x;
             rct.size.height = point.y - rct.origin.y;

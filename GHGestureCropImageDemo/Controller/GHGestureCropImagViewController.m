@@ -9,6 +9,7 @@
 #import "GHGestureCropImagViewController.h"
 #import "UIView+Extension.h"
 #import "ZZImageEditTool.h"
+#import "ClipViewController.h"
 
 @interface GHGestureCropImagViewController ()
 @property (nonatomic , strong) UIView *test;
@@ -28,9 +29,13 @@
     
     [self.test addGestureRecognizer:panGest];
     
-    ZZImageEditTool *tool = [ZZImageEditTool showViewWithImg:[UIImage imageNamed:@"tian"] andSelectClipRatio:0];
 }
 
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    ClipViewController *vc = [[ClipViewController alloc]init];
+    vc.image = [UIImage imageNamed:@"tian"];
+    [self.navigationController pushViewController:vc animated:YES];
+}
 - (void)panView:(UIPanGestureRecognizer *)panGest{
     
 //    [self.cameraModuleView showAdjustFocal];
