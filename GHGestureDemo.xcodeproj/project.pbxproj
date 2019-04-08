@@ -62,6 +62,30 @@
 		D6B204D822564C5E004849E5 /* GHGestureDraggingHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = D6B204D722564C5E004849E5 /* GHGestureDraggingHeader.m */; };
 		D6B204DB22564E44004849E5 /* GHGestureDraggingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6B204DA22564E44004849E5 /* GHGestureDraggingViewController.m */; };
 		D6B204DE225655FE004849E5 /* GHGestureDraggingCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D6B204DD225655FE004849E5 /* GHGestureDraggingCell.m */; };
+		D6B204E2225ADDA8004849E5 /* GHGestureDraggingHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = D6B204D722564C5E004849E5 /* GHGestureDraggingHeader.m */; };
+		D6B204E3225ADDA8004849E5 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6A75CD32251A9430074D683 /* ViewController.m */; };
+		D6B204E4225ADDA8004849E5 /* GHGestureDraggingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6B204DA22564E44004849E5 /* GHGestureDraggingViewController.m */; };
+		D6B204E5225ADDA8004849E5 /* GHGestureDraggingCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D6B204DD225655FE004849E5 /* GHGestureDraggingCell.m */; };
+		D6B204E6225ADDA8004849E5 /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = D62D9AAD2254655600B51E89 /* UIView+Extension.m */; };
+		D6B204E7225ADDA8004849E5 /* GHTimerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D6B20490225562E1004849E5 /* GHTimerManager.m */; };
+		D6B204E8225ADDA8004849E5 /* GHViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D62D9AB322547A1F00B51E89 /* GHViewController.m */; };
+		D6B204E9225ADDA8004849E5 /* GHPrivacyAuthTool.m in Sources */ = {isa = PBXBuildFile; fileRef = D62D9A9322537B9200B51E89 /* GHPrivacyAuthTool.m */; };
+		D6B204EA225ADDA8004849E5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D6A75CDE2251A9450074D683 /* main.m */; };
+		D6B204EB225ADDA8004849E5 /* GHCameraModuleView.m in Sources */ = {isa = PBXBuildFile; fileRef = D62D9AAC2254655600B51E89 /* GHCameraModuleView.m */; };
+		D6B204EC225ADDA8004849E5 /* GHCameraModuleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D62D9AAB2254655600B51E89 /* GHCameraModuleViewController.m */; };
+		D6B204ED225ADDA8004849E5 /* GHAdjustFocal.m in Sources */ = {isa = PBXBuildFile; fileRef = D62D9A8F22530A2800B51E89 /* GHAdjustFocal.m */; };
+		D6B204EE225ADDA8004849E5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D6A75CD02251A9430074D683 /* AppDelegate.m */; };
+		D6B204EF225ADDA8004849E5 /* GHGestureDraggingView.m in Sources */ = {isa = PBXBuildFile; fileRef = D6B204D422564B9F004849E5 /* GHGestureDraggingView.m */; };
+		D6B204F0225ADDA8004849E5 /* GHScanView.m in Sources */ = {isa = PBXBuildFile; fileRef = D62D9AAA2254655600B51E89 /* GHScanView.m */; };
+		D6B204F1225ADDA8004849E5 /* GHCameraModule.m in Sources */ = {isa = PBXBuildFile; fileRef = D6A75CEE2251BA950074D683 /* GHCameraModule.m */; };
+		D6B204F3225ADDA8004849E5 /* libPods-GHGestureDraggingDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F7340B3AC6749CE4D531BAF7 /* libPods-GHGestureDraggingDemo.a */; };
+		D6B204F5225ADDA8004849E5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6A75CDA2251A9450074D683 /* LaunchScreen.storyboard */; };
+		D6B204F6225ADDA8004849E5 /* GHGestureDraggingDemo.plist in Resources */ = {isa = PBXBuildFile; fileRef = D6B204CB22564300004849E5 /* GHGestureDraggingDemo.plist */; };
+		D6B204F7225ADDA8004849E5 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = D62D9A8B2253079200B51E89 /* README.md */; };
+		D6B204F8225ADDA8004849E5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D62D9A95225387F100B51E89 /* Assets.xcassets */; };
+		D6B204F9225ADDA8004849E5 /* GHGestureCameraModuleDemo.plist in Resources */ = {isa = PBXBuildFile; fileRef = D62D9ACD22547EE900B51E89 /* GHGestureCameraModuleDemo.plist */; };
+		D6B20501225ADE41004849E5 /* GHGestureCropImageDemo.plist in Resources */ = {isa = PBXBuildFile; fileRef = D6B20500225ADE41004849E5 /* GHGestureCropImageDemo.plist */; };
+		D6B20505225ADEB0004849E5 /* GHGestureCropImagViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6B20504225ADEB0004849E5 /* GHGestureCropImagViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -113,6 +137,10 @@
 		D6B204DA22564E44004849E5 /* GHGestureDraggingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHGestureDraggingViewController.m; sourceTree = "<group>"; };
 		D6B204DC225655FE004849E5 /* GHGestureDraggingCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GHGestureDraggingCell.h; sourceTree = "<group>"; };
 		D6B204DD225655FE004849E5 /* GHGestureDraggingCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GHGestureDraggingCell.m; sourceTree = "<group>"; };
+		D6B204FE225ADDA8004849E5 /* GHGestureCropImageDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GHGestureCropImageDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D6B20500225ADE41004849E5 /* GHGestureCropImageDemo.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = GHGestureCropImageDemo.plist; sourceTree = "<group>"; };
+		D6B20503225ADEB0004849E5 /* GHGestureCropImagViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GHGestureCropImagViewController.h; sourceTree = "<group>"; };
+		D6B20504225ADEB0004849E5 /* GHGestureCropImagViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GHGestureCropImagViewController.m; sourceTree = "<group>"; };
 		EB932B34794DF789714BB870 /* Pods-GHGestureDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GHGestureDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-GHGestureDemo/Pods-GHGestureDemo.release.xcconfig"; sourceTree = "<group>"; };
 		EC0550C803F9E1472B4CB118 /* Pods-GHGestureDraggingDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GHGestureDraggingDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-GHGestureDraggingDemo/Pods-GHGestureDraggingDemo.release.xcconfig"; sourceTree = "<group>"; };
 		F7340B3AC6749CE4D531BAF7 /* libPods-GHGestureDraggingDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GHGestureDraggingDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -140,6 +168,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				05A01CEE1A74B0497585EC2F /* libPods-GHGestureDraggingDemo.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D6B204F2225ADDA8004849E5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D6B204F3225ADDA8004849E5 /* libPods-GHGestureDraggingDemo.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -206,6 +242,7 @@
 		D6A75CC32251A9430074D683 = {
 			isa = PBXGroup;
 			children = (
+				D6B20502225ADE99004849E5 /* GHGestureCropImageDemo */,
 				D6B204CF22564B30004849E5 /* GHGestureDraggingDemo */,
 				D6B2048E225562E1004849E5 /* GHTimerManager */,
 				D62D9AA42254655600B51E89 /* GHCustom */,
@@ -225,6 +262,7 @@
 				D6A75CCC2251A9430074D683 /* GHGestureDemo.app */,
 				D62D9ACB22547A8600B51E89 /* GHGestureCameraModuleDemo.app */,
 				D6B204C5225641C2004849E5 /* GHGestureDraggingDemo.app */,
+				D6B204FE225ADDA8004849E5 /* GHGestureCropImageDemo.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -243,6 +281,7 @@
 				D62D9A95225387F100B51E89 /* Assets.xcassets */,
 				D6A75CDA2251A9450074D683 /* LaunchScreen.storyboard */,
 				D6A75CDD2251A9450074D683 /* Info.plist */,
+				D6B20500225ADE41004849E5 /* GHGestureCropImageDemo.plist */,
 				D6B204CB22564300004849E5 /* GHGestureDraggingDemo.plist */,
 				D62D9ACD22547EE900B51E89 /* GHGestureCameraModuleDemo.plist */,
 				D6A75CDE2251A9450074D683 /* main.m */,
@@ -316,6 +355,15 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		D6B20502225ADE99004849E5 /* GHGestureCropImageDemo */ = {
+			isa = PBXGroup;
+			children = (
+				D6B20503225ADEB0004849E5 /* GHGestureCropImagViewController.h */,
+				D6B20504225ADEB0004849E5 /* GHGestureCropImagViewController.m */,
+			);
+			path = GHGestureCropImageDemo;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -376,6 +424,25 @@
 			productReference = D6B204C5225641C2004849E5 /* GHGestureDraggingDemo.app */;
 			productType = "com.apple.product-type.application";
 		};
+		D6B204DF225ADDA8004849E5 /* GHGestureCropImageDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D6B204FB225ADDA8004849E5 /* Build configuration list for PBXNativeTarget "GHGestureCropImageDemo" */;
+			buildPhases = (
+				D6B204E0225ADDA8004849E5 /* [CP] Check Pods Manifest.lock */,
+				D6B204E1225ADDA8004849E5 /* Sources */,
+				D6B204F2225ADDA8004849E5 /* Frameworks */,
+				D6B204F4225ADDA8004849E5 /* Resources */,
+				D6B204FA225ADDA8004849E5 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GHGestureCropImageDemo;
+			productName = GHGestureDemo;
+			productReference = D6B204FE225ADDA8004849E5 /* GHGestureCropImageDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -406,6 +473,7 @@
 				D6A75CCB2251A9430074D683 /* GHGestureDemo */,
 				D62D9AB522547A8600B51E89 /* GHGestureCameraModuleDemo */,
 				D6B204AE225641C2004849E5 /* GHGestureDraggingDemo */,
+				D6B204DF225ADDA8004849E5 /* GHGestureCropImageDemo */,
 			);
 		};
 /* End PBXProject section */
@@ -441,6 +509,19 @@
 				D6B204BF225641C2004849E5 /* README.md in Resources */,
 				D6B204C0225641C2004849E5 /* Assets.xcassets in Resources */,
 				D6B204C1225641C2004849E5 /* GHGestureCameraModuleDemo.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D6B204F4225ADDA8004849E5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D6B204F5225ADDA8004849E5 /* LaunchScreen.storyboard in Resources */,
+				D6B204F6225ADDA8004849E5 /* GHGestureDraggingDemo.plist in Resources */,
+				D6B20501225ADE41004849E5 /* GHGestureCropImageDemo.plist in Resources */,
+				D6B204F7225ADDA8004849E5 /* README.md in Resources */,
+				D6B204F8225ADDA8004849E5 /* Assets.xcassets in Resources */,
+				D6B204F9225ADDA8004849E5 /* GHGestureCameraModuleDemo.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -579,6 +660,50 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		D6B204E0225ADDA8004849E5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GHGestureDraggingDemo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D6B204FA225ADDA8004849E5 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-GHGestureDraggingDemo/Pods-GHGestureDraggingDemo-resources.sh",
+				"${PODS_ROOT}/BaiduMapKit/BaiduMapKit/BaiduMapAPI_Map.framework/mapapi.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/mapapi.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GHGestureDraggingDemo/Pods-GHGestureDraggingDemo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -640,6 +765,30 @@
 				D6B204D522564B9F004849E5 /* GHGestureDraggingView.m in Sources */,
 				D6B204BA225641C2004849E5 /* GHScanView.m in Sources */,
 				D6B204BB225641C2004849E5 /* GHCameraModule.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D6B204E1225ADDA8004849E5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D6B20505225ADEB0004849E5 /* GHGestureCropImagViewController.m in Sources */,
+				D6B204E2225ADDA8004849E5 /* GHGestureDraggingHeader.m in Sources */,
+				D6B204E3225ADDA8004849E5 /* ViewController.m in Sources */,
+				D6B204E4225ADDA8004849E5 /* GHGestureDraggingViewController.m in Sources */,
+				D6B204E5225ADDA8004849E5 /* GHGestureDraggingCell.m in Sources */,
+				D6B204E6225ADDA8004849E5 /* UIView+Extension.m in Sources */,
+				D6B204E7225ADDA8004849E5 /* GHTimerManager.m in Sources */,
+				D6B204E8225ADDA8004849E5 /* GHViewController.m in Sources */,
+				D6B204E9225ADDA8004849E5 /* GHPrivacyAuthTool.m in Sources */,
+				D6B204EA225ADDA8004849E5 /* main.m in Sources */,
+				D6B204EB225ADDA8004849E5 /* GHCameraModuleView.m in Sources */,
+				D6B204EC225ADDA8004849E5 /* GHCameraModuleViewController.m in Sources */,
+				D6B204ED225ADDA8004849E5 /* GHAdjustFocal.m in Sources */,
+				D6B204EE225ADDA8004849E5 /* AppDelegate.m in Sources */,
+				D6B204EF225ADDA8004849E5 /* GHGestureDraggingView.m in Sources */,
+				D6B204F0225ADDA8004849E5 /* GHScanView.m in Sources */,
+				D6B204F1225ADDA8004849E5 /* GHCameraModule.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -891,6 +1040,48 @@
 			};
 			name = Release;
 		};
+		D6B204FC225ADDA8004849E5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4616ED7641DE5E622E2F2831 /* Pods-GHGestureDraggingDemo.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = KZ9JB9ZT4S;
+				GCC_PREFIX_HEADER = GHGestureDemo/Other/PrefixHeader.pch;
+				GCC_PREPROCESSOR_DEFINITIONS = DEVELOPMENT3;
+				INFOPLIST_FILE = "$(SRCROOT)/GHGestureDemo/GHGestureCropImageDemo.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = GHome.GHGestureDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D6B204FD225ADDA8004849E5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EC0550C803F9E1472B4CB118 /* Pods-GHGestureDraggingDemo.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = KZ9JB9ZT4S;
+				GCC_PREFIX_HEADER = GHGestureDemo/Other/PrefixHeader.pch;
+				GCC_PREPROCESSOR_DEFINITIONS = "";
+				INFOPLIST_FILE = "$(SRCROOT)/GHGestureDemo/GHGestureCropImageDemo.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = GHome.GHGestureDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -926,6 +1117,15 @@
 			buildConfigurations = (
 				D6B204C3225641C2004849E5 /* Debug */,
 				D6B204C4225641C2004849E5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D6B204FB225ADDA8004849E5 /* Build configuration list for PBXNativeTarget "GHGestureCropImageDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D6B204FC225ADDA8004849E5 /* Debug */,
+				D6B204FD225ADDA8004849E5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

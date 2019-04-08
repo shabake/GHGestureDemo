@@ -10,6 +10,7 @@
 #import "ViewController.h"
 #import "GHViewController.h"
 #import "GHGestureDraggingViewController.h"
+#import "GHGestureCropImagViewController.h"
 
 @interface AppDelegate ()
 
@@ -35,7 +36,12 @@
     GHGestureDraggingViewController *vc = [[GHGestureDraggingViewController alloc]init];
     UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:vc];
     self.window.rootViewController = nav;
+#elif DEVELOPMENT3
+    GHGestureCropImagViewController *vc = [[GHGestureCropImagViewController alloc]init];
+    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:vc];
+    self.window.rootViewController = nav;
 #else
+    
 #endif
     [window makeKeyAndVisible];
 
