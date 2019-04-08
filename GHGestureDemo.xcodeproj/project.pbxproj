@@ -337,17 +337,8 @@
 				D6B20521225B2A0C004849E5 /* CropImage */,
 				D6B20517225B11A4004849E5 /* 图片裁剪 */,
 				D6B2050E225B0CDE004849E5 /* Controller */,
-				D6B20506225B0CDE004849E5 /* Model */,
-				D6B20511225B0CDE004849E5 /* View */,
 			);
 			path = GHGestureCropImageDemo;
-			sourceTree = "<group>";
-		};
-		D6B20506225B0CDE004849E5 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 		D6B2050E225B0CDE004849E5 /* Controller */ = {
@@ -357,13 +348,6 @@
 				D6B2050F225B0CDE004849E5 /* GHGestureCropImagViewController.m */,
 			);
 			path = Controller;
-			sourceTree = "<group>";
-		};
-		D6B20511225B0CDE004849E5 /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
 			sourceTree = "<group>";
 		};
 		D6B20517225B11A4004849E5 /* 图片裁剪 */ = {
