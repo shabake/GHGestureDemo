@@ -45,6 +45,7 @@
                                  cameraModuleCodeBlock: (CameraModuleCodeBlock)cameraModuleCodeBlock {
 
     if (self == [super init]) {
+        /// 测试
         self.cameraModuleBlock = cameraModuleBlock;
         self.cameraModuleCodeBlock = cameraModuleCodeBlock;
     }
