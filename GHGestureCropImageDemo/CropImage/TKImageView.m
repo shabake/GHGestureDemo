@@ -224,13 +224,16 @@ typedef NS_ENUM(NSInteger, TKMidLineType) {
 @end
 
 @interface MidLineView : UIView
+
 @property (strong, nonatomic) CAShapeLayer *lineLayer;
 @property (assign, nonatomic) CGFloat lineWidth;
 @property (assign, nonatomic) CGFloat lineHeight;
 @property (strong, nonatomic) UIColor *lineColor;
 @property (assign, nonatomic) TKMidLineType type;
+
 @end
 @implementation MidLineView
+
 - (instancetype)initWithLineWidth: (CGFloat)lineWidth lineHeight: (CGFloat)lineHeight lineColor: (UIColor *)lineColor {
     
     self = [super initWithFrame: CGRectMake(0, 0, MID_LINE_INTERACT_WIDTH, MID_LINE_INTERACT_HEIGHT)];
@@ -559,6 +562,7 @@ typedef NS_ENUM(NSInteger, TKMidLineType) {
     [_cropAreaView addGestureRecognizer: _cropAreaPan];
     
 }
+
 #pragma mark - PinchGesture CallBack
 - (void)handleCropAreaPinch: (UIPinchGestureRecognizer *)pinchGesture {
     

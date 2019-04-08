@@ -90,7 +90,6 @@
 		D6B2051E225B11A4004849E5 /* ZZCutCircle.m in Sources */ = {isa = PBXBuildFile; fileRef = D6B20518225B11A4004849E5 /* ZZCutCircle.m */; };
 		D6B2051F225B11A4004849E5 /* ZZCutGridLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = D6B2051B225B11A4004849E5 /* ZZCutGridLayer.m */; };
 		D6B20520225B11A4004849E5 /* ZZImageEditTool.m in Sources */ = {isa = PBXBuildFile; fileRef = D6B2051D225B11A4004849E5 /* ZZImageEditTool.m */; };
-		D6B20526225B2A0C004849E5 /* ClipViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6B20522225B2A0C004849E5 /* ClipViewController.m */; };
 		D6B20527225B2A0C004849E5 /* TKImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = D6B20525225B2A0C004849E5 /* TKImageView.m */; };
 /* End PBXBuildFile section */
 
@@ -155,9 +154,7 @@
 		D6B2051B225B11A4004849E5 /* ZZCutGridLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZZCutGridLayer.m; sourceTree = "<group>"; };
 		D6B2051C225B11A4004849E5 /* ZZCutCircle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZZCutCircle.h; sourceTree = "<group>"; };
 		D6B2051D225B11A4004849E5 /* ZZImageEditTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZZImageEditTool.m; sourceTree = "<group>"; };
-		D6B20522225B2A0C004849E5 /* ClipViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClipViewController.m; sourceTree = "<group>"; };
 		D6B20523225B2A0C004849E5 /* TKImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TKImageView.h; sourceTree = "<group>"; };
-		D6B20524225B2A0C004849E5 /* ClipViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClipViewController.h; sourceTree = "<group>"; };
 		D6B20525225B2A0C004849E5 /* TKImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TKImageView.m; sourceTree = "<group>"; };
 		EB932B34794DF789714BB870 /* Pods-GHGestureDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GHGestureDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-GHGestureDemo/Pods-GHGestureDemo.release.xcconfig"; sourceTree = "<group>"; };
 		ED715A5D0275C7DAE5AEACD2 /* Pods-GHGestureDraggingDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GHGestureDraggingDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-GHGestureDraggingDemo/Pods-GHGestureDraggingDemo.release.xcconfig"; sourceTree = "<group>"; };
@@ -400,8 +397,8 @@
 		D6B2050E225B0CDE004849E5 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				D6B2050F225B0CDE004849E5 /* GHGestureCropImagViewController.m */,
 				D6B20510225B0CDE004849E5 /* GHGestureCropImagViewController.h */,
+				D6B2050F225B0CDE004849E5 /* GHGestureCropImagViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -429,8 +426,6 @@
 		D6B20521225B2A0C004849E5 /* CropImage */ = {
 			isa = PBXGroup;
 			children = (
-				D6B20524225B2A0C004849E5 /* ClipViewController.h */,
-				D6B20522225B2A0C004849E5 /* ClipViewController.m */,
 				D6B20523225B2A0C004849E5 /* TKImageView.h */,
 				D6B20525225B2A0C004849E5 /* TKImageView.m */,
 			);
@@ -857,7 +852,6 @@
 				D6B204EA225ADDA8004849E5 /* main.m in Sources */,
 				D6B204EB225ADDA8004849E5 /* GHCameraModuleView.m in Sources */,
 				D6B204EC225ADDA8004849E5 /* GHCameraModuleViewController.m in Sources */,
-				D6B20526225B2A0C004849E5 /* ClipViewController.m in Sources */,
 				D6B204ED225ADDA8004849E5 /* GHAdjustFocal.m in Sources */,
 				D6B2051E225B11A4004849E5 /* ZZCutCircle.m in Sources */,
 				D6B204EE225ADDA8004849E5 /* AppDelegate.m in Sources */,
