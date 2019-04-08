@@ -35,7 +35,7 @@
     self.title.frame = CGRectMake(10, 10, self.bounds.size.width - 20, 40);
     [self.backGround addSubview:self.title];
     
-    self.line.frame = CGRectMake(10, self.title.height + self.title.y, kScreenWidthAMap3DMap - 20, 0.5);
+    self.line.frame = CGRectMake(10, self.title.height + self.title.y, kScreenWidth- 20, 0.5);
     [self.backGround addSubview:self.line];
 
     self.info.frame = CGRectMake(10, CGRectGetMaxY(self.line.frame) + 10, self.bounds.size.width - 20, 20);
