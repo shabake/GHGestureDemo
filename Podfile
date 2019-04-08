@@ -1,6 +1,5 @@
 # Uncomment the next line to define a global platform for your project
  platform :ios, '7.0'
-pod 'BaiduMapKit', '~> 4.3.0'
 pod 'Masonry', '1.0.0'
 
 target 'GHGestureCropImageDemo' do
