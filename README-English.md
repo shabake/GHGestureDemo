@@ -7,14 +7,17 @@
 
 [Chinese](https://github.com/shabake/GHGestureDemo) | [English](https://github.com/shabake/GHGestureDemo/blob/master/README-English.md)
 
-The pinch gesture and the drag gesture coexist to achieve the adjustment of the focal length<br/>
+`The pinch gesture and the drag gesture coexist to achieve the adjustment of the focal length`
 
+## note
 
+**please choose** `GHGestureDemo ` **run**
 **git is large and unclear, please download demo to run to see**
 
 **If you run crash, add key `Privacy - Camera Usage Description`** to iofo.plist
 
-![www.alltoall.net_1554517967660633_VElU7L3HnI.gif](https://upload-images.jianshu.io/upload_images/1419035-e87501ab35e9b0d1.gif?imageMogr2/auto-orient/strip)
+![1.gif](https://upload-images.jianshu.io/upload_images/1419035-e87501ab35e9b0d1.gif?imageMogr2/auto-orient/strip)
+
 
 ### Features
 ```diff

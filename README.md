@@ -7,14 +7,20 @@
 
 [中文](https://github.com/shabake/GHGestureDemo) | [English](https://github.com/shabake/GHGestureDemo/blob/master/README-English.md)
 
-捏合手势和拖拽手势并存,实现调整焦距<br/>
+`捏合手势和拖拽手势并存,实现调整焦距`
+
+## 运行
+
+**请选择**`GHGestureDemo` **运行**
+
+![image.png](https://upload-images.jianshu.io/upload_images/1419035-ed2e6d34c6e37a47.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 
 **git较大且不清晰请下载demo运行到真机查看**
 
 **如果运行崩溃请在iofo.plist中添加key `Privacy - Camera Usage Description`**
 
-![www.alltoall.net_1554517967660633_VElU7L3HnI.gif](https://upload-images.jianshu.io/upload_images/1419035-e87501ab35e9b0d1.gif?imageMogr2/auto-orient/strip)
+![1.gif](https://upload-images.jianshu.io/upload_images/1419035-e87501ab35e9b0d1.gif?imageMogr2/auto-orient/strip)
 
 ### 功能
 ```diff

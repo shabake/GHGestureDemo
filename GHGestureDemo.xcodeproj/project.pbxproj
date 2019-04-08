@@ -409,11 +409,11 @@
 		D6B20517225B11A4004849E5 /* 图片裁剪 */ = {
 			isa = PBXGroup;
 			children = (
-				D6B20518225B11A4004849E5 /* ZZCutCircle.m */,
 				D6B20519225B11A4004849E5 /* ZZCutGridLayer.h */,
-				D6B2051A225B11A4004849E5 /* ZZImageEditTool.h */,
 				D6B2051B225B11A4004849E5 /* ZZCutGridLayer.m */,
 				D6B2051C225B11A4004849E5 /* ZZCutCircle.h */,
+				D6B20518225B11A4004849E5 /* ZZCutCircle.m */,
+				D6B2051A225B11A4004849E5 /* ZZImageEditTool.h */,
 				D6B2051D225B11A4004849E5 /* ZZImageEditTool.m */,
 			);
 			path = "图片裁剪";
