@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		05A01CEE1A74B0497585EC2F /* libPods-GHGestureDraggingDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F7340B3AC6749CE4D531BAF7 /* libPods-GHGestureDraggingDemo.a */; };
+		715E0F637F5BDEE6E6ED3EE3 /* libPods-GHGestureCropImageDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E3C26510AFED5A3378DE2A9 /* libPods-GHGestureCropImageDemo.a */; };
+		9374E7AE6F7A171522D63826 /* libPods-GHGestureDraggingDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F7340B3AC6749CE4D531BAF7 /* libPods-GHGestureDraggingDemo.a */; };
 		B88AC45BCBA9B219086C0ADA /* libPods-GHGestureDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 20DF6644C6ADE9B2495C2117 /* libPods-GHGestureDemo.a */; };
 		D5F29C8C24FA8B1573E997ED /* libPods-GHGestureCameraModuleDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CD48F29B02F8070675F5538 /* libPods-GHGestureCameraModuleDemo.a */; };
 		D62D9A8C2253079200B51E89 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = D62D9A8B2253079200B51E89 /* README.md */; };
@@ -78,22 +80,26 @@
 		D6B204EF225ADDA8004849E5 /* GHGestureDraggingView.m in Sources */ = {isa = PBXBuildFile; fileRef = D6B204D422564B9F004849E5 /* GHGestureDraggingView.m */; };
 		D6B204F0225ADDA8004849E5 /* GHScanView.m in Sources */ = {isa = PBXBuildFile; fileRef = D62D9AAA2254655600B51E89 /* GHScanView.m */; };
 		D6B204F1225ADDA8004849E5 /* GHCameraModule.m in Sources */ = {isa = PBXBuildFile; fileRef = D6A75CEE2251BA950074D683 /* GHCameraModule.m */; };
-		D6B204F3225ADDA8004849E5 /* libPods-GHGestureDraggingDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F7340B3AC6749CE4D531BAF7 /* libPods-GHGestureDraggingDemo.a */; };
 		D6B204F5225ADDA8004849E5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6A75CDA2251A9450074D683 /* LaunchScreen.storyboard */; };
 		D6B204F6225ADDA8004849E5 /* GHGestureDraggingDemo.plist in Resources */ = {isa = PBXBuildFile; fileRef = D6B204CB22564300004849E5 /* GHGestureDraggingDemo.plist */; };
 		D6B204F7225ADDA8004849E5 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = D62D9A8B2253079200B51E89 /* README.md */; };
 		D6B204F8225ADDA8004849E5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D62D9A95225387F100B51E89 /* Assets.xcassets */; };
 		D6B204F9225ADDA8004849E5 /* GHGestureCameraModuleDemo.plist in Resources */ = {isa = PBXBuildFile; fileRef = D62D9ACD22547EE900B51E89 /* GHGestureCameraModuleDemo.plist */; };
 		D6B20501225ADE41004849E5 /* GHGestureCropImageDemo.plist in Resources */ = {isa = PBXBuildFile; fileRef = D6B20500225ADE41004849E5 /* GHGestureCropImageDemo.plist */; };
-		D6B20505225ADEB0004849E5 /* GHGestureCropImagViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6B20504225ADEB0004849E5 /* GHGestureCropImagViewController.m */; };
+		D6B20515225B0CDE004849E5 /* GHGestureCropImagViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6B2050F225B0CDE004849E5 /* GHGestureCropImagViewController.m */; };
+		D6B2051E225B11A4004849E5 /* ZZCutCircle.m in Sources */ = {isa = PBXBuildFile; fileRef = D6B20518225B11A4004849E5 /* ZZCutCircle.m */; };
+		D6B2051F225B11A4004849E5 /* ZZCutGridLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = D6B2051B225B11A4004849E5 /* ZZCutGridLayer.m */; };
+		D6B20520225B11A4004849E5 /* ZZImageEditTool.m in Sources */ = {isa = PBXBuildFile; fileRef = D6B2051D225B11A4004849E5 /* ZZImageEditTool.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		16E104218E84444D45567567 /* Pods-GHGestureCameraModuleDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GHGestureCameraModuleDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-GHGestureCameraModuleDemo/Pods-GHGestureCameraModuleDemo.release.xcconfig"; sourceTree = "<group>"; };
 		20DF6644C6ADE9B2495C2117 /* libPods-GHGestureDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GHGestureDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		45E1DB76F0F059097A618106 /* Pods-GHGestureDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GHGestureDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GHGestureDemo/Pods-GHGestureDemo.debug.xcconfig"; sourceTree = "<group>"; };
-		4616ED7641DE5E622E2F2831 /* Pods-GHGestureDraggingDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GHGestureDraggingDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GHGestureDraggingDemo/Pods-GHGestureDraggingDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		5336AB7AA506592D1C5EB6CE /* Pods-GHGestureCropImageDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GHGestureCropImageDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-GHGestureCropImageDemo/Pods-GHGestureCropImageDemo.release.xcconfig"; sourceTree = "<group>"; };
+		7133944D52E4651CD4D6F935 /* Pods-GHGestureDraggingDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GHGestureDraggingDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GHGestureDraggingDemo/Pods-GHGestureDraggingDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		7CD48F29B02F8070675F5538 /* libPods-GHGestureCameraModuleDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GHGestureCameraModuleDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7E3C26510AFED5A3378DE2A9 /* libPods-GHGestureCropImageDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GHGestureCropImageDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C490937CD42CE058FF7B0191 /* Pods-GHGestureCameraModuleDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GHGestureCameraModuleDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GHGestureCameraModuleDemo/Pods-GHGestureCameraModuleDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		D62D9A8B2253079200B51E89 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
 		D62D9A8E22530A2800B51E89 /* GHAdjustFocal.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GHAdjustFocal.h; sourceTree = "<group>"; };
@@ -139,11 +145,18 @@
 		D6B204DD225655FE004849E5 /* GHGestureDraggingCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GHGestureDraggingCell.m; sourceTree = "<group>"; };
 		D6B204FE225ADDA8004849E5 /* GHGestureCropImageDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GHGestureCropImageDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6B20500225ADE41004849E5 /* GHGestureCropImageDemo.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = GHGestureCropImageDemo.plist; sourceTree = "<group>"; };
-		D6B20503225ADEB0004849E5 /* GHGestureCropImagViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GHGestureCropImagViewController.h; sourceTree = "<group>"; };
-		D6B20504225ADEB0004849E5 /* GHGestureCropImagViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GHGestureCropImagViewController.m; sourceTree = "<group>"; };
+		D6B2050F225B0CDE004849E5 /* GHGestureCropImagViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHGestureCropImagViewController.m; sourceTree = "<group>"; };
+		D6B20510225B0CDE004849E5 /* GHGestureCropImagViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHGestureCropImagViewController.h; sourceTree = "<group>"; };
+		D6B20518225B11A4004849E5 /* ZZCutCircle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZZCutCircle.m; sourceTree = "<group>"; };
+		D6B20519225B11A4004849E5 /* ZZCutGridLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZZCutGridLayer.h; sourceTree = "<group>"; };
+		D6B2051A225B11A4004849E5 /* ZZImageEditTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZZImageEditTool.h; sourceTree = "<group>"; };
+		D6B2051B225B11A4004849E5 /* ZZCutGridLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZZCutGridLayer.m; sourceTree = "<group>"; };
+		D6B2051C225B11A4004849E5 /* ZZCutCircle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZZCutCircle.h; sourceTree = "<group>"; };
+		D6B2051D225B11A4004849E5 /* ZZImageEditTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZZImageEditTool.m; sourceTree = "<group>"; };
 		EB932B34794DF789714BB870 /* Pods-GHGestureDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GHGestureDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-GHGestureDemo/Pods-GHGestureDemo.release.xcconfig"; sourceTree = "<group>"; };
-		EC0550C803F9E1472B4CB118 /* Pods-GHGestureDraggingDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GHGestureDraggingDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-GHGestureDraggingDemo/Pods-GHGestureDraggingDemo.release.xcconfig"; sourceTree = "<group>"; };
+		ED715A5D0275C7DAE5AEACD2 /* Pods-GHGestureDraggingDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GHGestureDraggingDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-GHGestureDraggingDemo/Pods-GHGestureDraggingDemo.release.xcconfig"; sourceTree = "<group>"; };
 		F7340B3AC6749CE4D531BAF7 /* libPods-GHGestureDraggingDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GHGestureDraggingDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FE1026400F1E5E99D25C1A70 /* Pods-GHGestureCropImageDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GHGestureCropImageDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GHGestureCropImageDemo/Pods-GHGestureCropImageDemo.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -168,6 +181,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				05A01CEE1A74B0497585EC2F /* libPods-GHGestureDraggingDemo.a in Frameworks */,
+				9374E7AE6F7A171522D63826 /* libPods-GHGestureDraggingDemo.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -175,7 +189,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D6B204F3225ADDA8004849E5 /* libPods-GHGestureDraggingDemo.a in Frameworks */,
+				715E0F637F5BDEE6E6ED3EE3 /* libPods-GHGestureCropImageDemo.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -189,8 +203,10 @@
 				16E104218E84444D45567567 /* Pods-GHGestureCameraModuleDemo.release.xcconfig */,
 				45E1DB76F0F059097A618106 /* Pods-GHGestureDemo.debug.xcconfig */,
 				EB932B34794DF789714BB870 /* Pods-GHGestureDemo.release.xcconfig */,
-				4616ED7641DE5E622E2F2831 /* Pods-GHGestureDraggingDemo.debug.xcconfig */,
-				EC0550C803F9E1472B4CB118 /* Pods-GHGestureDraggingDemo.release.xcconfig */,
+				7133944D52E4651CD4D6F935 /* Pods-GHGestureDraggingDemo.debug.xcconfig */,
+				ED715A5D0275C7DAE5AEACD2 /* Pods-GHGestureDraggingDemo.release.xcconfig */,
+				FE1026400F1E5E99D25C1A70 /* Pods-GHGestureCropImageDemo.debug.xcconfig */,
+				5336AB7AA506592D1C5EB6CE /* Pods-GHGestureCropImageDemo.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -201,6 +217,7 @@
 				7CD48F29B02F8070675F5538 /* libPods-GHGestureCameraModuleDemo.a */,
 				20DF6644C6ADE9B2495C2117 /* libPods-GHGestureDemo.a */,
 				F7340B3AC6749CE4D531BAF7 /* libPods-GHGestureDraggingDemo.a */,
+				7E3C26510AFED5A3378DE2A9 /* libPods-GHGestureCropImageDemo.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -358,10 +375,48 @@
 		D6B20502225ADE99004849E5 /* GHGestureCropImageDemo */ = {
 			isa = PBXGroup;
 			children = (
-				D6B20503225ADEB0004849E5 /* GHGestureCropImagViewController.h */,
-				D6B20504225ADEB0004849E5 /* GHGestureCropImagViewController.m */,
+				D6B20517225B11A4004849E5 /* 图片裁剪 */,
+				D6B2050E225B0CDE004849E5 /* Controller */,
+				D6B20506225B0CDE004849E5 /* Model */,
+				D6B20511225B0CDE004849E5 /* View */,
 			);
 			path = GHGestureCropImageDemo;
+			sourceTree = "<group>";
+		};
+		D6B20506225B0CDE004849E5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D6B2050E225B0CDE004849E5 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D6B2050F225B0CDE004849E5 /* GHGestureCropImagViewController.m */,
+				D6B20510225B0CDE004849E5 /* GHGestureCropImagViewController.h */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		D6B20511225B0CDE004849E5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D6B20517225B11A4004849E5 /* 图片裁剪 */ = {
+			isa = PBXGroup;
+			children = (
+				D6B20518225B11A4004849E5 /* ZZCutCircle.m */,
+				D6B20519225B11A4004849E5 /* ZZCutGridLayer.h */,
+				D6B2051A225B11A4004849E5 /* ZZImageEditTool.h */,
+				D6B2051B225B11A4004849E5 /* ZZCutGridLayer.m */,
+				D6B2051C225B11A4004849E5 /* ZZCutCircle.h */,
+				D6B2051D225B11A4004849E5 /* ZZImageEditTool.m */,
+			);
+			path = "图片裁剪";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -428,11 +483,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D6B204FB225ADDA8004849E5 /* Build configuration list for PBXNativeTarget "GHGestureCropImageDemo" */;
 			buildPhases = (
-				D6B204E0225ADDA8004849E5 /* [CP] Check Pods Manifest.lock */,
+				03962E0ED392266193C03CAE /* [CP] Check Pods Manifest.lock */,
 				D6B204E1225ADDA8004849E5 /* Sources */,
 				D6B204F2225ADDA8004849E5 /* Frameworks */,
 				D6B204F4225ADDA8004849E5 /* Resources */,
-				D6B204FA225ADDA8004849E5 /* [CP] Copy Pods Resources */,
+				F5606C2B15EB6F13BE596789 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -528,6 +583,28 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		03962E0ED392266193C03CAE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GHGestureCropImageDemo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 		17B9D5983B34B6B08090E4EC /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -660,7 +737,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		D6B204E0225ADDA8004849E5 /* [CP] Check Pods Manifest.lock */ = {
+		F5606C2B15EB6F13BE596789 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -668,29 +745,7 @@
 			inputFileListPaths = (
 			);
 			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-GHGestureDraggingDemo-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		D6B204FA225ADDA8004849E5 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-GHGestureDraggingDemo/Pods-GHGestureDraggingDemo-resources.sh",
+				"${SRCROOT}/Pods/Target Support Files/Pods-GHGestureCropImageDemo/Pods-GHGestureCropImageDemo-resources.sh",
 				"${PODS_ROOT}/BaiduMapKit/BaiduMapKit/BaiduMapAPI_Map.framework/mapapi.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
@@ -701,7 +756,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GHGestureDraggingDemo/Pods-GHGestureDraggingDemo-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GHGestureCropImageDemo/Pods-GHGestureCropImageDemo-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -772,10 +827,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D6B20505225ADEB0004849E5 /* GHGestureCropImagViewController.m in Sources */,
 				D6B204E2225ADDA8004849E5 /* GHGestureDraggingHeader.m in Sources */,
 				D6B204E3225ADDA8004849E5 /* ViewController.m in Sources */,
 				D6B204E4225ADDA8004849E5 /* GHGestureDraggingViewController.m in Sources */,
+				D6B20520225B11A4004849E5 /* ZZImageEditTool.m in Sources */,
 				D6B204E5225ADDA8004849E5 /* GHGestureDraggingCell.m in Sources */,
 				D6B204E6225ADDA8004849E5 /* UIView+Extension.m in Sources */,
 				D6B204E7225ADDA8004849E5 /* GHTimerManager.m in Sources */,
@@ -785,9 +840,12 @@
 				D6B204EB225ADDA8004849E5 /* GHCameraModuleView.m in Sources */,
 				D6B204EC225ADDA8004849E5 /* GHCameraModuleViewController.m in Sources */,
 				D6B204ED225ADDA8004849E5 /* GHAdjustFocal.m in Sources */,
+				D6B2051E225B11A4004849E5 /* ZZCutCircle.m in Sources */,
 				D6B204EE225ADDA8004849E5 /* AppDelegate.m in Sources */,
 				D6B204EF225ADDA8004849E5 /* GHGestureDraggingView.m in Sources */,
 				D6B204F0225ADDA8004849E5 /* GHScanView.m in Sources */,
+				D6B20515225B0CDE004849E5 /* GHGestureCropImagViewController.m in Sources */,
+				D6B2051F225B11A4004849E5 /* ZZCutGridLayer.m in Sources */,
 				D6B204F1225ADDA8004849E5 /* GHCameraModule.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1000,7 +1058,7 @@
 		};
 		D6B204C3225641C2004849E5 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4616ED7641DE5E622E2F2831 /* Pods-GHGestureDraggingDemo.debug.xcconfig */;
+			baseConfigurationReference = 7133944D52E4651CD4D6F935 /* Pods-GHGestureDraggingDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -1021,7 +1079,7 @@
 		};
 		D6B204C4225641C2004849E5 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = EC0550C803F9E1472B4CB118 /* Pods-GHGestureDraggingDemo.release.xcconfig */;
+			baseConfigurationReference = ED715A5D0275C7DAE5AEACD2 /* Pods-GHGestureDraggingDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -1042,7 +1100,7 @@
 		};
 		D6B204FC225ADDA8004849E5 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4616ED7641DE5E622E2F2831 /* Pods-GHGestureDraggingDemo.debug.xcconfig */;
+			baseConfigurationReference = FE1026400F1E5E99D25C1A70 /* Pods-GHGestureCropImageDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -1063,7 +1121,7 @@
 		};
 		D6B204FD225ADDA8004849E5 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = EC0550C803F9E1472B4CB118 /* Pods-GHGestureDraggingDemo.release.xcconfig */;
+			baseConfigurationReference = 5336AB7AA506592D1C5EB6CE /* Pods-GHGestureCropImageDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

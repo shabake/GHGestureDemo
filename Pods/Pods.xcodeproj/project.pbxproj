@@ -7,190 +7,379 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0570BDA1A6EB7B83965DAA59BB6E6CED /* Pods-GHGestureCameraModuleDemo-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = AB020C600A7C4DCCF983A249DD05B539 /* Pods-GHGestureCameraModuleDemo-dummy.m */; };
-		4F8AB774794F1ABD612798CD071D6A43 /* Pods-GHGestureDraggingDemo-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 91BB2419A7C0254B44A8BB58E128EF32 /* Pods-GHGestureDraggingDemo-dummy.m */; };
-		B4F9F19F1B676ABC08DDA28A7D991377 /* Pods-GHGestureDemo-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DF789D4A68807F3D16C103046A48D44 /* Pods-GHGestureDemo-dummy.m */; };
+		049B460E1DDF110E868627655CE0ADEA /* MASViewAttribute.h in Headers */ = {isa = PBXBuildFile; fileRef = 42D5AAF288D75F146139A5B69BD9B61F /* MASViewAttribute.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		0BED362262BF36B8F775BC5810DD7EDE /* NSArray+MASAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 7DB3CDAD859E33C2406FBD6280D26A58 /* NSArray+MASAdditions.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		12B1110786810911F8F4D419021CF630 /* MASConstraintMaker.m in Sources */ = {isa = PBXBuildFile; fileRef = B7E4C3384C818A02A6F037D44D5823D0 /* MASConstraintMaker.m */; };
+		1EC8595D0E176DB06815789B6F7E35C1 /* MASConstraint.h in Headers */ = {isa = PBXBuildFile; fileRef = 24163D1790D429173FE43290DFA00234 /* MASConstraint.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		265ED3616AD8DC0516A45DE5473133DD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EFB40531CB700ADF867FEEE78561E78 /* Foundation.framework */; };
+		2A6EEFDF3EE2BBBF63F6063C3F6747A1 /* View+MASShorthandAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 43A0A53353AE2564AC830D545B5B9415 /* View+MASShorthandAdditions.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		2AF8E8005BF2A4EBAC866F0A1AF5975C /* NSLayoutConstraint+MASDebugAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 25E08CA81E5AA46D188A1F5B4F33954E /* NSLayoutConstraint+MASDebugAdditions.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		2BBA747A4E46FFA08C5AFE5D3F6E9D7C /* NSArray+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = F019686434D55726BB08585CE4995166 /* NSArray+MASAdditions.m */; };
+		349A7678AD638D5FE26743AAF165A54A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74E404AA6957590324067E330E0EC533 /* UIKit.framework */; };
+		3C46B0D1EC37F02B2AC1A88DA87522B7 /* Pods-GHGestureDraggingDemo-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1314F557D098388846EDF9ACF78B89CC /* Pods-GHGestureDraggingDemo-dummy.m */; };
+		59E460AA853038A50B89ED33CC615FB4 /* MASLayoutConstraint.h in Headers */ = {isa = PBXBuildFile; fileRef = 5183C5E9357D7CD941FBC5C8AC3427E2 /* MASLayoutConstraint.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		6C9A7132AF305BA5C9EB218D573CE624 /* Pods-GHGestureCameraModuleDemo-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A7245F34318076B7A41AA00E6F30844E /* Pods-GHGestureCameraModuleDemo-dummy.m */; };
+		7157D66DCE09397047A7ECF10F15DCBF /* MASCompositeConstraint.h in Headers */ = {isa = PBXBuildFile; fileRef = 6F92B77CDB339BF24F7B47AB7B1C5B1F /* MASCompositeConstraint.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		7D48232AE62FD0A1E4C4EEC4AE858209 /* MASCompositeConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = CA7928101113D22426D75E161519AEF4 /* MASCompositeConstraint.m */; };
+		7FE1C36A12C885ECCD858E05C3685AF5 /* MASViewConstraint.h in Headers */ = {isa = PBXBuildFile; fileRef = 60C75E5B52A146A36E6D4848B4051D28 /* MASViewConstraint.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		91BEFCA99AED2127184DEE584255FBFE /* MASViewAttribute.m in Sources */ = {isa = PBXBuildFile; fileRef = 82B6B1BDD6BD34B88DD0A6461445CD19 /* MASViewAttribute.m */; };
+		9B5D721633B82BF8FE44D1A435434DF9 /* ViewController+MASAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = FDCE263B33B156437D92A9FD04656255 /* ViewController+MASAdditions.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		9FD2FB144A530D0AB5A82A99CB4ED088 /* Masonry-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 63614659C16E8BDD08917A3F3E7E65D5 /* Masonry-dummy.m */; };
+		A2839EE1C3CFDBC573DF28B3EAAFF1B5 /* MASConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 6344FEBBA408511A14078256158996E6 /* MASConstraint.m */; };
+		ADB022A853D74C0A9F48BC16D4EA59CF /* View+MASAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D20198ED84D4624FC84E6231310ED28 /* View+MASAdditions.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		B4BEBC36B586556BFDEDDB9F6D669239 /* Masonry.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B7A0462B4EC394147C2F754AB5CE1E5 /* Masonry.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		B5BE571A0725C4506001C206FB69C2F7 /* MASConstraint+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 0C20AEE0DFDF405013FB5424A860DDC7 /* MASConstraint+Private.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		BC4BB4FAA82D4C4C439CE83F0C004392 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F940422E164298BC4DEC79024F7069A /* NSLayoutConstraint+MASDebugAdditions.m */; };
+		C0953168C5916BF83D7C7BDE01A2A300 /* NSArray+MASShorthandAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 32968BA94775EA1F663F95071ED36890 /* NSArray+MASShorthandAdditions.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		CB13D9F36F1BCED0BA07D8401CC78E39 /* Pods-GHGestureCropImageDemo-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = BBC872899502B7C5FA3FA05CDDA857D3 /* Pods-GHGestureCropImageDemo-dummy.m */; };
+		D3F46C1FB5B4E58C8A2C36F67D99ECE8 /* Pods-GHGestureDemo-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 07DB19EA779A852971B2D96B2E292B72 /* Pods-GHGestureDemo-dummy.m */; };
+		E3312A275C1003F02C7386349FBE4195 /* View+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = BBB06587BFF2F3ABA5BD6B17548D9F3F /* View+MASAdditions.m */; };
+		E8D2B06760AD270146CF0C5CB07E2043 /* MASUtilities.h in Headers */ = {isa = PBXBuildFile; fileRef = 243D334D219FC0619E52B0220F8C475A /* MASUtilities.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		F57F3C8BF466FA98523222E68B41B77D /* MASViewConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 98C5A53786CE95720E7036794A63FD67 /* MASViewConstraint.m */; };
+		F6FCDB8385D380A13B3303853DDEEDAB /* ViewController+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E61D0F2918064E522F87D0CCCEC5156 /* ViewController+MASAdditions.m */; };
+		FC2959986CFDEBB4308E36CF89A325B6 /* MASLayoutConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 37E3CA384F1FE0BF764EA3F6E5C10D4C /* MASLayoutConstraint.m */; };
+		FCD64586536B2C1974F92ACAF8447ACD /* MASConstraintMaker.h in Headers */ = {isa = PBXBuildFile; fileRef = 06380D6000627747C15827477151D86D /* MASConstraintMaker.h */; settings = {ATTRIBUTES = (Project, ); }; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		1AFD203C34EBB46E3DF63D5F7B3EE14A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 40A42EA465E764DD959C829C51404C08;
+			remoteInfo = Masonry;
+		};
+		5C1DA57E4B4DB29F78A416F3DE277A9F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 40A42EA465E764DD959C829C51404C08;
+			remoteInfo = Masonry;
+		};
+		A6159009EF16F641CA7FFCC26877EDEE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 40A42EA465E764DD959C829C51404C08;
+			remoteInfo = Masonry;
+		};
+		EB27C945E06CD484945C232AB716F1E9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 40A42EA465E764DD959C829C51404C08;
+			remoteInfo = Masonry;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
-		03522BCAD2B0CB47A7EB206C4006BAC7 /* Pods-GHGestureDemo-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-GHGestureDemo-acknowledgements.plist"; sourceTree = "<group>"; };
-		0DF789D4A68807F3D16C103046A48D44 /* Pods-GHGestureDemo-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-GHGestureDemo-dummy.m"; sourceTree = "<group>"; };
-		19490763F44F7170FAD69ABA291565F3 /* Pods-GHGestureDraggingDemo-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-GHGestureDraggingDemo-frameworks.sh"; sourceTree = "<group>"; };
-		19AA8998BB3A06F736F136353BA9AC60 /* Pods-GHGestureDraggingDemo-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-GHGestureDraggingDemo-resources.sh"; sourceTree = "<group>"; };
-		218321BE3F4C011A8A9BAC4A7C7CBCF9 /* Pods-GHGestureCameraModuleDemo-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-GHGestureCameraModuleDemo-acknowledgements.plist"; sourceTree = "<group>"; };
-		32C617557FD2775EB2D06A81D127F6C2 /* Pods-GHGestureDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-GHGestureDemo.release.xcconfig"; sourceTree = "<group>"; };
-		357B85E7CB3C5385D30C542DECAE341D /* Pods-GHGestureDemo-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-GHGestureDemo-acknowledgements.markdown"; sourceTree = "<group>"; };
-		3DE9F04FE68F09813E21A102DB696FDE /* libPods-GHGestureDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-GHGestureDemo.a"; path = "libPods-GHGestureDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		4DC13B6F261685624C88FD8D9D3660AB /* mapapi.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = mapapi.bundle; path = BaiduMapKit/BaiduMapAPI_Map.framework/mapapi.bundle; sourceTree = "<group>"; };
-		516935C41BE1066364CAA1F92DA91583 /* Pods-GHGestureDemo-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-GHGestureDemo-resources.sh"; sourceTree = "<group>"; };
-		531E2027260E09C17C7A249791977ADF /* BaiduMapAPI_Utils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BaiduMapAPI_Utils.framework; path = BaiduMapKit/BaiduMapAPI_Utils.framework; sourceTree = "<group>"; };
-		575ABEBEC669C5BBA6916364CFA94099 /* Pods-GHGestureCameraModuleDemo-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-GHGestureCameraModuleDemo-acknowledgements.markdown"; sourceTree = "<group>"; };
-		6E2EF1467970D2D535F25984DC7B5AE0 /* Pods-GHGestureDemo-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-GHGestureDemo-frameworks.sh"; sourceTree = "<group>"; };
-		71C4D5E495B0FF6294001DD2EB94D80B /* BaiduMapAPI_Map.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BaiduMapAPI_Map.framework; path = BaiduMapKit/BaiduMapAPI_Map.framework; sourceTree = "<group>"; };
-		7ACCB62E50000899BAEEA9E80467F074 /* Pods-GHGestureDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-GHGestureDemo.debug.xcconfig"; sourceTree = "<group>"; };
-		84230C1CD9E22FB6115E7A18CFC5A58D /* BaiduMapAPI_Cloud.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BaiduMapAPI_Cloud.framework; path = BaiduMapKit/BaiduMapAPI_Cloud.framework; sourceTree = "<group>"; };
-		9023A1DB8B32B79DBE3146CC52473B0F /* Pods-GHGestureCameraModuleDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-GHGestureCameraModuleDemo.debug.xcconfig"; sourceTree = "<group>"; };
-		91BB2419A7C0254B44A8BB58E128EF32 /* Pods-GHGestureDraggingDemo-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-GHGestureDraggingDemo-dummy.m"; sourceTree = "<group>"; };
+		03E08FF4E8D227BEDE657A486540E10E /* libcrypto.a */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = archive.ar; name = libcrypto.a; path = BaiduMapKit/thirdlibs/libcrypto.a; sourceTree = "<group>"; };
+		06380D6000627747C15827477151D86D /* MASConstraintMaker.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MASConstraintMaker.h; path = Masonry/MASConstraintMaker.h; sourceTree = "<group>"; };
+		067BFF0A6DF4F6AF3D37DA99470EC72A /* Pods-GHGestureDraggingDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-GHGestureDraggingDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		07DB19EA779A852971B2D96B2E292B72 /* Pods-GHGestureDemo-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-GHGestureDemo-dummy.m"; sourceTree = "<group>"; };
+		0C20AEE0DFDF405013FB5424A860DDC7 /* MASConstraint+Private.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "MASConstraint+Private.h"; path = "Masonry/MASConstraint+Private.h"; sourceTree = "<group>"; };
+		11BA8FB85CFAE34D5FE2A32238BC1DE8 /* Pods-GHGestureDraggingDemo-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-GHGestureDraggingDemo-acknowledgements.plist"; sourceTree = "<group>"; };
+		12B736C37414EEF90AA965FB9F3A4FA1 /* Pods-GHGestureCropImageDemo-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-GHGestureCropImageDemo-acknowledgements.plist"; sourceTree = "<group>"; };
+		1314F557D098388846EDF9ACF78B89CC /* Pods-GHGestureDraggingDemo-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-GHGestureDraggingDemo-dummy.m"; sourceTree = "<group>"; };
+		147E4AD6AA1E894596F605E379457258 /* libPods-GHGestureCropImageDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-GHGestureCropImageDemo.a"; path = "libPods-GHGestureCropImageDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		198C7E9A3ABFCE2B46303625FC6CDFFC /* Pods-GHGestureDraggingDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-GHGestureDraggingDemo.release.xcconfig"; sourceTree = "<group>"; };
+		1D20198ED84D4624FC84E6231310ED28 /* View+MASAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "View+MASAdditions.h"; path = "Masonry/View+MASAdditions.h"; sourceTree = "<group>"; };
+		24163D1790D429173FE43290DFA00234 /* MASConstraint.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MASConstraint.h; path = Masonry/MASConstraint.h; sourceTree = "<group>"; };
+		243D334D219FC0619E52B0220F8C475A /* MASUtilities.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MASUtilities.h; path = Masonry/MASUtilities.h; sourceTree = "<group>"; };
+		25E08CA81E5AA46D188A1F5B4F33954E /* NSLayoutConstraint+MASDebugAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSLayoutConstraint+MASDebugAdditions.h"; path = "Masonry/NSLayoutConstraint+MASDebugAdditions.h"; sourceTree = "<group>"; };
+		2BEE052CB9F52DED995E0A0A2133F863 /* Pods-GHGestureCropImageDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-GHGestureCropImageDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		2EFB40531CB700ADF867FEEE78561E78 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		32968BA94775EA1F663F95071ED36890 /* NSArray+MASShorthandAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSArray+MASShorthandAdditions.h"; path = "Masonry/NSArray+MASShorthandAdditions.h"; sourceTree = "<group>"; };
+		37E3CA384F1FE0BF764EA3F6E5C10D4C /* MASLayoutConstraint.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MASLayoutConstraint.m; path = Masonry/MASLayoutConstraint.m; sourceTree = "<group>"; };
+		3B7A0462B4EC394147C2F754AB5CE1E5 /* Masonry.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Masonry.h; path = Masonry/Masonry.h; sourceTree = "<group>"; };
+		3CCCB9C33E6AF761139A75A54C11138D /* Masonry.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Masonry.xcconfig; sourceTree = "<group>"; };
+		3F940422E164298BC4DEC79024F7069A /* NSLayoutConstraint+MASDebugAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSLayoutConstraint+MASDebugAdditions.m"; path = "Masonry/NSLayoutConstraint+MASDebugAdditions.m"; sourceTree = "<group>"; };
+		42813941F74BDAF94E6A212093176EBF /* BaiduMapAPI_Map.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BaiduMapAPI_Map.framework; path = BaiduMapKit/BaiduMapAPI_Map.framework; sourceTree = "<group>"; };
+		42D5AAF288D75F146139A5B69BD9B61F /* MASViewAttribute.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MASViewAttribute.h; path = Masonry/MASViewAttribute.h; sourceTree = "<group>"; };
+		4326B2B5668FE1414A0D7A76F3A7A24D /* Pods-GHGestureCameraModuleDemo-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-GHGestureCameraModuleDemo-acknowledgements.markdown"; sourceTree = "<group>"; };
+		43A0A53353AE2564AC830D545B5B9415 /* View+MASShorthandAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "View+MASShorthandAdditions.h"; path = "Masonry/View+MASShorthandAdditions.h"; sourceTree = "<group>"; };
+		4AA2857E70A9407A6324D77C4041EBCB /* Pods-GHGestureCameraModuleDemo-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-GHGestureCameraModuleDemo-resources.sh"; sourceTree = "<group>"; };
+		4B9AC208C663697CF2BBD2FD976EB932 /* Pods-GHGestureCameraModuleDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-GHGestureCameraModuleDemo.release.xcconfig"; sourceTree = "<group>"; };
+		4EB85AD719073FD5EB3344845DC69B1B /* Pods-GHGestureCameraModuleDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-GHGestureCameraModuleDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		4EFA702D74D0F06056EFF697662C3DDA /* Pods-GHGestureDemo-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-GHGestureDemo-frameworks.sh"; sourceTree = "<group>"; };
+		5183C5E9357D7CD941FBC5C8AC3427E2 /* MASLayoutConstraint.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MASLayoutConstraint.h; path = Masonry/MASLayoutConstraint.h; sourceTree = "<group>"; };
+		5434C064CF1D618F5288A188B765EF47 /* libssl.a */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = archive.ar; name = libssl.a; path = BaiduMapKit/thirdlibs/libssl.a; sourceTree = "<group>"; };
+		5455C9B8A2A39716835742CA6C91E553 /* Pods-GHGestureCropImageDemo-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-GHGestureCropImageDemo-resources.sh"; sourceTree = "<group>"; };
+		553598A54A934B4DB19B7D3CD8D8E009 /* Pods-GHGestureDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-GHGestureDemo.release.xcconfig"; sourceTree = "<group>"; };
+		5AF233AEA741468198261929147DAAF8 /* Pods-GHGestureDraggingDemo-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-GHGestureDraggingDemo-frameworks.sh"; sourceTree = "<group>"; };
+		60C75E5B52A146A36E6D4848B4051D28 /* MASViewConstraint.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MASViewConstraint.h; path = Masonry/MASViewConstraint.h; sourceTree = "<group>"; };
+		6344FEBBA408511A14078256158996E6 /* MASConstraint.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MASConstraint.m; path = Masonry/MASConstraint.m; sourceTree = "<group>"; };
+		63614659C16E8BDD08917A3F3E7E65D5 /* Masonry-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Masonry-dummy.m"; sourceTree = "<group>"; };
+		6F92B77CDB339BF24F7B47AB7B1C5B1F /* MASCompositeConstraint.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MASCompositeConstraint.h; path = Masonry/MASCompositeConstraint.h; sourceTree = "<group>"; };
+		71ED4D1D61445476092F5509DF734CB8 /* Pods-GHGestureCameraModuleDemo-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-GHGestureCameraModuleDemo-frameworks.sh"; sourceTree = "<group>"; };
+		74E404AA6957590324067E330E0EC533 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		7B9BB3DB23A3090216225791795285DC /* mapapi.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = mapapi.bundle; path = BaiduMapKit/BaiduMapAPI_Map.framework/mapapi.bundle; sourceTree = "<group>"; };
+		7CA2FDF949E83335F67EA62274CCE604 /* BaiduMapAPI_Search.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BaiduMapAPI_Search.framework; path = BaiduMapKit/BaiduMapAPI_Search.framework; sourceTree = "<group>"; };
+		7DB3CDAD859E33C2406FBD6280D26A58 /* NSArray+MASAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSArray+MASAdditions.h"; path = "Masonry/NSArray+MASAdditions.h"; sourceTree = "<group>"; };
+		82B6B1BDD6BD34B88DD0A6461445CD19 /* MASViewAttribute.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MASViewAttribute.m; path = Masonry/MASViewAttribute.m; sourceTree = "<group>"; };
+		82E1FD51C715F0231E790DC8F32647FE /* Masonry-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Masonry-prefix.pch"; sourceTree = "<group>"; };
+		8755B3894F029C50567A2A03334FF144 /* BaiduMapAPI_Cloud.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BaiduMapAPI_Cloud.framework; path = BaiduMapKit/BaiduMapAPI_Cloud.framework; sourceTree = "<group>"; };
+		87D65FF3FC5ED38BDCF27686E480AE2A /* Pods-GHGestureDraggingDemo-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-GHGestureDraggingDemo-acknowledgements.markdown"; sourceTree = "<group>"; };
+		8E61D0F2918064E522F87D0CCCEC5156 /* ViewController+MASAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "ViewController+MASAdditions.m"; path = "Masonry/ViewController+MASAdditions.m"; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		94762E387C137CCE0485A8996B3115FA /* BaiduMapAPI_Search.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BaiduMapAPI_Search.framework; path = BaiduMapKit/BaiduMapAPI_Search.framework; sourceTree = "<group>"; };
-		96BB177BF6BB350FA23EEB4B4F5FEBE6 /* Pods-GHGestureDraggingDemo-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-GHGestureDraggingDemo-acknowledgements.plist"; sourceTree = "<group>"; };
-		9A38779E77AE18B0B005F393BC1712A1 /* Pods-GHGestureCameraModuleDemo-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-GHGestureCameraModuleDemo-resources.sh"; sourceTree = "<group>"; };
-		A7C87D2B347CA32D3A6F2921FF5EEA35 /* Pods-GHGestureDraggingDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-GHGestureDraggingDemo.release.xcconfig"; sourceTree = "<group>"; };
-		AB020C600A7C4DCCF983A249DD05B539 /* Pods-GHGestureCameraModuleDemo-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-GHGestureCameraModuleDemo-dummy.m"; sourceTree = "<group>"; };
-		BD7BDFB15BB530F14A6CAED9698F43F1 /* libcrypto.a */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = archive.ar; name = libcrypto.a; path = BaiduMapKit/thirdlibs/libcrypto.a; sourceTree = "<group>"; };
-		C32EAF3FD8B2C3997BFCC88A0891D846 /* Pods-GHGestureCameraModuleDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-GHGestureCameraModuleDemo.release.xcconfig"; sourceTree = "<group>"; };
-		C63B5744AAD8B82D4FF29D6285F85572 /* Pods-GHGestureCameraModuleDemo-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-GHGestureCameraModuleDemo-frameworks.sh"; sourceTree = "<group>"; };
-		CB435D7949A8FDDF49E0B9026B783C81 /* libPods-GHGestureDraggingDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-GHGestureDraggingDemo.a"; path = "libPods-GHGestureDraggingDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		DD61DF643F43BAAF18086ECCB4C3E0B9 /* BaiduMapAPI_Base.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BaiduMapAPI_Base.framework; path = BaiduMapKit/BaiduMapAPI_Base.framework; sourceTree = "<group>"; };
-		EE6ECA3864BE5965D04380051302BE53 /* libPods-GHGestureCameraModuleDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-GHGestureCameraModuleDemo.a"; path = "libPods-GHGestureCameraModuleDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		EF60FF6EC17BF6FF4C99180F4925C4E3 /* Pods-GHGestureDraggingDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-GHGestureDraggingDemo.debug.xcconfig"; sourceTree = "<group>"; };
-		FC38E00D8F9E22521BF780D143CED9F7 /* Pods-GHGestureDraggingDemo-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-GHGestureDraggingDemo-acknowledgements.markdown"; sourceTree = "<group>"; };
-		FE71282F21D742D6ACC535D0031A7C39 /* libssl.a */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = archive.ar; name = libssl.a; path = BaiduMapKit/thirdlibs/libssl.a; sourceTree = "<group>"; };
+		98C5A53786CE95720E7036794A63FD67 /* MASViewConstraint.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MASViewConstraint.m; path = Masonry/MASViewConstraint.m; sourceTree = "<group>"; };
+		993670FE258274C2BC594934CCB3117F /* Pods-GHGestureCropImageDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-GHGestureCropImageDemo.release.xcconfig"; sourceTree = "<group>"; };
+		9C7D207306AC43263C65C40F536789BD /* Pods-GHGestureDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-GHGestureDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		9DA121DC530AC7A724AE23B15D1B2FB1 /* Pods-GHGestureDraggingDemo-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-GHGestureDraggingDemo-resources.sh"; sourceTree = "<group>"; };
+		A130F87F8A02BB6C54AF6D606E6F964E /* Pods-GHGestureDemo-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-GHGestureDemo-acknowledgements.plist"; sourceTree = "<group>"; };
+		A7245F34318076B7A41AA00E6F30844E /* Pods-GHGestureCameraModuleDemo-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-GHGestureCameraModuleDemo-dummy.m"; sourceTree = "<group>"; };
+		AEA410A8B857E345C887BEA742A7726C /* libMasonry.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libMasonry.a; path = libMasonry.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		B6742A14DF8D5FC896AB204BA911E24F /* Pods-GHGestureDemo-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-GHGestureDemo-acknowledgements.markdown"; sourceTree = "<group>"; };
+		B7E4C3384C818A02A6F037D44D5823D0 /* MASConstraintMaker.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MASConstraintMaker.m; path = Masonry/MASConstraintMaker.m; sourceTree = "<group>"; };
+		B96DC395EC63DF72EC24B69D4EB9F146 /* libPods-GHGestureDraggingDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-GHGestureDraggingDemo.a"; path = "libPods-GHGestureDraggingDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BBB06587BFF2F3ABA5BD6B17548D9F3F /* View+MASAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "View+MASAdditions.m"; path = "Masonry/View+MASAdditions.m"; sourceTree = "<group>"; };
+		BBC872899502B7C5FA3FA05CDDA857D3 /* Pods-GHGestureCropImageDemo-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-GHGestureCropImageDemo-dummy.m"; sourceTree = "<group>"; };
+		C06BE3C8091CD85DFAB813B6404B5FD4 /* BaiduMapAPI_Utils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BaiduMapAPI_Utils.framework; path = BaiduMapKit/BaiduMapAPI_Utils.framework; sourceTree = "<group>"; };
+		C4B2835F51EDD22207E1B5F20472026E /* libPods-GHGestureDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-GHGestureDemo.a"; path = "libPods-GHGestureDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C7108D3C27381749CCBDEEAB74BEE16D /* libPods-GHGestureCameraModuleDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-GHGestureCameraModuleDemo.a"; path = "libPods-GHGestureCameraModuleDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CA7928101113D22426D75E161519AEF4 /* MASCompositeConstraint.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MASCompositeConstraint.m; path = Masonry/MASCompositeConstraint.m; sourceTree = "<group>"; };
+		CC111D9156C494323DF3D2DD83EF7A2D /* Pods-GHGestureCropImageDemo-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-GHGestureCropImageDemo-frameworks.sh"; sourceTree = "<group>"; };
+		CD67FE4532FA5719D597C2DDC779F98F /* Pods-GHGestureCameraModuleDemo-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-GHGestureCameraModuleDemo-acknowledgements.plist"; sourceTree = "<group>"; };
+		D6F2D677FC4026FF16DBC6946D074821 /* BaiduMapAPI_Base.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BaiduMapAPI_Base.framework; path = BaiduMapKit/BaiduMapAPI_Base.framework; sourceTree = "<group>"; };
+		D9DFE0DE78754E4FE68756F123EA0144 /* Pods-GHGestureCropImageDemo-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-GHGestureCropImageDemo-acknowledgements.markdown"; sourceTree = "<group>"; };
+		EAF59F8711F5BAB9D313FA890CE39608 /* Pods-GHGestureDemo-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-GHGestureDemo-resources.sh"; sourceTree = "<group>"; };
+		F019686434D55726BB08585CE4995166 /* NSArray+MASAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSArray+MASAdditions.m"; path = "Masonry/NSArray+MASAdditions.m"; sourceTree = "<group>"; };
+		FDCE263B33B156437D92A9FD04656255 /* ViewController+MASAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "ViewController+MASAdditions.h"; path = "Masonry/ViewController+MASAdditions.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		116E80A7D7C591DB43B175609CC106AA /* Frameworks */ = {
+		11A688F15C7C901F8D4090B426DA120E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		756E07D90EE5FF57E651B8693D2C9DF2 /* Frameworks */ = {
+		89E25C346EA67931424447E28C8259AE /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E98B1922911462AB2A7B1CA80A156980 /* Frameworks */ = {
+		C1D416DA5E76379A6155AC7D1E9B5CF0 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C3BD1FDB16EC0A1F699A04A874126D0A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C95ADA1C4EF2FA5FF4EEC54DD65EAA3C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				265ED3616AD8DC0516A45DE5473133DD /* Foundation.framework in Frameworks */,
+				349A7678AD638D5FE26743AAF165A54A /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0F8D2E47FE03D3B91B51069F7C273AF4 /* Frameworks */ = {
+		06CDD10DE71306278CF89108B3036DFD /* iOS */ = {
 			isa = PBXGroup;
 			children = (
+				2EFB40531CB700ADF867FEEE78561E78 /* Foundation.framework */,
+				74E404AA6957590324067E330E0EC533 /* UIKit.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		2C3C8AB28E0AB87EB7169DD9C626461F /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				3CCCB9C33E6AF761139A75A54C11138D /* Masonry.xcconfig */,
+				63614659C16E8BDD08917A3F3E7E65D5 /* Masonry-dummy.m */,
+				82E1FD51C715F0231E790DC8F32647FE /* Masonry-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Masonry";
+			sourceTree = "<group>";
+		};
+		433CD3331B6C3787F473C941B61FC68F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				06CDD10DE71306278CF89108B3036DFD /* iOS */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		2B50DA49CFE79F26897C90A115063971 /* Pods-GHGestureCameraModuleDemo */ = {
+		4A81B9B2FC2EDBD9D1E84DEBDB654939 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				575ABEBEC669C5BBA6916364CFA94099 /* Pods-GHGestureCameraModuleDemo-acknowledgements.markdown */,
-				218321BE3F4C011A8A9BAC4A7C7CBCF9 /* Pods-GHGestureCameraModuleDemo-acknowledgements.plist */,
-				AB020C600A7C4DCCF983A249DD05B539 /* Pods-GHGestureCameraModuleDemo-dummy.m */,
-				C63B5744AAD8B82D4FF29D6285F85572 /* Pods-GHGestureCameraModuleDemo-frameworks.sh */,
-				9A38779E77AE18B0B005F393BC1712A1 /* Pods-GHGestureCameraModuleDemo-resources.sh */,
-				9023A1DB8B32B79DBE3146CC52473B0F /* Pods-GHGestureCameraModuleDemo.debug.xcconfig */,
-				C32EAF3FD8B2C3997BFCC88A0891D846 /* Pods-GHGestureCameraModuleDemo.release.xcconfig */,
+				D6F2D677FC4026FF16DBC6946D074821 /* BaiduMapAPI_Base.framework */,
+				8755B3894F029C50567A2A03334FF144 /* BaiduMapAPI_Cloud.framework */,
+				42813941F74BDAF94E6A212093176EBF /* BaiduMapAPI_Map.framework */,
+				7CA2FDF949E83335F67EA62274CCE604 /* BaiduMapAPI_Search.framework */,
+				C06BE3C8091CD85DFAB813B6404B5FD4 /* BaiduMapAPI_Utils.framework */,
+				03E08FF4E8D227BEDE657A486540E10E /* libcrypto.a */,
+				5434C064CF1D618F5288A188B765EF47 /* libssl.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5DE28C3C15E7904314DCE3E70F3DFBA7 /* Pods-GHGestureCameraModuleDemo */ = {
+			isa = PBXGroup;
+			children = (
+				4326B2B5668FE1414A0D7A76F3A7A24D /* Pods-GHGestureCameraModuleDemo-acknowledgements.markdown */,
+				CD67FE4532FA5719D597C2DDC779F98F /* Pods-GHGestureCameraModuleDemo-acknowledgements.plist */,
+				A7245F34318076B7A41AA00E6F30844E /* Pods-GHGestureCameraModuleDemo-dummy.m */,
+				71ED4D1D61445476092F5509DF734CB8 /* Pods-GHGestureCameraModuleDemo-frameworks.sh */,
+				4AA2857E70A9407A6324D77C4041EBCB /* Pods-GHGestureCameraModuleDemo-resources.sh */,
+				4EB85AD719073FD5EB3344845DC69B1B /* Pods-GHGestureCameraModuleDemo.debug.xcconfig */,
+				4B9AC208C663697CF2BBD2FD976EB932 /* Pods-GHGestureCameraModuleDemo.release.xcconfig */,
 			);
 			name = "Pods-GHGestureCameraModuleDemo";
 			path = "Target Support Files/Pods-GHGestureCameraModuleDemo";
 			sourceTree = "<group>";
 		};
-		487C96F6A688B56EAE45E24000B7840C /* Pods-GHGestureDemo */ = {
+		60C278D181739DDF0CEA7C7F9CC01979 /* Pods-GHGestureDraggingDemo */ = {
 			isa = PBXGroup;
 			children = (
-				357B85E7CB3C5385D30C542DECAE341D /* Pods-GHGestureDemo-acknowledgements.markdown */,
-				03522BCAD2B0CB47A7EB206C4006BAC7 /* Pods-GHGestureDemo-acknowledgements.plist */,
-				0DF789D4A68807F3D16C103046A48D44 /* Pods-GHGestureDemo-dummy.m */,
-				6E2EF1467970D2D535F25984DC7B5AE0 /* Pods-GHGestureDemo-frameworks.sh */,
-				516935C41BE1066364CAA1F92DA91583 /* Pods-GHGestureDemo-resources.sh */,
-				7ACCB62E50000899BAEEA9E80467F074 /* Pods-GHGestureDemo.debug.xcconfig */,
-				32C617557FD2775EB2D06A81D127F6C2 /* Pods-GHGestureDemo.release.xcconfig */,
+				87D65FF3FC5ED38BDCF27686E480AE2A /* Pods-GHGestureDraggingDemo-acknowledgements.markdown */,
+				11BA8FB85CFAE34D5FE2A32238BC1DE8 /* Pods-GHGestureDraggingDemo-acknowledgements.plist */,
+				1314F557D098388846EDF9ACF78B89CC /* Pods-GHGestureDraggingDemo-dummy.m */,
+				5AF233AEA741468198261929147DAAF8 /* Pods-GHGestureDraggingDemo-frameworks.sh */,
+				9DA121DC530AC7A724AE23B15D1B2FB1 /* Pods-GHGestureDraggingDemo-resources.sh */,
+				067BFF0A6DF4F6AF3D37DA99470EC72A /* Pods-GHGestureDraggingDemo.debug.xcconfig */,
+				198C7E9A3ABFCE2B46303625FC6CDFFC /* Pods-GHGestureDraggingDemo.release.xcconfig */,
 			);
-			name = "Pods-GHGestureDemo";
-			path = "Target Support Files/Pods-GHGestureDemo";
+			name = "Pods-GHGestureDraggingDemo";
+			path = "Target Support Files/Pods-GHGestureDraggingDemo";
 			sourceTree = "<group>";
 		};
-		52AD045B3420B483002A5EC0C241097F /* Resources */ = {
+		6996E81602058B3DD3234A3CF9A1C727 /* Masonry */ = {
 			isa = PBXGroup;
 			children = (
-				4DC13B6F261685624C88FD8D9D3660AB /* mapapi.bundle */,
+				6F92B77CDB339BF24F7B47AB7B1C5B1F /* MASCompositeConstraint.h */,
+				CA7928101113D22426D75E161519AEF4 /* MASCompositeConstraint.m */,
+				24163D1790D429173FE43290DFA00234 /* MASConstraint.h */,
+				6344FEBBA408511A14078256158996E6 /* MASConstraint.m */,
+				0C20AEE0DFDF405013FB5424A860DDC7 /* MASConstraint+Private.h */,
+				06380D6000627747C15827477151D86D /* MASConstraintMaker.h */,
+				B7E4C3384C818A02A6F037D44D5823D0 /* MASConstraintMaker.m */,
+				5183C5E9357D7CD941FBC5C8AC3427E2 /* MASLayoutConstraint.h */,
+				37E3CA384F1FE0BF764EA3F6E5C10D4C /* MASLayoutConstraint.m */,
+				3B7A0462B4EC394147C2F754AB5CE1E5 /* Masonry.h */,
+				243D334D219FC0619E52B0220F8C475A /* MASUtilities.h */,
+				42D5AAF288D75F146139A5B69BD9B61F /* MASViewAttribute.h */,
+				82B6B1BDD6BD34B88DD0A6461445CD19 /* MASViewAttribute.m */,
+				60C75E5B52A146A36E6D4848B4051D28 /* MASViewConstraint.h */,
+				98C5A53786CE95720E7036794A63FD67 /* MASViewConstraint.m */,
+				7DB3CDAD859E33C2406FBD6280D26A58 /* NSArray+MASAdditions.h */,
+				F019686434D55726BB08585CE4995166 /* NSArray+MASAdditions.m */,
+				32968BA94775EA1F663F95071ED36890 /* NSArray+MASShorthandAdditions.h */,
+				25E08CA81E5AA46D188A1F5B4F33954E /* NSLayoutConstraint+MASDebugAdditions.h */,
+				3F940422E164298BC4DEC79024F7069A /* NSLayoutConstraint+MASDebugAdditions.m */,
+				1D20198ED84D4624FC84E6231310ED28 /* View+MASAdditions.h */,
+				BBB06587BFF2F3ABA5BD6B17548D9F3F /* View+MASAdditions.m */,
+				43A0A53353AE2564AC830D545B5B9415 /* View+MASShorthandAdditions.h */,
+				FDCE263B33B156437D92A9FD04656255 /* ViewController+MASAdditions.h */,
+				8E61D0F2918064E522F87D0CCCEC5156 /* ViewController+MASAdditions.m */,
+				2C3C8AB28E0AB87EB7169DD9C626461F /* Support Files */,
 			);
-			name = Resources;
+			name = Masonry;
+			path = Masonry;
 			sourceTree = "<group>";
 		};
-		77F83023C1B4EBA551726037F84301C2 /* Pods */ = {
+		6D53CB5620C8652271628FC0C3386D18 /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				F3FA3F609DED53AEBA8E7CFECEDAB186 /* BaiduMapKit */,
+				5DE28C3C15E7904314DCE3E70F3DFBA7 /* Pods-GHGestureCameraModuleDemo */,
+				90615BF2C3E961CAB234CE85D012902C /* Pods-GHGestureCropImageDemo */,
+				D19717469B5CE54B058FACFC971B084F /* Pods-GHGestureDemo */,
+				60C278D181739DDF0CEA7C7F9CC01979 /* Pods-GHGestureDraggingDemo */,
 			);
-			name = Pods;
+			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
 		7DB346D0F39D3F0E887471402A8071AB = {
 			isa = PBXGroup;
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
-				0F8D2E47FE03D3B91B51069F7C273AF4 /* Frameworks */,
-				77F83023C1B4EBA551726037F84301C2 /* Pods */,
-				805F9A5C30FF2DAE471D25AACDEBE3D6 /* Products */,
-				A3BB05DB080F84D6BEA19A7F4E37375F /* Targets Support Files */,
+				433CD3331B6C3787F473C941B61FC68F /* Frameworks */,
+				9DBE2D1A5AE6824A05C19731F2AF7A46 /* Pods */,
+				DB9D1289347F0D7CF9DCD296A7FD6084 /* Products */,
+				6D53CB5620C8652271628FC0C3386D18 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		805F9A5C30FF2DAE471D25AACDEBE3D6 /* Products */ = {
+		90615BF2C3E961CAB234CE85D012902C /* Pods-GHGestureCropImageDemo */ = {
 			isa = PBXGroup;
 			children = (
-				EE6ECA3864BE5965D04380051302BE53 /* libPods-GHGestureCameraModuleDemo.a */,
-				3DE9F04FE68F09813E21A102DB696FDE /* libPods-GHGestureDemo.a */,
-				CB435D7949A8FDDF49E0B9026B783C81 /* libPods-GHGestureDraggingDemo.a */,
+				D9DFE0DE78754E4FE68756F123EA0144 /* Pods-GHGestureCropImageDemo-acknowledgements.markdown */,
+				12B736C37414EEF90AA965FB9F3A4FA1 /* Pods-GHGestureCropImageDemo-acknowledgements.plist */,
+				BBC872899502B7C5FA3FA05CDDA857D3 /* Pods-GHGestureCropImageDemo-dummy.m */,
+				CC111D9156C494323DF3D2DD83EF7A2D /* Pods-GHGestureCropImageDemo-frameworks.sh */,
+				5455C9B8A2A39716835742CA6C91E553 /* Pods-GHGestureCropImageDemo-resources.sh */,
+				2BEE052CB9F52DED995E0A0A2133F863 /* Pods-GHGestureCropImageDemo.debug.xcconfig */,
+				993670FE258274C2BC594934CCB3117F /* Pods-GHGestureCropImageDemo.release.xcconfig */,
+			);
+			name = "Pods-GHGestureCropImageDemo";
+			path = "Target Support Files/Pods-GHGestureCropImageDemo";
+			sourceTree = "<group>";
+		};
+		9DBE2D1A5AE6824A05C19731F2AF7A46 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F2B0F545C628DC1268730A6622300C0F /* BaiduMapKit */,
+				6996E81602058B3DD3234A3CF9A1C727 /* Masonry */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		D19717469B5CE54B058FACFC971B084F /* Pods-GHGestureDemo */ = {
+			isa = PBXGroup;
+			children = (
+				B6742A14DF8D5FC896AB204BA911E24F /* Pods-GHGestureDemo-acknowledgements.markdown */,
+				A130F87F8A02BB6C54AF6D606E6F964E /* Pods-GHGestureDemo-acknowledgements.plist */,
+				07DB19EA779A852971B2D96B2E292B72 /* Pods-GHGestureDemo-dummy.m */,
+				4EFA702D74D0F06056EFF697662C3DDA /* Pods-GHGestureDemo-frameworks.sh */,
+				EAF59F8711F5BAB9D313FA890CE39608 /* Pods-GHGestureDemo-resources.sh */,
+				9C7D207306AC43263C65C40F536789BD /* Pods-GHGestureDemo.debug.xcconfig */,
+				553598A54A934B4DB19B7D3CD8D8E009 /* Pods-GHGestureDemo.release.xcconfig */,
+			);
+			name = "Pods-GHGestureDemo";
+			path = "Target Support Files/Pods-GHGestureDemo";
+			sourceTree = "<group>";
+		};
+		D6AE504FC010C2BBC5A6E3B32FCE3807 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				7B9BB3DB23A3090216225791795285DC /* mapapi.bundle */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		DB9D1289347F0D7CF9DCD296A7FD6084 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AEA410A8B857E345C887BEA742A7726C /* libMasonry.a */,
+				C7108D3C27381749CCBDEEAB74BEE16D /* libPods-GHGestureCameraModuleDemo.a */,
+				147E4AD6AA1E894596F605E379457258 /* libPods-GHGestureCropImageDemo.a */,
+				C4B2835F51EDD22207E1B5F20472026E /* libPods-GHGestureDemo.a */,
+				B96DC395EC63DF72EC24B69D4EB9F146 /* libPods-GHGestureDraggingDemo.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		99CD722EC6C2DD15891C6D746238BEDF /* Frameworks */ = {
+		F2B0F545C628DC1268730A6622300C0F /* BaiduMapKit */ = {
 			isa = PBXGroup;
 			children = (
-				DD61DF643F43BAAF18086ECCB4C3E0B9 /* BaiduMapAPI_Base.framework */,
-				84230C1CD9E22FB6115E7A18CFC5A58D /* BaiduMapAPI_Cloud.framework */,
-				71C4D5E495B0FF6294001DD2EB94D80B /* BaiduMapAPI_Map.framework */,
-				94762E387C137CCE0485A8996B3115FA /* BaiduMapAPI_Search.framework */,
-				531E2027260E09C17C7A249791977ADF /* BaiduMapAPI_Utils.framework */,
-				BD7BDFB15BB530F14A6CAED9698F43F1 /* libcrypto.a */,
-				FE71282F21D742D6ACC535D0031A7C39 /* libssl.a */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		9B20DB8277251B86C5753E6086CEA8B8 /* Pods-GHGestureDraggingDemo */ = {
-			isa = PBXGroup;
-			children = (
-				FC38E00D8F9E22521BF780D143CED9F7 /* Pods-GHGestureDraggingDemo-acknowledgements.markdown */,
-				96BB177BF6BB350FA23EEB4B4F5FEBE6 /* Pods-GHGestureDraggingDemo-acknowledgements.plist */,
-				91BB2419A7C0254B44A8BB58E128EF32 /* Pods-GHGestureDraggingDemo-dummy.m */,
-				19490763F44F7170FAD69ABA291565F3 /* Pods-GHGestureDraggingDemo-frameworks.sh */,
-				19AA8998BB3A06F736F136353BA9AC60 /* Pods-GHGestureDraggingDemo-resources.sh */,
-				EF60FF6EC17BF6FF4C99180F4925C4E3 /* Pods-GHGestureDraggingDemo.debug.xcconfig */,
-				A7C87D2B347CA32D3A6F2921FF5EEA35 /* Pods-GHGestureDraggingDemo.release.xcconfig */,
-			);
-			name = "Pods-GHGestureDraggingDemo";
-			path = "Target Support Files/Pods-GHGestureDraggingDemo";
-			sourceTree = "<group>";
-		};
-		A3BB05DB080F84D6BEA19A7F4E37375F /* Targets Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				2B50DA49CFE79F26897C90A115063971 /* Pods-GHGestureCameraModuleDemo */,
-				487C96F6A688B56EAE45E24000B7840C /* Pods-GHGestureDemo */,
-				9B20DB8277251B86C5753E6086CEA8B8 /* Pods-GHGestureDraggingDemo */,
-			);
-			name = "Targets Support Files";
-			sourceTree = "<group>";
-		};
-		F3FA3F609DED53AEBA8E7CFECEDAB186 /* BaiduMapKit */ = {
-			isa = PBXGroup;
-			children = (
-				99CD722EC6C2DD15891C6D746238BEDF /* Frameworks */,
-				52AD045B3420B483002A5EC0C241097F /* Resources */,
+				4A81B9B2FC2EDBD9D1E84DEBDB654939 /* Frameworks */,
+				D6AE504FC010C2BBC5A6E3B32FCE3807 /* Resources */,
 			);
 			name = BaiduMapKit;
 			path = BaiduMapKit;
@@ -199,21 +388,50 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		2E8E341EB17EDF901F5A78F72B404823 /* Headers */ = {
+		5DC70733084758FEC62F83B0409C922A /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		31F8E5B4CAD813186599CE602AB03975 /* Headers */ = {
+		71F3A7269ED0195B78527EA722FB727C /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B7F750F6F16B92AFE56EF456AD3DDF5E /* Headers */ = {
+		8990EEE1BB31A1D570F04DF35DD765DD /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7157D66DCE09397047A7ECF10F15DCBF /* MASCompositeConstraint.h in Headers */,
+				B5BE571A0725C4506001C206FB69C2F7 /* MASConstraint+Private.h in Headers */,
+				1EC8595D0E176DB06815789B6F7E35C1 /* MASConstraint.h in Headers */,
+				FCD64586536B2C1974F92ACAF8447ACD /* MASConstraintMaker.h in Headers */,
+				59E460AA853038A50B89ED33CC615FB4 /* MASLayoutConstraint.h in Headers */,
+				B4BEBC36B586556BFDEDDB9F6D669239 /* Masonry.h in Headers */,
+				E8D2B06760AD270146CF0C5CB07E2043 /* MASUtilities.h in Headers */,
+				049B460E1DDF110E868627655CE0ADEA /* MASViewAttribute.h in Headers */,
+				7FE1C36A12C885ECCD858E05C3685AF5 /* MASViewConstraint.h in Headers */,
+				0BED362262BF36B8F775BC5810DD7EDE /* NSArray+MASAdditions.h in Headers */,
+				C0953168C5916BF83D7C7BDE01A2A300 /* NSArray+MASShorthandAdditions.h in Headers */,
+				2AF8E8005BF2A4EBAC866F0A1AF5975C /* NSLayoutConstraint+MASDebugAdditions.h in Headers */,
+				ADB022A853D74C0A9F48BC16D4EA59CF /* View+MASAdditions.h in Headers */,
+				2A6EEFDF3EE2BBBF63F6063C3F6747A1 /* View+MASShorthandAdditions.h in Headers */,
+				9B5D721633B82BF8FE44D1A435434DF9 /* ViewController+MASAdditions.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		97A7A52C02DB04C43C4BF607322B1B0C /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C82CDF5F119B2251499A10A73715EA76 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -223,55 +441,93 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		85B305619BCF2C700E3FE886F15090A7 /* Pods-GHGestureCameraModuleDemo */ = {
+		40A42EA465E764DD959C829C51404C08 /* Masonry */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2FC55DA6A82BD1AA03C7339D86C1EFD8 /* Build configuration list for PBXNativeTarget "Pods-GHGestureCameraModuleDemo" */;
+			buildConfigurationList = CFB00DFDEF804FAD5E3E20BC782ADAB8 /* Build configuration list for PBXNativeTarget "Masonry" */;
 			buildPhases = (
-				31F8E5B4CAD813186599CE602AB03975 /* Headers */,
-				A048FFE55CB680C6DE778D79157DB43D /* Sources */,
-				116E80A7D7C591DB43B175609CC106AA /* Frameworks */,
+				8990EEE1BB31A1D570F04DF35DD765DD /* Headers */,
+				CD3F0F0348E695642F4232776EFC8AD5 /* Sources */,
+				C95ADA1C4EF2FA5FF4EEC54DD65EAA3C /* Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = "Pods-GHGestureCameraModuleDemo";
-			productName = "Pods-GHGestureCameraModuleDemo";
-			productReference = EE6ECA3864BE5965D04380051302BE53 /* libPods-GHGestureCameraModuleDemo.a */;
+			name = Masonry;
+			productName = Masonry;
+			productReference = AEA410A8B857E345C887BEA742A7726C /* libMasonry.a */;
 			productType = "com.apple.product-type.library.static";
 		};
-		9F77DCFEE1D0B959B7DE1AA340578B1D /* Pods-GHGestureDraggingDemo */ = {
+		7C0A76215E359B0620B617411759C0C0 /* Pods-GHGestureDraggingDemo */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 924C6B32B2EF4F4554A566BC79773AD4 /* Build configuration list for PBXNativeTarget "Pods-GHGestureDraggingDemo" */;
+			buildConfigurationList = 8689C35013E90F81876B11569D11AAB7 /* Build configuration list for PBXNativeTarget "Pods-GHGestureDraggingDemo" */;
 			buildPhases = (
-				B7F750F6F16B92AFE56EF456AD3DDF5E /* Headers */,
-				FE54B1B1FA48FA2B93C42DD58FCECAC8 /* Sources */,
-				E98B1922911462AB2A7B1CA80A156980 /* Frameworks */,
+				C82CDF5F119B2251499A10A73715EA76 /* Headers */,
+				B64898A4F9242EE2F0027E7290DDCA2B /* Sources */,
+				89E25C346EA67931424447E28C8259AE /* Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				257913A2FB2630F42552999A118E7FD9 /* PBXTargetDependency */,
 			);
 			name = "Pods-GHGestureDraggingDemo";
 			productName = "Pods-GHGestureDraggingDemo";
-			productReference = CB435D7949A8FDDF49E0B9026B783C81 /* libPods-GHGestureDraggingDemo.a */;
+			productReference = B96DC395EC63DF72EC24B69D4EB9F146 /* libPods-GHGestureDraggingDemo.a */;
 			productType = "com.apple.product-type.library.static";
 		};
-		F4B05B7363F625EFCBF75C2641C6A8F5 /* Pods-GHGestureDemo */ = {
+		8A2919945131163AC206EEF4200FBFDE /* Pods-GHGestureDemo */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 4F1D4BBAC2FD9AB22A4AE32F6DB6AA46 /* Build configuration list for PBXNativeTarget "Pods-GHGestureDemo" */;
+			buildConfigurationList = 61DAE7287C2C6EBA8867A3CC9E7EFE6D /* Build configuration list for PBXNativeTarget "Pods-GHGestureDemo" */;
 			buildPhases = (
-				2E8E341EB17EDF901F5A78F72B404823 /* Headers */,
-				27FE6D6C7A3F20C9A2F60615BE8A7124 /* Sources */,
-				756E07D90EE5FF57E651B8693D2C9DF2 /* Frameworks */,
+				5DC70733084758FEC62F83B0409C922A /* Headers */,
+				24763DC107C95592429A81E564239E83 /* Sources */,
+				C3BD1FDB16EC0A1F699A04A874126D0A /* Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				E5276964A0ADE1959A96FF80460CEA73 /* PBXTargetDependency */,
 			);
 			name = "Pods-GHGestureDemo";
 			productName = "Pods-GHGestureDemo";
-			productReference = 3DE9F04FE68F09813E21A102DB696FDE /* libPods-GHGestureDemo.a */;
+			productReference = C4B2835F51EDD22207E1B5F20472026E /* libPods-GHGestureDemo.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		CF037F842AF5ED407D8D1A9D6313AD9F /* Pods-GHGestureCropImageDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 16B343DA6B834C15BB6BFAFB30ECA1D1 /* Build configuration list for PBXNativeTarget "Pods-GHGestureCropImageDemo" */;
+			buildPhases = (
+				71F3A7269ED0195B78527EA722FB727C /* Headers */,
+				6E7A0EEB40E2057EC9C4EBD747E10875 /* Sources */,
+				C1D416DA5E76379A6155AC7D1E9B5CF0 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3F8F32EF0E92BA858A2874B38F810FD4 /* PBXTargetDependency */,
+			);
+			name = "Pods-GHGestureCropImageDemo";
+			productName = "Pods-GHGestureCropImageDemo";
+			productReference = 147E4AD6AA1E894596F605E379457258 /* libPods-GHGestureCropImageDemo.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		D33B47A8F6A7CD146022148DCB0231DA /* Pods-GHGestureCameraModuleDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2B1475E96FA1D5573F20B5203BFA7568 /* Build configuration list for PBXNativeTarget "Pods-GHGestureCameraModuleDemo" */;
+			buildPhases = (
+				97A7A52C02DB04C43C4BF607322B1B0C /* Headers */,
+				090998AD211BD09D085FE6843E52D69F /* Sources */,
+				11A688F15C7C901F8D4090B426DA120E /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4AA8A6F851932B76BB411D1FB70F61E0 /* PBXTargetDependency */,
+			);
+			name = "Pods-GHGestureCameraModuleDemo";
+			productName = "Pods-GHGestureCameraModuleDemo";
+			productReference = C7108D3C27381749CCBDEEAB74BEE16D /* libPods-GHGestureCameraModuleDemo.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
@@ -291,48 +547,126 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = 805F9A5C30FF2DAE471D25AACDEBE3D6 /* Products */;
+			productRefGroup = DB9D1289347F0D7CF9DCD296A7FD6084 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				85B305619BCF2C700E3FE886F15090A7 /* Pods-GHGestureCameraModuleDemo */,
-				F4B05B7363F625EFCBF75C2641C6A8F5 /* Pods-GHGestureDemo */,
-				9F77DCFEE1D0B959B7DE1AA340578B1D /* Pods-GHGestureDraggingDemo */,
+				40A42EA465E764DD959C829C51404C08 /* Masonry */,
+				D33B47A8F6A7CD146022148DCB0231DA /* Pods-GHGestureCameraModuleDemo */,
+				CF037F842AF5ED407D8D1A9D6313AD9F /* Pods-GHGestureCropImageDemo */,
+				8A2919945131163AC206EEF4200FBFDE /* Pods-GHGestureDemo */,
+				7C0A76215E359B0620B617411759C0C0 /* Pods-GHGestureDraggingDemo */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		27FE6D6C7A3F20C9A2F60615BE8A7124 /* Sources */ = {
+		090998AD211BD09D085FE6843E52D69F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B4F9F19F1B676ABC08DDA28A7D991377 /* Pods-GHGestureDemo-dummy.m in Sources */,
+				6C9A7132AF305BA5C9EB218D573CE624 /* Pods-GHGestureCameraModuleDemo-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A048FFE55CB680C6DE778D79157DB43D /* Sources */ = {
+		24763DC107C95592429A81E564239E83 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0570BDA1A6EB7B83965DAA59BB6E6CED /* Pods-GHGestureCameraModuleDemo-dummy.m in Sources */,
+				D3F46C1FB5B4E58C8A2C36F67D99ECE8 /* Pods-GHGestureDemo-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		FE54B1B1FA48FA2B93C42DD58FCECAC8 /* Sources */ = {
+		6E7A0EEB40E2057EC9C4EBD747E10875 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4F8AB774794F1ABD612798CD071D6A43 /* Pods-GHGestureDraggingDemo-dummy.m in Sources */,
+				CB13D9F36F1BCED0BA07D8401CC78E39 /* Pods-GHGestureCropImageDemo-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B64898A4F9242EE2F0027E7290DDCA2B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3C46B0D1EC37F02B2AC1A88DA87522B7 /* Pods-GHGestureDraggingDemo-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CD3F0F0348E695642F4232776EFC8AD5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7D48232AE62FD0A1E4C4EEC4AE858209 /* MASCompositeConstraint.m in Sources */,
+				A2839EE1C3CFDBC573DF28B3EAAFF1B5 /* MASConstraint.m in Sources */,
+				12B1110786810911F8F4D419021CF630 /* MASConstraintMaker.m in Sources */,
+				FC2959986CFDEBB4308E36CF89A325B6 /* MASLayoutConstraint.m in Sources */,
+				9FD2FB144A530D0AB5A82A99CB4ED088 /* Masonry-dummy.m in Sources */,
+				91BEFCA99AED2127184DEE584255FBFE /* MASViewAttribute.m in Sources */,
+				F57F3C8BF466FA98523222E68B41B77D /* MASViewConstraint.m in Sources */,
+				2BBA747A4E46FFA08C5AFE5D3F6E9D7C /* NSArray+MASAdditions.m in Sources */,
+				BC4BB4FAA82D4C4C439CE83F0C004392 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
+				E3312A275C1003F02C7386349FBE4195 /* View+MASAdditions.m in Sources */,
+				F6FCDB8385D380A13B3303853DDEEDAB /* ViewController+MASAdditions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		257913A2FB2630F42552999A118E7FD9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Masonry;
+			target = 40A42EA465E764DD959C829C51404C08 /* Masonry */;
+			targetProxy = EB27C945E06CD484945C232AB716F1E9 /* PBXContainerItemProxy */;
+		};
+		3F8F32EF0E92BA858A2874B38F810FD4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Masonry;
+			target = 40A42EA465E764DD959C829C51404C08 /* Masonry */;
+			targetProxy = 1AFD203C34EBB46E3DF63D5F7B3EE14A /* PBXContainerItemProxy */;
+		};
+		4AA8A6F851932B76BB411D1FB70F61E0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Masonry;
+			target = 40A42EA465E764DD959C829C51404C08 /* Masonry */;
+			targetProxy = 5C1DA57E4B4DB29F78A416F3DE277A9F /* PBXContainerItemProxy */;
+		};
+		E5276964A0ADE1959A96FF80460CEA73 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Masonry;
+			target = 40A42EA465E764DD959C829C51404C08 /* Masonry */;
+			targetProxy = A6159009EF16F641CA7FFCC26877EDEE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
-		077943BCB67B1FB577D1DEA8153FAE15 /* Debug */ = {
+		1D3F48869EA6A0024D621535B6BC77C9 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7ACCB62E50000899BAEEA9E80467F074 /* Pods-GHGestureDemo.debug.xcconfig */;
+			baseConfigurationReference = 3CCCB9C33E6AF761139A75A54C11138D /* Masonry.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/Masonry/Masonry-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = Masonry;
+				PRODUCT_NAME = Masonry;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		489553549E95F6BB99DDBCD8E361C8AA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4EB85AD719073FD5EB3344845DC69B1B /* Pods-GHGestureCameraModuleDemo.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -351,9 +685,9 @@
 			};
 			name = Debug;
 		};
-		188EF3111A18A21C8DEC03895472CFF7 /* Debug */ = {
+		4DBA00D6B8027059751BC6142DFA11C8 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9023A1DB8B32B79DBE3146CC52473B0F /* Pods-GHGestureCameraModuleDemo.debug.xcconfig */;
+			baseConfigurationReference = 4B9AC208C663697CF2BBD2FD976EB932 /* Pods-GHGestureCameraModuleDemo.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -369,29 +703,9 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
 			};
-			name = Debug;
-		};
-		3333DAEC3F0FB68746FAFB398198189A /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = EF60FF6EC17BF6FF4C99180F4925C4E3 /* Pods-GHGestureDraggingDemo.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				MACH_O_TYPE = staticlib;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
+			name = Release;
 		};
 		5DE734ABD787801184C181C385D15EA4 /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -521,9 +835,51 @@
 			};
 			name = Debug;
 		};
-		6AB74F31FC8BF22CB9598193D5158FD5 /* Release */ = {
+		951BBDD322846A63625C4A5C7C246402 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A7C87D2B347CA32D3A6F2921FF5EEA35 /* Pods-GHGestureDraggingDemo.release.xcconfig */;
+			baseConfigurationReference = 9C7D207306AC43263C65C40F536789BD /* Pods-GHGestureDemo.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MACH_O_TYPE = staticlib;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		975A3FD3903B8FBBFBBB7D378E98A93A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 067BFF0A6DF4F6AF3D37DA99470EC72A /* Pods-GHGestureDraggingDemo.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MACH_O_TYPE = staticlib;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		9E992D5F3FCF778CE6BB7162D39AE961 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 198C7E9A3ABFCE2B46303625FC6CDFFC /* Pods-GHGestureDraggingDemo.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -543,9 +899,54 @@
 			};
 			name = Release;
 		};
-		9201E2C9E7C8A9F3A930BFC6C4AE40EC /* Release */ = {
+		A254A1D5CAE40ABC54B15E5215496D62 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C32EAF3FD8B2C3997BFCC88A0891D846 /* Pods-GHGestureCameraModuleDemo.release.xcconfig */;
+			baseConfigurationReference = 3CCCB9C33E6AF761139A75A54C11138D /* Masonry.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/Masonry/Masonry-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = Masonry;
+				PRODUCT_NAME = Masonry;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DAF6DE8A11D962183DFCBA912DF9DAA1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2BEE052CB9F52DED995E0A0A2133F863 /* Pods-GHGestureCropImageDemo.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MACH_O_TYPE = staticlib;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		E90DDB8B9D1DCC63D63CE4416C30A4A6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 553598A54A934B4DB19B7D3CD8D8E009 /* Pods-GHGestureDemo.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -565,9 +966,9 @@
 			};
 			name = Release;
 		};
-		F565083F449F58CD909B0E1F0CC25D58 /* Release */ = {
+		EAE7EA8EEA54B918D2248BA832504ECA /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 32C617557FD2775EB2D06A81D127F6C2 /* Pods-GHGestureDemo.release.xcconfig */;
+			baseConfigurationReference = 993670FE258274C2BC594934CCB3117F /* Pods-GHGestureCropImageDemo.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -590,6 +991,24 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		16B343DA6B834C15BB6BFAFB30ECA1D1 /* Build configuration list for PBXNativeTarget "Pods-GHGestureCropImageDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DAF6DE8A11D962183DFCBA912DF9DAA1 /* Debug */,
+				EAE7EA8EEA54B918D2248BA832504ECA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2B1475E96FA1D5573F20B5203BFA7568 /* Build configuration list for PBXNativeTarget "Pods-GHGestureCameraModuleDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				489553549E95F6BB99DDBCD8E361C8AA /* Debug */,
+				4DBA00D6B8027059751BC6142DFA11C8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -599,29 +1018,29 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2FC55DA6A82BD1AA03C7339D86C1EFD8 /* Build configuration list for PBXNativeTarget "Pods-GHGestureCameraModuleDemo" */ = {
+		61DAE7287C2C6EBA8867A3CC9E7EFE6D /* Build configuration list for PBXNativeTarget "Pods-GHGestureDemo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				188EF3111A18A21C8DEC03895472CFF7 /* Debug */,
-				9201E2C9E7C8A9F3A930BFC6C4AE40EC /* Release */,
+				951BBDD322846A63625C4A5C7C246402 /* Debug */,
+				E90DDB8B9D1DCC63D63CE4416C30A4A6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		4F1D4BBAC2FD9AB22A4AE32F6DB6AA46 /* Build configuration list for PBXNativeTarget "Pods-GHGestureDemo" */ = {
+		8689C35013E90F81876B11569D11AAB7 /* Build configuration list for PBXNativeTarget "Pods-GHGestureDraggingDemo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				077943BCB67B1FB577D1DEA8153FAE15 /* Debug */,
-				F565083F449F58CD909B0E1F0CC25D58 /* Release */,
+				975A3FD3903B8FBBFBBB7D378E98A93A /* Debug */,
+				9E992D5F3FCF778CE6BB7162D39AE961 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		924C6B32B2EF4F4554A566BC79773AD4 /* Build configuration list for PBXNativeTarget "Pods-GHGestureDraggingDemo" */ = {
+		CFB00DFDEF804FAD5E3E20BC782ADAB8 /* Build configuration list for PBXNativeTarget "Masonry" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				3333DAEC3F0FB68746FAFB398198189A /* Debug */,
-				6AB74F31FC8BF22CB9598193D5158FD5 /* Release */,
+				1D3F48869EA6A0024D621535B6BC77C9 /* Debug */,
+				A254A1D5CAE40ABC54B15E5215496D62 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

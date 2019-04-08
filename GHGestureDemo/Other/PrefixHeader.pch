@@ -9,6 +9,8 @@
 #ifndef PrefixHeader_pch
 #define PrefixHeader_pch
 
+#import "Masonry.h"
+
 //弱引用对象
 #define WS(weakSelf)            __weak __typeof(&*self)weakSelf = self;
 // WeakSelf
