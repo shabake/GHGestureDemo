@@ -220,7 +220,9 @@
 }
 
 - (void)cameraModule:(GHCameraModule *)cameraModule info:(NSDictionary *)info resultString:(NSString *)resultString {
- 
+    
+    UIAlertView *alertView = [[UIAlertView alloc]initWithTitle:@"扫描结果" message:resultString delegate:nil cancelButtonTitle:@"知道了" otherButtonTitles:nil, nil];
+    [alertView show];
 }
 
 #pragma mark - 懒加载

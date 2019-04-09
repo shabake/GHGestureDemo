@@ -90,10 +90,13 @@
 
 - (void)adjustFocalWtihValue: (CGFloat)value {
     
-    AVCaptureConnection * videoConnection = [self.stillImageOutput connectionWithMediaType:AVMediaTypeVideo];
+    AVCaptureConnection *videoConnection = [self.stillImageOutput connectionWithMediaType:AVMediaTypeVideo];
 
     [self.previewLayer setAffineTransform:CGAffineTransformMakeScale(1+value, 1+value)];
+    [self.input.device lockForConfiguration:nil];
     videoConnection.videoScaleAndCropFactor = 1 + value;
+    [self.input.device unlockForConfiguration];
+
 }
 
 - (void)turnTorchOn:(BOOL)on{

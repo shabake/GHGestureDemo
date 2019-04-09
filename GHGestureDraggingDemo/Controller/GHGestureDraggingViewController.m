@@ -30,6 +30,8 @@
 
     self.mapView = [[BMKMapView alloc]initWithFrame:self.view.bounds];
     self.mapView.delegate = self;
+    self.mapView.showsUserLocation = YES;
+
     [self.view addSubview:self.mapView];
     
     self.view.backgroundColor = [UIColor orangeColor];
