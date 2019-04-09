@@ -384,8 +384,8 @@
 		D6B2054B225B49A4004849E5 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				D6B2054C225B49A4004849E5 /* GHGestureDraggingViewController.m */,
 				D6B2054D225B49A4004849E5 /* GHGestureDraggingViewController.h */,
+				D6B2054C225B49A4004849E5 /* GHGestureDraggingViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -393,10 +393,10 @@
 		D6B2054E225B49A4004849E5 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				D6B2054F225B49A4004849E5 /* GHGestureDraggingHeader.m */,
 				D6B20550225B49A4004849E5 /* GHGestureDraggingCell.h */,
 				D6B20551225B49A4004849E5 /* GHGestureDraggingView.h */,
 				D6B20552225B49A4004849E5 /* GHGestureDraggingHeader.h */,
+				D6B2054F225B49A4004849E5 /* GHGestureDraggingHeader.m */,
 				D6B20553225B49A4004849E5 /* GHGestureDraggingCell.m */,
 				D6B20554225B49A4004849E5 /* GHGestureDraggingView.m */,
 			);

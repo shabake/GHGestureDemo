@@ -9,8 +9,11 @@
 #import "GHGestureDraggingViewController.h"
 #import "UIView+Extension.h"
 #import "GHGestureDraggingView.h"
+#import <BaiduMapAPI_Base/BMKBaseComponent.h>//引入base相关所有的头文件
+#import <BaiduMapAPI_Map/BMKMapComponent.h>//引入地图功能所有的头文件
 
-@interface GHGestureDraggingViewController ()
+@interface GHGestureDraggingViewController ()<BMKMapViewDelegate>
+@property (nonatomic, strong) BMKMapView *mapView;
 
 @property (nonatomic , strong) GHGestureDraggingView *testView;
 @end
@@ -25,6 +28,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
+    self.mapView = [[BMKMapView alloc]initWithFrame:self.view.bounds];
+    self.mapView.delegate = self;
+    [self.view addSubview:self.mapView];
     
     self.view.backgroundColor = [UIColor orangeColor];
     
@@ -34,6 +40,7 @@
     panGest.minimumNumberOfTouches = 1;
     
     [self.testView addGestureRecognizer:panGest];
+    
 }
 
 - (void)panView:(UIPanGestureRecognizer *)panGest {
@@ -52,8 +59,8 @@
         
         if (velocity.y < 0) {
             [UIView animateWithDuration:0.25 animations:^{
-                self.testView.y = kSafeAreaTopHeight;
-                self.testView.height = kScreenHeight - kSafeAreaTopHeight;
+                self.testView.y = kStatusBarHeight;
+                self.testView.height = kScreenHeight - kStatusBarHeight;
             } completion:^(BOOL finished) {
 
             }];

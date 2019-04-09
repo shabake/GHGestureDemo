@@ -48,9 +48,12 @@
 - (UIButton *)timeNavigation {
     if (_timeNavigation == nil) {
         _timeNavigation = [[UIButton alloc]init];
-        _timeNavigation.backgroundColor = [UIColor redColor];
+        _timeNavigation.layer.masksToBounds = YES;
+        _timeNavigation.layer.borderWidth = 0.5;
+        _timeNavigation.layer.borderColor = [UIColor lightGrayColor].CGColor;
+        _timeNavigation.layer.cornerRadius = 5;
         [_timeNavigation setTitle:@"实时导航" forState:UIControlStateNormal];
-        [_timeNavigation setTitleColor:[UIColor lightGrayColor] forState:UIControlStateNormal];
+        [_timeNavigation setTitleColor:[UIColor darkGrayColor] forState:UIControlStateNormal];
         _timeNavigation.titleLabel.font = [UIFont systemFontOfSize:15];
     }
     return _timeNavigation;
