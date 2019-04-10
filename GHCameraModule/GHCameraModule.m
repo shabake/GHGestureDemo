@@ -30,6 +30,7 @@
 
 @property (nonatomic , copy) CameraModuleBlock cameraModuleBlock;
 @property (nonatomic , copy) CameraModuleCodeBlock cameraModuleCodeBlock;
+@property (nonatomic , copy) NSString *string;
 
 #define weakself(self)  __weak __typeof(self) weakSelf = self
 
@@ -121,23 +122,52 @@
     if (metadataObjects.count > 0) {
    
         AVMetadataMachineReadableCodeObject *metadataObject = [metadataObjects objectAtIndex :0];
-    
-        [self.session stopRunning];
-
         NSString *string = metadataObject.stringValue;
-        if (string.length) {
-            NSString *resultString = metadataObject.stringValue;
-            
-            if (self.cameraModuleCodeBlock) {
-                self.cameraModuleCodeBlock(resultString);
-            }
-            if (self.delegate && [self.delegate respondsToSelector:@selector(cameraModule:info:resultString:)]) {
-                [self.delegate cameraModule:self info:nil resultString:resultString];
-            }
-        }
+        self.string = string;
+        NSArray *array = metadataObject.corners;
+        NSLog(@"array%@",array);
+        CGPoint point = CGPointZero;
+        int index = 0;
+        CFDictionaryRef dict = (__bridge CFDictionaryRef)(array[index++]);
+        CGPointMakeWithDictionaryRepresentation(dict, &point);
+        CGPoint point2 = CGPointZero;
+        CGPointMakeWithDictionaryRepresentation((__bridge CFDictionaryRef)array[2], &point2);
+        CGFloat scace = 100 /(point2.x-point.x);
+        NSLog(@"scacescacescace%f",scace);
+        [self setVideoScale:scace];
     }
 }
 
+- (void)setVideoScale:(CGFloat)scale{
+    
+    [self.input.device lockForConfiguration:nil];
+    //获取放大最大倍数
+    AVCaptureConnection *videoConnection = [self.stillImageOutput connectionWithMediaType:AVMediaTypeVideo];
+    CGFloat maxScaleAndCropFactor = ([[self.stillImageOutput connectionWithMediaType:AVMediaTypeVideo] videoMaxScaleAndCropFactor])/16;
+    
+    scale = 1.4;
+    
+    videoConnection.videoScaleAndCropFactor = scale;
+    [CATransaction begin];
+    [CATransaction setAnimationDuration:0.25];
+    [self.previewLayer setAffineTransform:CGAffineTransformMakeScale(scale, scale)];
+    videoConnection.videoScaleAndCropFactor = scale;
+    [CATransaction commit];
+    [CATransaction setCompletionBlock:^{
+        [self.session stopRunning];
+        [self.input.device unlockForConfiguration];
+
+        if (self.string.length) {
+            
+            if (self.cameraModuleCodeBlock) {
+                self.cameraModuleCodeBlock(self.string);
+            }
+            if (self.delegate && [self.delegate respondsToSelector:@selector(cameraModule:info:resultString:)]) {
+                [self.delegate cameraModule:self info:nil resultString:self.string];
+            }
+        }
+    }];
+}
 - (void)screenshot {
     AVCaptureConnection * videoConnection = [self.stillImageOutput connectionWithMediaType:AVMediaTypeVideo];
     if (!videoConnection) {

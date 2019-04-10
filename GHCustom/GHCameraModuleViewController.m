@@ -227,7 +227,7 @@
 
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex NS_DEPRECATED_IOS(2_0, 9_0) {
     
-    [self.cameraModule start];
+//    [self.cameraModule start];
 }
 
 #pragma mark - 懒加载
