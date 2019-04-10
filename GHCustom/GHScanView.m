@@ -42,13 +42,13 @@
 }
 
 - (void)startAnimation {
-    [self endAnimation];
     
     [UIView animateWithDuration:1 animations:^{
         self.line.y = 2;
         self.line.height = self.bounds.size.height - 2;
 
     } completion:^(BOOL finished) {
+        
         if (finished) {
             self.line.y = 0;
             self.line.height = 2;
@@ -60,7 +60,7 @@
 }
 
 - (void)endAnimation{
-    [self.line.layer removeAllAnimations];
+    
 }
 
 - (void)drawRect:(CGRect)rect {

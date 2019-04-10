@@ -196,6 +196,7 @@ typedef NS_ENUM(NSInteger, UIGestureRecognizerState) {
     UIGestureRecognizerStateRecognized = UIGestureRecognizerStateEnded 
 };
 ```
+
 #### 属性
 `delegate ` 手势代理
 
@@ -235,5 +236,12 @@ typedef NS_ENUM(NSInteger, UIGestureRecognizerState) {
 
 
 ### 如果对你有帮助请点帮我一个✨,小弟感激不尽
+
+
+
+[参考1](https://blog.csdn.net/sinat_30336277/article/details/79276113)
+
+
+[参考2](https://www.jianshu.com/p/080814eff67e)
 
 ---

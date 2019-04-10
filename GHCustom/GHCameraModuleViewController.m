@@ -12,7 +12,7 @@
 #import "GHCameraModuleView.h"
 #import "GHPrivacyAuthTool.h"
 
-@interface GHCameraModuleViewController ()<GHCameraModuleViewDelegate,GHCameraModuleDelegate>
+@interface GHCameraModuleViewController ()<GHCameraModuleViewDelegate,GHCameraModuleDelegate,UIAlertViewDelegate>
 /** 摄像头模块 */
 @property (nonatomic , strong) GHCameraModule *cameraModule;
 /** 扫描ui */
@@ -221,8 +221,13 @@
 
 - (void)cameraModule:(GHCameraModule *)cameraModule info:(NSDictionary *)info resultString:(NSString *)resultString {
     
-    UIAlertView *alertView = [[UIAlertView alloc]initWithTitle:@"扫描结果" message:resultString delegate:nil cancelButtonTitle:@"知道了" otherButtonTitles:nil, nil];
+    UIAlertView *alertView = [[UIAlertView alloc]initWithTitle:@"扫描结果" message:resultString delegate:self cancelButtonTitle:@"知道了" otherButtonTitles:nil, nil];
     [alertView show];
+}
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex NS_DEPRECATED_IOS(2_0, 9_0) {
+    
+    [self.cameraModule start];
 }
 
 #pragma mark - 懒加载
