@@ -7,6 +7,7 @@
 //
 
 #import "TKImageView.h"
+
 #define WIDTH(_view) CGRectGetWidth(_view.bounds)
 #define HEIGHT(_view) CGRectGetHeight(_view.bounds)
 #define MAXX(_view) CGRectGetMaxX(_view.frame)
@@ -15,6 +16,7 @@
 #define MINY(_view) CGRectGetMinY(_view.frame)
 #define MID_LINE_INTERACT_WIDTH 44
 #define MID_LINE_INTERACT_HEIGHT 44
+
 typedef NS_ENUM(NSInteger, TKCropAreaCornerPosition) {
     TKCropAreaCornerPositionTopLeft,
     TKCropAreaCornerPositionTopRight,

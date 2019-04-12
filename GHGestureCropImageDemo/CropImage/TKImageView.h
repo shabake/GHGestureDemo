@@ -11,6 +11,7 @@ typedef NS_ENUM(NSInteger, TKCropAreaCornerStyle) {
     TKCropAreaCornerStyleRightAngle,
     TKCropAreaCornerStyleCircle
 };
+
 @interface TKImageView : UIView
 @property (strong, nonatomic) UIImage *toCropImage;
 @property (assign, nonatomic) BOOL needScaleCrop;

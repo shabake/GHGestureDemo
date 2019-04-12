@@ -19,7 +19,7 @@
 
 **If you run crash, add key `Privacy - Camera Usage Description`** to iofo.plist
 
-![1.gif](https://upload-images.jianshu.io/upload_images/1419035-e87501ab35e9b0d1.gif?imageMogr2/auto-orient/strip)
+![WechatIMG88.jpeg](https://upload-images.jianshu.io/upload_images/1419035-371e1a05b152a70f.jpeg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 
 ### Features
