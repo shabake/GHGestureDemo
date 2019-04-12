@@ -123,18 +123,17 @@
    
         AVMetadataMachineReadableCodeObject *metadataObject = [metadataObjects objectAtIndex :0];
         NSString *string = metadataObject.stringValue;
-        self.string = string;
-        NSArray *array = metadataObject.corners;
-        NSLog(@"array%@",array);
-        CGPoint point = CGPointZero;
-        int index = 0;
-        CFDictionaryRef dict = (__bridge CFDictionaryRef)(array[index++]);
-        CGPointMakeWithDictionaryRepresentation(dict, &point);
-        CGPoint point2 = CGPointZero;
-        CGPointMakeWithDictionaryRepresentation((__bridge CFDictionaryRef)array[2], &point2);
-        CGFloat scace = 100 /(point2.x-point.x);
-        NSLog(@"scacescacescace%f",scace);
-        [self setVideoScale:scace];
+        [self.session stopRunning];
+        
+        if (self.string.length) {
+            
+            if (self.cameraModuleCodeBlock) {
+                self.cameraModuleCodeBlock(self.string);
+            }
+            if (self.delegate && [self.delegate respondsToSelector:@selector(cameraModule:info:resultString:)]) {
+                [self.delegate cameraModule:self info:nil resultString:self.string];
+            }
+        }
     }
 }
 
@@ -154,18 +153,7 @@
     videoConnection.videoScaleAndCropFactor = scale;
     [CATransaction commit];
     [CATransaction setCompletionBlock:^{
-        [self.session stopRunning];
-        [self.input.device unlockForConfiguration];
-
-        if (self.string.length) {
-            
-            if (self.cameraModuleCodeBlock) {
-                self.cameraModuleCodeBlock(self.string);
-            }
-            if (self.delegate && [self.delegate respondsToSelector:@selector(cameraModule:info:resultString:)]) {
-                [self.delegate cameraModule:self info:nil resultString:self.string];
-            }
-        }
+    
     }];
 }
 - (void)screenshot {
