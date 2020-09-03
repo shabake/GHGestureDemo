@@ -33,7 +33,7 @@
 + 拖拽和捏合手势动态调整相机镜头焦距
 
 ```
-### 复习拖拽手势 `UIPanGestureRecognizer `
+### 拖拽手势 `UIPanGestureRecognizer `
 
 先看api提供集成属性和方法
 
@@ -44,7 +44,7 @@
 > `(void)setTranslation:(CGPoint)translation inView:(nullable UIView *)view;` 设置拖拽速度
 
 
-### 复习捏合手势 `UIPinchGestureRecognizer `
+### 捏合手势 `UIPinchGestureRecognizer `
 
 >`scale` 缩放比例
 
